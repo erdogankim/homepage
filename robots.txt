@@ -1,36 +1,5 @@
 # erdogan.kim — robots.txt
-# Tüm crawler'lara açık (klasik arama motorları + AI crawler'ları)
+# Site geçici olarak yeniden tasarımda; tüm crawler'lara kapalı.
 
 User-agent: *
-Allow: /
-
-# Sitemap
-Sitemap: https://erdogan.kim/sitemap.xml
-
-# AI crawler'larına açık not (istenirse buradan kapatılabilir)
-# Aşağıdaki ajanlar JS çalıştırmaz; sayfanın <main class="seo-only">
-# bloğu onlar için tasarlanmıştır.
-
-User-agent: GPTBot
-Allow: /
-
-User-agent: ClaudeBot
-Allow: /
-
-User-agent: anthropic-ai
-Allow: /
-
-User-agent: PerplexityBot
-Allow: /
-
-User-agent: CCBot
-Allow: /
-
-User-agent: Google-Extended
-Allow: /
-
-User-agent: Applebot
-Allow: /
-
-User-agent: Applebot-Extended
-Allow: /
+Disallow: /
