@@ -2,7 +2,7 @@
 <html lang="tr">
 <head>
 <meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, maximum-scale=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
 <meta name="theme-color" content="#f4efe4" />
 
 <title>Erdoğan Öztürk — Yazılım Mimarı, Danışmanı, Eğitmeni · 19 yıl · erdogan.kim</title>
@@ -322,6 +322,9 @@
     padding: 22px 24px;
     color: var(--ink);
     box-shadow: 8px 10px 0 rgba(20,18,16,0.08);
+    will-change: transform;
+    backface-visibility: hidden;
+    transform: translateZ(0);
   }
   .p-card .label {
     font-family: var(--mono);
@@ -418,6 +421,9 @@
     color: var(--ink);
     box-shadow: 10px 12px 0 rgba(20,18,16,0.06);
     font-family: var(--sans);
+    will-change: transform;
+    backface-visibility: hidden;
+    transform: translateZ(0);
   }
   .cv-card .cv-head {
     padding: 16px 22px;
@@ -648,6 +654,8 @@
     white-space: nowrap;
     text-transform: uppercase;
     user-select: none;
+    will-change: transform;
+    backface-visibility: hidden;
   }
 
   .node-tag {
@@ -660,6 +668,8 @@
     border: 1.5px solid var(--ink);
     color: var(--ink);
     white-space: nowrap;
+    will-change: transform;
+    backface-visibility: hidden;
   }
   .node-tag.red { background: var(--red); color: var(--paper); border-color: var(--red); }
 
@@ -1252,9 +1262,11 @@ document.getElementById('css3d').appendChild(cssRenderer.domElement);
 // ============ CONTROLS ============
 const controls = new OrbitControls(camera, cssRenderer.domElement);
 controls.enableDamping = true;
-controls.dampingFactor = 0.08;
-controls.minDistance = 6;
+controls.dampingFactor = 0.15;
+controls.minDistance = isMobile ? 2.5 : 6;
 controls.maxDistance = 90;
+controls.zoomSpeed = isMobile ? 1.4 : 1.0;
+controls.rotateSpeed = isMobile ? 0.7 : 1.0;
 controls.minPolarAngle = 0.15;
 controls.maxPolarAngle = Math.PI * 0.58;
 controls.touches = {
@@ -1265,7 +1277,7 @@ controls.touches = {
 // Menu camera vs full camera
 const MENU_CAM    = new THREE.Vector3(2, 14.5, 13);
 const MENU_TARGET = new THREE.Vector3(0, 14.5, 1.5);
-const FULL_CAM    = new THREE.Vector3(0, 7.2, isMobile ? 37 : 29);
+const FULL_CAM    = new THREE.Vector3(0, 7.2, isMobile ? 26 : 29);
 const FULL_TARGET = new THREE.Vector3(0, 4, 0);
 
 camera.position.copy(MENU_CAM);
@@ -1650,46 +1662,10 @@ const cardData = [
     `
   },
   {
-    id: 'kim', cls: 'p-card kim',
-    pos: [-13, 5.5, -9], rotY: Math.PI / 5,
-    html: `
-      <div class="label"><span class="num">02</span> KİM</div>
-      <h3>Kaotik görüneni <em>anlaşılır</em> hâle getirmek.</h3>
-      <p class="lead">Ankara'da, babamın getirdiği ikinci el bilgisayarla başladı. O günden bu yana bankalardan e-ticarete, sağlıktan oyun arka uçlarına dek birçok sistemde çalıştım.</p>
-      <div class="pullquote">
-        İyi bir mimar, çizdiği her çizgiden önce neyi çizmeyeceğine karar verendir.
-      </div>
-    `
-  },
-  {
-    id: 'yazilar', cls: 'p-card writing',
-    pos: [13, 5.5, -9], rotY: -Math.PI / 5,
-    html: `
-      <div class="label"><span class="num">03</span> YAZILAR</div>
-      <h3>Bir probleme yakınken yazılmış <em>notlar</em>.</h3>
-      <div class="row"><span class="t"><a href="#">Bounded context üzerine notlar</a></span><span class="d">12 NİS</span></div>
-      <div class="row"><span class="t"><a href="#">Geri alınamayan kararlar</a></span><span class="d">28 MAR</span></div>
-      <div class="row"><span class="t"><a href="#">ADR'nin terapötik faydaları</a></span><span class="d">14 MAR</span></div>
-      <div class="row"><span class="t"><a href="#">"Basit tut" demek kolay</a></span><span class="d">2 MAR</span></div>
-    `
-  },
-  {
-    id: 'talks', cls: 'p-card talks',
-    pos: [0, 7, -14], rotY: 0,
-    html: `
-      <div class="label"><span class="num">04</span> KONUŞMALAR &amp; EĞİTİMLER</div>
-      <h3>Sahnede, atölyede, ekibin <em>içinde</em>.</h3>
-      <div class="row"><span class="t">Yazılım Mimarisi Atölyesi</span><span class="d">MAY 2026</span></div>
-      <div class="row"><span class="t">Dağıtık Sistemlerde Karar Almak</span><span class="d">MAR 2026</span></div>
-      <div class="row"><span class="t">Senior → Staff Programı</span><span class="d">KIŞ 2026</span></div>
-      <div class="row"><span class="t">Event Storming 101</span><span class="d">KAS 2025</span></div>
-    `
-  },
-  {
     id: 'contact', cls: 'p-card contact',
     pos: [0, -4.5, -4], rotY: 0, rotX: -0.18,
     html: `
-      <div class="label"><span class="num">05</span> İLETİŞİM</div>
+      <div class="label"><span class="num">02</span> İLETİŞİM</div>
       <h3>Bir <em>fikrin</em> mi var? Yaz.</h3>
       <p>İlk cevap genellikle 24 saat içinde.</p>
       <div class="row"><span class="t">E-posta</span><span class="d"><a href="mailto:ezterk@gmail.com">ezterk@gmail.com</a></span></div>
@@ -2022,7 +1998,7 @@ for (const c of cardData) {
 // ============ EDGE LABELS (Cypher tadında) ============
 const edgeLabels = {
   mimar: ':DESIGNS', danisman: ':ADVISES', egitmen: ':TEACHES',
-  kim: ':IS', yazilar: ':WROTE', talks: ':SPOKE_AT', contact: ':REACHED_VIA'
+  contact: ':REACHED_VIA'
 };
 for (const c of cardData) {
   if (c.id === 'hero' || !edgeLabels[c.id]) continue;
