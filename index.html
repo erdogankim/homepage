@@ -414,6 +414,80 @@
     .cv-row { grid-template-columns: 80px 1fr; gap: 10px; }
   }
 
+  /* Orgs (kurumlar) */
+  .orgs-intro {
+    max-width: 760px;
+    font-size: 16px;
+    line-height: 1.55;
+    color: var(--ink-soft);
+    margin: 0 0 48px;
+  }
+  .orgs-section { margin-bottom: 48px; }
+  .orgs-section:last-child { margin-bottom: 0; }
+  .orgs-head {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-family: var(--mono);
+    font-size: 11.5px;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--ink);
+    border-bottom: 2px solid var(--line);
+    padding-bottom: 10px;
+    margin-bottom: 0;
+  }
+  .orgs-head .orgs-tag {
+    background: var(--accent);
+    color: #fff;
+    padding: 4px 9px;
+    font-weight: 700;
+    letter-spacing: 0.15em;
+    line-height: 1;
+  }
+  .orgs-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    border-left: 2px solid var(--line);
+  }
+  .org-cell {
+    border-right: 2px solid var(--line);
+    border-bottom: 2px solid var(--line);
+    padding: 22px 18px 24px;
+    background: var(--bg);
+    transition: background 0.18s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 124px;
+  }
+  .org-cell:hover { background: var(--accent-soft); }
+  .org-name {
+    font-weight: 800;
+    font-size: 19px;
+    letter-spacing: -0.02em;
+    line-height: 1.1;
+    margin-bottom: 14px;
+    color: var(--ink);
+  }
+  .org-meta {
+    font-family: var(--mono);
+    font-size: 10px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--muted);
+    line-height: 1.55;
+  }
+  @media (max-width: 900px) {
+    .orgs-grid { grid-template-columns: repeat(3, 1fr); }
+  }
+  @media (max-width: 720px) {
+    .orgs-grid { grid-template-columns: repeat(2, 1fr); }
+    .org-cell { min-height: 110px; padding: 18px 14px 20px; }
+    .org-name { font-size: 15.5px; margin-bottom: 10px; }
+    .org-meta { font-size: 9.5px; }
+  }
+
   /* Writings & talks */
   .writing-list, .talks-list {
     list-style: none; padding: 0; margin: 0;
@@ -592,7 +666,7 @@
     <a href="#s-intro" data-nav>Intro</a>
     <a href="#s-roles" data-nav>Roller</a>
     <a href="#s-career" data-nav>Kariyer</a>
-    <a href="#s-writing" data-nav>Yazılar</a>
+    <a href="#s-kurumlar" data-nav>Kurumlar</a>
     <a href="#s-talks" data-nav>Konuşmalar</a>
     <a href="#s-contact" data-nav>İletişim</a>
   </nav>
@@ -889,52 +963,61 @@
     </div>
   </section>
 
-  <!-- ============ 003 / YAZILAR ============ -->
-  <section id="s-writing" class="section">
+  <!-- ============ 003 / KURUMLAR ============ -->
+  <section id="s-kurumlar" class="section">
     <div class="grid">
       <div class="sec-head">
         <span class="num">003</span>
-        <span class="label"><span>Son Yazılar</span><span class="right">Bir probleme yakınken yazılmış notlar</span></span>
+        <span class="label"><span>Kurumlar</span><span class="right">Mimari · Danışmanlık · Eğitim</span></span>
       </div>
 
       <h2 class="titanic" style="font-size:clamp(40px,8vw,108px);margin-bottom:30px;">
-        Sahnenin <span class="accent">arkası.</span>
+        Birlikte <span class="accent">çalıştığım.</span>
       </h2>
 
-      <ul class="writing-list">
-        <li>
-          <span class="num">№ 04</span>
-          <div>
-            <a class="ttl" href="#">Bounded context üzerine notlar</a>
-            <div class="desc">DDD'nin en çok yanlış anlaşılan kısmı sanırım bu. Sınırı yanlış çizdiğimizde sistemler nasıl çürüyor?</div>
-          </div>
-          <span class="when">12 NİS 2026</span>
-        </li>
-        <li>
-          <span class="num">№ 03</span>
-          <div>
-            <a class="ttl" href="#">Event-driven mimaride geri alınamayan kararlar</a>
-            <div class="desc">Bir mesaj yayınladığında onu geri alamazsın. Tasarımın gerçekten başladığı yer burası.</div>
-          </div>
-          <span class="when">28 MAR 2026</span>
-        </li>
-        <li>
-          <span class="num">№ 02</span>
-          <div>
-            <a class="ttl" href="#">ADR yazmanın terapötik faydaları</a>
-            <div class="desc">Karar kayıtları bir dokümantasyon aracı değil; bir düşünme aracıdır.</div>
-          </div>
-          <span class="when">14 MAR 2026</span>
-        </li>
-        <li>
-          <span class="num">№ 01</span>
-          <div>
-            <a class="ttl" href="#">"Basit tut" demek kolay: peki gerçekte nasıl?</a>
-            <div class="desc">Basitlik, bir son değil; sürekli verilen bir kavgadır.</div>
-          </div>
-          <span class="when">02 MAR 2026</span>
-        </li>
-      </ul>
+      <p class="orgs-intro">
+        19 yıllık yolda bankacılıktan savunma sanayine, otomotivden ödeme sistemlerine
+        uzanan bir çeşitlilikte ekiplere katıldım, danışmanlık verdim, mühendisleri yetiştirdim.
+        Aşağıda kurumların bir kısmı.
+      </p>
+
+      <div class="orgs-section">
+        <div class="orgs-head"><span class="orgs-tag">A</span> Mimari &amp; Danışmanlık</div>
+        <div class="orgs-grid">
+          <div class="org-cell"><div class="org-name">Architecht</div><div class="org-meta">Kuveyt-Türk · Bankacılık · 2023–</div></div>
+          <div class="org-cell"><div class="org-name">Tübitak-SAGE</div><div class="org-meta">Savunma · Mimar · 2021–22</div></div>
+          <div class="org-cell"><div class="org-name">PAYCORE</div><div class="org-meta">Ödeme · Danışman · 2022</div></div>
+          <div class="org-cell"><div class="org-name">Mercedes-Benz Türk</div><div class="org-meta">Otomotiv · Danışman · 2020–21</div></div>
+          <div class="org-cell"><div class="org-name">Wirecard</div><div class="org-meta">Fintech · Danışman · 2019–20</div></div>
+          <div class="org-cell"><div class="org-name">YCP Bilgi Teknolojileri</div><div class="org-meta">Ar/Ge Direktörü · 2016–19</div></div>
+          <div class="org-cell"><div class="org-name">İstanbul Teknik Üniversitesi</div><div class="org-meta">Bilgi İşlem · Mimar · 2014–15</div></div>
+          <div class="org-cell"><div class="org-name">Anadolu Sigorta</div><div class="org-meta">Sigorta · Rücu/Hasar projeleri</div></div>
+          <div class="org-cell"><div class="org-name">Biometrik Perkotek</div><div class="org-meta">Biyometri · Danışman · 2016</div></div>
+          <div class="org-cell"><div class="org-name">Ajanspress Medya Takip</div><div class="org-meta">Medya · Mimari · 2016</div></div>
+          <div class="org-cell"><div class="org-name">Saat &amp; Saat Mağazacılık</div><div class="org-meta">Perakende · Mimari · 2016</div></div>
+          <div class="org-cell"><div class="org-name">Çolakoğlu Holding</div><div class="org-meta">Texas, USA · ERP · 2015–16</div></div>
+        </div>
+      </div>
+
+      <div class="orgs-section">
+        <div class="orgs-head"><span class="orgs-tag">B</span> Kurumsal Eğitim</div>
+        <div class="orgs-grid">
+          <div class="org-cell"><div class="org-name">TSK</div><div class="org-meta">Türk Silahlı Kuvvetleri · Yazılım eğitimi</div></div>
+          <div class="org-cell"><div class="org-name">Fresenius Medical</div><div class="org-meta">Sağlık · OOP · SOLID · TFS</div></div>
+          <div class="org-cell"><div class="org-name">Zorlu Holding</div><div class="org-meta">Holding · Katmanlı Mimari · SCRUM</div></div>
+          <div class="org-cell"><div class="org-name">Petkim PetroKimya</div><div class="org-meta">Petrokimya · İleri Yazılım Teknikleri</div></div>
+        </div>
+      </div>
+
+      <div class="orgs-section">
+        <div class="orgs-head"><span class="orgs-tag">C</span> Eğitim Kurumları · Master Trainer</div>
+        <div class="orgs-grid">
+          <div class="org-cell"><div class="org-name">Bilge Adam Bilişim</div><div class="org-meta">Birim Müdürü · Master Trainer · 2013–14</div></div>
+          <div class="org-cell"><div class="org-name">BT Akademi</div><div class="org-meta">Eğitmen · ≈150 grup · 2015–19</div></div>
+          <div class="org-cell"><div class="org-name">Uzman Bilişim Akademisi</div><div class="org-meta">Eğitmen · 900+ saat · 2008–09</div></div>
+          <div class="org-cell"><div class="org-name">Kariyer Mimarı</div><div class="org-meta">Serbest eğitmen · 2019–20</div></div>
+        </div>
+      </div>
     </div>
   </section>
 
@@ -1242,8 +1325,8 @@ const waypoints = [
   { pos: [100,  1.6,  5.8], lookAt: [100,  1.4, 0] },   // contact
 ];
 
-const sectionIds = ['s-intro','s-roles','s-career','s-writing','s-talks','s-contact'];
-const sectionLabels = ['000 / INTRO','001 / ROLLER','002 / KARİYER','003 / YAZILAR','004 / KONUŞMALAR','005 / İLETİŞİM'];
+const sectionIds = ['s-intro','s-roles','s-career','s-kurumlar','s-talks','s-contact'];
+const sectionLabels = ['000 / INTRO','001 / ROLLER','002 / KARİYER','003 / KURUMLAR','004 / KONUŞMALAR','005 / İLETİŞİM'];
 
 /* ============ SCROLL HANDLING ============ */
 const progressEl = document.getElementById('progress');
