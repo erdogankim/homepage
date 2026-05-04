@@ -1,0 +1,1725 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, maximum-scale=1" />
+<meta name="theme-color" content="#f4efe4" />
+
+<title>Erdoğan Öztürk — Yazılım Mimarı, Danışmanı, Eğitmeni · erdogan.kim</title>
+
+<meta name="description" content="Erdoğan Öztürk. 15+ yıllık yazılım mimarı, bağımsız danışman ve eğitmen. Domain-driven tasarım, event-driven mimari ve dağıtık sistemler üzerine ekiplerle çalışıyor. İstanbul." />
+<meta name="author" content="Erdoğan Öztürk" />
+<meta name="keywords" content="Erdoğan Öztürk, yazılım mimarı, software architect, danışman, eğitmen, DDD, domain-driven design, event-driven, dağıtık sistemler, mimari değerlendirme, İstanbul" />
+<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large" />
+<link rel="canonical" href="https://erdogan.kim/" />
+<link rel="alternate" hreflang="tr" href="https://erdogan.kim/" />
+<link rel="alternate" hreflang="x-default" href="https://erdogan.kim/" />
+
+<!-- Open Graph -->
+<meta property="og:type" content="profile" />
+<meta property="og:site_name" content="erdogan.kim" />
+<meta property="og:title" content="Erdoğan Öztürk — Yazılım Mimarı, Danışmanı, Eğitmeni" />
+<meta property="og:description" content="15+ yıllık yazılım mimarı, bağımsız danışman ve eğitmen. Karmaşık sistemleri sakin kararlarla tasarlıyor." />
+<meta property="og:url" content="https://erdogan.kim/" />
+<meta property="og:image" content="https://erdogan.kim/og-image.png" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:image:alt" content="Erdoğan Öztürk · Yazılım Mimarı, Danışmanı, Eğitmeni" />
+<meta property="og:locale" content="tr_TR" />
+<meta property="profile:first_name" content="Erdoğan" />
+<meta property="profile:last_name" content="Öztürk" />
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Erdoğan Öztürk — Yazılım Mimarı, Danışmanı, Eğitmeni" />
+<meta name="twitter:description" content="15+ yıllık yazılım mimarı, bağımsız danışman ve eğitmen. Domain-driven tasarım, event-driven mimari, dağıtık sistemler." />
+<meta name="twitter:image" content="https://erdogan.kim/og-image.png" />
+<meta name="twitter:image:alt" content="Erdoğan Öztürk · erdogan.kim" />
+
+<!-- JSON-LD: Person -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Erdoğan Öztürk",
+  "givenName": "Erdoğan",
+  "familyName": "Öztürk",
+  "url": "https://erdogan.kim/",
+  "image": "https://erdogan.kim/og-image.png",
+  "jobTitle": ["Yazılım Mimarı", "Yazılım Danışmanı", "Yazılım Eğitmeni"],
+  "description": "15+ yıllık yazılım mimarı, bağımsız danışman ve eğitmen. Domain-driven tasarım, event-driven mimari ve dağıtık sistemler üzerine ekiplerle çalışır.",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "İstanbul",
+    "addressCountry": "TR"
+  },
+  "email": "mailto:merhaba@erdogan.kim",
+  "knowsLanguage": ["tr", "en"],
+  "knowsAbout": [
+    "Software Architecture",
+    "Domain-Driven Design",
+    "Event-Driven Architecture",
+    "Distributed Systems",
+    "Cloud Architecture",
+    "Architecture Decision Records",
+    "Technical Consulting",
+    "Engineering Leadership",
+    "Workshop Facilitation"
+  ],
+  "sameAs": [
+    "https://github.com/erdoganozturk",
+    "https://linkedin.com/in/erdoganozturk"
+  ]
+}
+</script>
+
+<!-- JSON-LD: WebSite -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "erdogan.kim",
+  "alternateName": "Erdoğan Öztürk · Kişisel Defter",
+  "url": "https://erdogan.kim/",
+  "inLanguage": "tr-TR",
+  "author": {
+    "@type": "Person",
+    "name": "Erdoğan Öztürk",
+    "url": "https://erdogan.kim/"
+  },
+  "potentialAction": {
+    "@type": "SearchAction",
+    "target": "https://erdogan.kim/?q={search_term_string}",
+    "query-input": "required name=search_term_string"
+  }
+}
+</script>
+
+<!-- JSON-LD: ProfessionalService -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  "name": "Erdoğan Öztürk · Mimari Danışmanlık ve Eğitim",
+  "url": "https://erdogan.kim/",
+  "areaServed": ["Türkiye", "Worldwide (remote)"],
+  "serviceType": [
+    "Yazılım Mimari Değerlendirmesi",
+    "Domain-Driven Design Atölyesi",
+    "Event Storming Atölyesi",
+    "Teknik Due Diligence",
+    "Mühendislik Eğitim Programları"
+  ],
+  "founder": {
+    "@type": "Person",
+    "name": "Erdoğan Öztürk"
+  }
+}
+</script>
+<style>
+  :root {
+    --paper: #f4efe4;
+    --paper-warm: #ede5cf;
+    --ink: #141210;
+    --ink-soft: #3a342c;
+    --muted: #7a7267;
+    --line: #14121022;
+    --line-strong: #141210;
+    --red: #c73c24;
+    --blue: #2a68c8;
+    --blue-soft: #2a68c815;
+    --blue-ink: #18407a;
+    --green: #5f8247;
+    --serif: "Newsreader", "Iowan Old Style", "Palatino", Georgia, serif;
+    --sans: -apple-system, BlinkMacSystemFont, "Inter", "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    --mono: "JetBrains Mono", "SF Mono", ui-monospace, Menlo, Consolas, monospace;
+  }
+  /* ====== SEO / A11Y CONTENT — görsel olarak gizli, semantik olarak tam ======
+     Bu blok ekranda görünmez (clip ile sıfır pikselle sınırlı) ama:
+       - Search engine crawler'ları (Googlebot, Bingbot) tam okur
+       - JS çalıştırmayan AI crawler'ları (GPTBot, Claude-Web, PerplexityBot) tam okur
+       - Ekran okuyucular tam okur (erişilebilirlik)
+     3D sahne içeriğin görsel sunumudur; bu blok aynı içeriğin metinsel ikizidir. */
+  .seo-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: normal;
+    border: 0;
+  }
+
+  *, *::before, *::after { box-sizing: border-box; }
+  html, body {
+    margin: 0; padding: 0;
+    height: 100%;
+    overflow: hidden;
+    background: var(--paper);
+    color: var(--ink);
+    font-family: var(--sans);
+    -webkit-font-smoothing: antialiased;
+    -webkit-text-size-adjust: 100%;
+  }
+  body { overscroll-behavior: none; touch-action: none; }
+
+  #webgl, #css3d {
+    position: fixed; inset: 0;
+  }
+  #css3d { pointer-events: none; }
+  #css3d .p-card { pointer-events: auto; }
+
+  /* ====== HUD ====== */
+  .hud {
+    position: fixed; z-index: 30;
+    font-family: var(--mono);
+    font-size: 11px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--ink);
+    user-select: none;
+    -webkit-user-select: none;
+  }
+  .hud.tl { top: 14px; left: 16px; }
+  .hud.bl { bottom: 14px; left: 16px; }
+  .hud.br { bottom: 14px; right: 16px; text-align: right; }
+  .hud .bar {
+    display: inline-flex; align-items: center; gap: 8px;
+    background: var(--paper);
+    border: 1.5px solid var(--line-strong);
+    padding: 6px 10px;
+  }
+  .hud .bar .dot {
+    width: 7px; height: 7px; border-radius: 50%; background: var(--red);
+    animation: pulse 1.6s ease-in-out infinite;
+  }
+  @keyframes pulse { 0%,100%{opacity:1;} 50%{opacity:.2;} }
+  .hud .muted { color: var(--muted); }
+  .hud b { color: var(--ink); font-weight: 600; }
+  @media (max-width: 560px) {
+    .hud.bl { font-size: 10px; }
+    .hud.br { display: none; }
+  }
+
+  /* ====== MENU CTA (açılış dokunuş hint'i) ====== */
+  #menu-cta {
+    position: fixed; z-index: 25;
+    left: 50%; top: 50%;
+    transform: translate(-50%, 0);
+    text-align: center;
+    pointer-events: none;
+    font-family: var(--mono);
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--muted);
+    font-size: 11.5px;
+    margin-top: 180px;
+    transition: opacity .5s ease, transform .6s ease;
+  }
+  #menu-cta .arrow {
+    display: block;
+    margin-top: 12px;
+    font-size: 18px;
+    color: var(--red);
+    animation: bounce 1.8s ease-in-out infinite;
+  }
+  #menu-cta.gone { opacity: 0; transform: translate(-50%, 20px); pointer-events: none; }
+  @keyframes bounce {
+    0%, 100% { transform: translateY(0); opacity: 1; }
+    50% { transform: translateY(6px); opacity: 0.4; }
+  }
+  @media (max-width: 720px) {
+    #menu-cta { margin-top: 140px; font-size: 10.5px; }
+  }
+
+  /* ====== CARDS ====== */
+  .p-card {
+    background: var(--paper);
+    border: 1.5px solid var(--line-strong);
+    padding: 22px 24px;
+    color: var(--ink);
+    box-shadow: 8px 10px 0 rgba(20,18,16,0.08);
+  }
+  .p-card .label {
+    font-family: var(--mono);
+    font-size: 10.5px;
+    letter-spacing: 0.2em;
+    color: var(--red);
+    text-transform: uppercase;
+    margin-bottom: 14px;
+  }
+  .p-card .label .num { margin-right: 6px; font-weight: 700; }
+  .p-card h3 {
+    font-family: var(--serif);
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 1.15;
+    letter-spacing: -0.01em;
+    margin: 0 0 12px;
+  }
+  .p-card h3 em { color: var(--red); font-style: italic; }
+  .p-card p {
+    font-size: 14px; line-height: 1.55; color: var(--ink-soft);
+    margin: 0 0 10px;
+  }
+  .p-card ul {
+    list-style: none; padding: 0; margin: 12px 0 0;
+    font-size: 13px; color: var(--ink-soft);
+  }
+  .p-card ul li {
+    padding: 6px 0;
+    border-top: 1px solid var(--line);
+    display: flex; gap: 8px;
+  }
+  .p-card ul li::before { content: "→"; color: var(--red); }
+  .p-card .row {
+    display: flex; justify-content: space-between; gap: 10px;
+    padding: 8px 0;
+    border-top: 1px solid var(--line);
+    font-size: 13px;
+    align-items: baseline;
+  }
+  .p-card .row:first-of-type { border-top: none; padding-top: 4px; }
+  .p-card .row .d { color: var(--muted); font-family: var(--mono); font-size: 11px; }
+  .p-card a { color: var(--ink); border-bottom: 1px dotted var(--line-strong); text-decoration: none; }
+  .p-card a:hover { color: var(--red); border-color: var(--red); }
+
+  /* pillar variants */
+  .p-card.mimar    { width: 300px; background: var(--paper); }
+  .p-card.danisman { width: 300px; background: var(--paper-warm); border-color: var(--line-strong); }
+  .p-card.egitmen  { width: 300px; background: var(--red); color: var(--paper); border-color: var(--red); }
+  .p-card.egitmen h3, .p-card.egitmen .label { color: var(--paper); }
+  .p-card.egitmen .label { color: var(--paper); opacity: 0.8; }
+  .p-card.egitmen p { color: #f4efe4d0; }
+  .p-card.egitmen ul { color: #f4efe4d8; }
+  .p-card.egitmen ul li { border-color: #ffffff25; }
+  .p-card.egitmen ul li::before { color: var(--paper); }
+
+  /* hero title */
+  .p-card.hero {
+    width: 540px;
+    padding: 34px 38px;
+    background: transparent;
+    border: none;
+    box-shadow: none;
+    text-align: center;
+  }
+  .p-card.hero .brand {
+    font-family: var(--mono);
+    font-size: 12px; letter-spacing: 0.2em; text-transform: uppercase;
+    color: var(--red);
+    margin-bottom: 18px;
+  }
+  .p-card.hero h1 {
+    font-family: var(--serif);
+    font-weight: 500;
+    font-size: 72px;
+    line-height: 0.95;
+    letter-spacing: -0.035em;
+    margin: 0;
+  }
+  .p-card.hero h1 em { color: var(--red); font-style: italic; }
+  .p-card.hero .roles {
+    display: inline-flex; flex-wrap: wrap; justify-content: center;
+    gap: 8px;
+    margin-top: 24px;
+  }
+  .p-card.hero .chip {
+    font-family: var(--mono);
+    font-size: 10.5px; letter-spacing: 0.1em; text-transform: uppercase;
+    padding: 6px 12px;
+    border: 1.5px solid var(--ink);
+  }
+  .p-card.hero .chip.ink { background: var(--ink); color: var(--paper); }
+  .p-card.hero .chip.red { background: var(--red); color: var(--paper); border-color: var(--red); }
+
+  .p-card.kim p.lead {
+    font-family: var(--serif);
+    font-size: 16px; line-height: 1.55;
+    color: var(--ink);
+    margin-bottom: 10px;
+  }
+  .p-card.kim .pullquote {
+    font-family: var(--serif);
+    font-style: italic;
+    font-size: 17px; line-height: 1.4;
+    border-left: 2px solid var(--red);
+    padding: 6px 0 6px 14px;
+    margin: 14px 0 6px;
+  }
+  .p-card.kim { width: 360px; }
+  .p-card.writing { width: 360px; }
+  .p-card.writing .row .t { font-family: var(--serif); font-size: 15px; }
+  .p-card.talks { width: 320px; }
+
+  .p-card.contact {
+    width: 340px;
+    background: var(--ink);
+    color: var(--paper);
+    border-color: var(--ink);
+  }
+  .p-card.contact .label { color: var(--red); }
+  .p-card.contact h3 { color: var(--paper); }
+  .p-card.contact h3 em { color: var(--red); }
+  .p-card.contact p { color: #d8d2c4; }
+  .p-card.contact .row { border-color: #ffffff15; }
+  .p-card.contact .row .d { color: var(--paper); }
+  .p-card.contact a { color: var(--paper); border-color: #ffffff30; }
+  .p-card.contact a:hover { color: var(--red); border-color: var(--red); }
+
+  @media (max-width: 560px) {
+    .p-card { padding: 18px 20px; }
+    .p-card.hero h1 { font-size: 56px; }
+    .p-card.hero { width: 420px; }
+    .p-card.mimar, .p-card.danisman, .p-card.egitmen { width: 280px; }
+  }
+
+  /* ====== DATA / GRAPH DOKUNUŞLARI ====== */
+  .edge-label {
+    font-family: var(--mono);
+    font-size: 13px;
+    letter-spacing: 0.06em;
+    color: var(--red);
+    background: var(--paper);
+    padding: 3px 8px;
+    border: 1px solid var(--red);
+    border-radius: 999px;
+    white-space: nowrap;
+    text-transform: uppercase;
+    user-select: none;
+  }
+
+  .node-tag {
+    font-family: var(--mono);
+    font-size: 12px;
+    letter-spacing: 0.05em;
+    padding: 4px 10px;
+    border-radius: 999px;
+    background: var(--paper);
+    border: 1.5px solid var(--ink);
+    color: var(--ink);
+    white-space: nowrap;
+  }
+  .node-tag.red { background: var(--red); color: var(--paper); border-color: var(--red); }
+
+  .data-card {
+    font-family: var(--mono);
+    font-size: 11.5px;
+    line-height: 1.55;
+    background: var(--paper);
+    border: 1.5px solid var(--line-strong);
+    padding: 16px 18px;
+    color: var(--ink);
+    width: 320px;
+    box-shadow: 6px 8px 0 rgba(20,18,16,0.06);
+    white-space: pre;
+  }
+  .data-card .dc-head {
+    display: flex; align-items: center; justify-content: space-between;
+    font-family: var(--mono);
+    font-size: 10px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--muted);
+    padding-bottom: 8px;
+    margin-bottom: 10px;
+    border-bottom: 1px solid var(--line);
+    white-space: normal;
+  }
+  .data-card .dc-head b { color: var(--ink); font-weight: 600; }
+  .data-card .dc-head .dot { color: var(--red); }
+  .data-card .kw    { color: var(--red); font-weight: 600; }
+  .data-card .ident { color: var(--ink); }
+  .data-card .str   { color: #3f5d3a; }
+  .data-card .com   { color: var(--muted); font-style: italic; }
+  .data-card.cypher { background: var(--paper-warm); }
+
+  .data-card.api {
+    background: var(--paper);
+    border-color: var(--blue);
+    box-shadow: 6px 8px 0 rgba(42,104,200,0.15);
+    position: relative;
+  }
+  .data-card.api .dc-head b { color: var(--blue-ink); }
+  .data-card.api .dc-head .dot { color: var(--blue); }
+  .data-card.api .kw   { color: var(--blue); }
+  .data-card.api .key  { color: var(--blue-ink); }
+  .data-card.api .str  { color: #3f5d3a; }
+  .data-card.api .num  { color: var(--red); }
+  .data-card.api .bool { color: var(--blue); font-weight: 600; }
+  .data-card.api .com  { color: var(--muted); font-style: italic; }
+  .data-card.api .status {
+    display: inline-block;
+    font-family: var(--mono);
+    font-size: 10.5px;
+    letter-spacing: 0.08em;
+    padding: 2px 8px;
+    border-radius: 3px;
+    background: var(--blue);
+    color: var(--paper);
+    margin-right: 6px;
+  }
+  .data-card.api .method {
+    display: inline-block;
+    font-family: var(--mono);
+    font-size: 10.5px;
+    letter-spacing: 0.15em;
+    padding: 2px 8px;
+    background: var(--blue-ink);
+    color: var(--paper);
+    margin-right: 8px;
+    border-radius: 3px;
+  }
+  .data-card.api .punct { color: var(--muted); }
+
+  .node-tag.blue {
+    background: var(--blue);
+    color: var(--paper);
+    border-color: var(--blue);
+  }
+
+  .table-card {
+    font-family: var(--mono);
+    font-size: 11px;
+    background: var(--paper);
+    border: 1.5px solid var(--line-strong);
+    width: 360px;
+    padding: 0;
+    box-shadow: 6px 8px 0 rgba(20,18,16,0.06);
+  }
+  .table-card .tc-head {
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 10px 14px;
+    background: var(--ink); color: var(--paper);
+    font-size: 10.5px; letter-spacing: 0.18em; text-transform: uppercase;
+  }
+  .table-card .tc-head .icon { color: var(--red); }
+  .table-card table { width: 100%; border-collapse: collapse; }
+  .table-card th, .table-card td {
+    text-align: left;
+    padding: 7px 12px;
+    border-top: 1px solid var(--line);
+    font-family: var(--mono);
+  }
+  .table-card th {
+    background: var(--paper-warm);
+    font-size: 10px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--muted);
+    font-weight: 500;
+  }
+  .table-card td { color: var(--ink); }
+  .table-card td .type { color: var(--red); }
+  .table-card td .mut { color: var(--muted); font-size: 10px; }
+  .table-card .tc-foot {
+    padding: 8px 14px;
+    font-size: 10px;
+    color: var(--muted);
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    border-top: 1.5px solid var(--line-strong);
+    background: var(--paper-warm);
+    display: flex; justify-content: space-between;
+  }
+  .table-card .tc-foot .ok { color: var(--ink); }
+  .table-card .tc-foot .ok .g {
+    display: inline-block; width: 6px; height: 6px; border-radius: 50%;
+    background: #5f8247; margin-right: 6px; vertical-align: middle;
+  }
+
+  /* ====== LOADING ====== */
+  #loading {
+    position: fixed; inset: 0;
+    display: flex; align-items: center; justify-content: center;
+    background: var(--paper);
+    font-family: var(--mono);
+    font-size: 11px;
+    color: var(--ink);
+    letter-spacing: 0.2em;
+    z-index: 50;
+    transition: opacity .6s;
+    text-transform: uppercase;
+  }
+  #loading.gone { opacity: 0; pointer-events: none; }
+  #loading .blink { color: var(--red); animation: blink 1.2s infinite; margin-right: 10px; }
+  @keyframes blink { 0%,50%{opacity:1;} 51%,100%{opacity:.2;} }
+
+  .hint {
+    position: fixed; bottom: 14px; left: 50%;
+    transform: translateX(-50%);
+    z-index: 20;
+    font-family: var(--mono);
+    font-size: 10.5px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    padding: 8px 14px;
+    background: var(--paper);
+    border: 1.5px solid var(--line-strong);
+    color: var(--ink);
+    pointer-events: none;
+    opacity: 0.92;
+    transition: opacity .4s;
+  }
+  .hint.gone { opacity: 0; }
+  @media (min-width: 720px) { .hint { display: none; } }
+</style>
+</head>
+<body>
+
+<!-- ====== SEO/A11Y SEMANTIC CONTENT (görsel olarak gizli, crawler'lar için tam) ====== -->
+<main class="seo-only" lang="tr" id="seo-content" aria-label="Erdoğan Öztürk — site içeriği">
+
+  <header>
+    <h1>Erdoğan Öztürk — Yazılım Mimarı, Danışmanı, Eğitmeni</h1>
+    <p>
+      Karmaşık sistemleri sakin kararlarla tasarlıyorum. 15+ yıldır büyük ölçekli, dağıtık yazılımlar üzerine çalışıyorum;
+      bağımsız danışman olarak ekiplere mimari kararlarda eşlik ediyor; atölyeler ve özel programlarla mühendislerin
+      bir adım öteye geçmesine yardım ediyorum. İstanbul'da yaşıyorum, dünya çapında uzaktan çalışıyorum.
+    </p>
+  </header>
+
+  <nav aria-label="Site bölümleri">
+    <ul>
+      <li><a href="#calisma-sekilleri">Çalışma Şekilleri</a></li>
+      <li><a href="#kim">Kim</a></li>
+      <li><a href="#yazilar">Yazılar</a></li>
+      <li><a href="#konusmalar">Konuşmalar &amp; Eğitimler</a></li>
+      <li><a href="#iletisim">İletişim</a></li>
+    </ul>
+  </nav>
+
+  <section id="calisma-sekilleri">
+    <h2>Çalışma Şekilleri — Üç Farklı Masada, Aynı Disiplin</h2>
+
+    <article id="rol-mimar">
+      <h3>Mimar — Sistemin omurgasını kurmak</h3>
+      <p>
+        Uzun dönemli olarak bir ürün ekibine katılıyorum; teknik vizyonu kod, insan ve süreç eksenlerinde birlikte şekillendiriyorum.
+      </p>
+      <ul>
+        <li>Domain-driven tasarım ve sınır belirleme</li>
+        <li>Event-driven mimari ve entegrasyon</li>
+        <li>Bulut ve platform stratejisi</li>
+        <li>Teknik yol haritası</li>
+      </ul>
+    </article>
+
+    <article id="rol-danisman">
+      <h3>Danışman — Kritik karar anında yanında</h3>
+      <p>
+        Kısa ve yoğun programlarla ekiplere bağımsız bir göz sunuyorum. Architecture review'dan karar atölyelerine kadar.
+      </p>
+      <ul>
+        <li>Mimari değerlendirme (2–4 hafta)</li>
+        <li>Event storming ve sınır atölyesi</li>
+        <li>Teknik due diligence</li>
+        <li>ADR ve dokümantasyon kültürü</li>
+      </ul>
+    </article>
+
+    <article id="rol-egitmen">
+      <h3>Eğitmen — Mühendisleri bir üst seviyeye taşımak</h3>
+      <p>
+        Şirket içi özel programlar ve kamuya açık atölyeler. Teori değil, somut kararlar ve vaka çalışmaları üzerinden.
+      </p>
+      <ul>
+        <li>Yazılım mimarisi temelleri</li>
+        <li>Dağıtık sistem tasarımı</li>
+        <li>DDD ve modelleme atölyesi</li>
+        <li>Senior'dan Staff'a geçiş programı</li>
+      </ul>
+    </article>
+  </section>
+
+  <section id="kim">
+    <h2>Kim</h2>
+    <p>
+      Ankara'nın bir mahallesinde, babamın getirdiği ikinci el bir bilgisayarla başladı her şey.
+      O makinede derlenen ilk "Merhaba dünya"dan bu yana geçen yıllarda bankalardan e-ticaret platformlarına,
+      sağlık sistemlerinden oyun arka uçlarına kadar birbirinden farklı alanlarda yazılımlar tasarladım.
+      Aslında hep aynı işi yaptım: kaotik görüneni anlaşılır hâle getirmek.
+    </p>
+    <p>
+      Yazılım mimarisi benim için kutuları çizgilerle bağlamaktan çok, insanlarla ilgili bir disiplin.
+      Bir sistemin dayanıklılığı, onu kuran ekibin birbirini ne kadar iyi anladığıyla doğru orantılı.
+    </p>
+    <blockquote cite="https://erdogan.kim/#kim">
+      İyi bir mimar, çizdiği her çizgiden önce neyi çizmeyeceğine karar verendir.
+    </blockquote>
+  </section>
+
+  <section id="yazilar">
+    <h2>Son Yazılar</h2>
+    <ul>
+      <li>
+        <article>
+          <h3><a href="/yazilar/bounded-context-uzerine-notlar">Bounded context üzerine notlar</a></h3>
+          <time datetime="2026-04-12">12 Nisan 2026</time>
+          <p>DDD'nin en çok yanlış anlaşılan kısmı sanırım bu. Sınırı yanlış çizdiğimizde sistemler nasıl çürüyor?</p>
+        </article>
+      </li>
+      <li>
+        <article>
+          <h3><a href="/yazilar/geri-alinamayan-kararlar">Event-driven mimaride geri alınamayan kararlar</a></h3>
+          <time datetime="2026-03-28">28 Mart 2026</time>
+          <p>Bir mesaj yayınladığında onu geri alamazsın. Tasarımın gerçekten başladığı yer burası.</p>
+        </article>
+      </li>
+      <li>
+        <article>
+          <h3><a href="/yazilar/adr-terapotik-faydalar">ADR yazmanın terapötik faydaları</a></h3>
+          <time datetime="2026-03-14">14 Mart 2026</time>
+          <p>Karar kayıtları bir dokümantasyon aracı değil; bir düşünme aracıdır.</p>
+        </article>
+      </li>
+      <li>
+        <article>
+          <h3><a href="/yazilar/basit-tut-demek-kolay">"Basit tut" demek kolay: peki gerçekte nasıl?</a></h3>
+          <time datetime="2026-03-02">2 Mart 2026</time>
+          <p>Basitlik, bir son değil; sürekli verilen bir kavgadır.</p>
+        </article>
+      </li>
+    </ul>
+  </section>
+
+  <section id="konusmalar">
+    <h2>Konuşmalar ve Eğitimler</h2>
+    <ul>
+      <li>
+        <article>
+          <h3>Yazılım Mimarisi Atölyesi — İstanbul</h3>
+          <time datetime="2026-05">Mayıs 2026</time>
+          <p>2 günlük atölye; DDD, sınır belirleme ve modelleme pratikleri. Kontenjan açık.</p>
+        </article>
+      </li>
+      <li>
+        <article>
+          <h3>Dağıtık Sistemlerde Karar Almak — DevTurkey</h3>
+          <time datetime="2026-03">Mart 2026</time>
+          <p>Konferans ana sahne konuşması. Kayıt mevcut.</p>
+        </article>
+      </li>
+      <li>
+        <article>
+          <h3>Senior'dan Staff'a Geçiş Programı</h3>
+          <time datetime="2026">Kış 2026</time>
+          <p>8 haftalık özel program; şirket içi kapalı grup.</p>
+        </article>
+      </li>
+      <li>
+        <article>
+          <h3>Event Storming 101 — Online Atölye</h3>
+          <time datetime="2025-11">Kasım 2025</time>
+          <p>Canlı kayıt ve materyaller abonelere açık.</p>
+        </article>
+      </li>
+    </ul>
+  </section>
+
+  <section id="iletisim">
+    <h2>İletişim</h2>
+    <p>
+      Yeni bir projeye giriyorsan, bir ekibe eşlik edecek birini arıyorsan ya da sadece bir yazıyı tartışmak istiyorsan — yaz.
+      İlk cevap genellikle 24 saat içinde gelir.
+    </p>
+    <address>
+      <p>E-posta: <a href="mailto:merhaba@erdogan.kim">merhaba@erdogan.kim</a></p>
+      <p>LinkedIn: <a rel="me" href="https://linkedin.com/in/erdoganozturk">linkedin.com/in/erdoganozturk</a></p>
+      <p>GitHub: <a rel="me" href="https://github.com/erdoganozturk">github.com/erdoganozturk</a></p>
+      <p>Konum: İstanbul, Türkiye · Uzaktan çalışmaya açık.</p>
+    </address>
+  </section>
+
+  <footer>
+    <p>© 2026 Erdoğan Öztürk · <a href="https://erdogan.kim/">erdogan.kim</a></p>
+  </footer>
+</main>
+
+<noscript>
+  <style>
+    .no-js-fallback {
+      position: fixed; inset: 0; z-index: 100;
+      background: #f4efe4; color: #141210;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      padding: 32px; overflow: auto;
+    }
+    .no-js-fallback h1 { font-family: Georgia, serif; font-size: 36px; margin: 0 0 12px; }
+    .no-js-fallback h2 { font-family: Georgia, serif; font-size: 22px; margin: 28px 0 8px; }
+    .no-js-fallback a { color: #c73c24; }
+    .no-js-fallback .note {
+      font-size: 13px; color: #7a7267;
+      border: 1.5px solid #141210; padding: 12px; margin-bottom: 24px;
+    }
+  </style>
+  <div class="no-js-fallback">
+    <p class="note">JavaScript kapalı görünüyor. Bu site etkileşimli bir 3D sunum; aşağıda metinsel sürümünü bulabilirsin.</p>
+    <h1>Erdoğan Öztürk</h1>
+    <p><strong>Yazılım Mimarı, Danışmanı, Eğitmeni</strong> — İstanbul</p>
+    <p>15+ yıllık yazılım mimarı, bağımsız danışman ve eğitmen. Domain-driven tasarım, event-driven mimari ve dağıtık sistemler.</p>
+    <p><a href="mailto:merhaba@erdogan.kim">merhaba@erdogan.kim</a></p>
+  </div>
+</noscript>
+
+<div id="loading">
+  <span><span class="blink">◆</span> ERDOGAN.KIM · YÜKLENİYOR</span>
+</div>
+
+<div id="webgl"></div>
+<div id="css3d"></div>
+
+<div class="hud tl">
+  <div class="bar"><span class="dot"></span><span><b>ERDOGAN.KIM</b></span></div>
+</div>
+
+<div class="hud bl">
+  <span class="muted">v0.3</span>
+</div>
+
+<div class="hud br">
+  <span class="muted">SÜRÜKLE &middot; YAKINLAŞTIR</span>
+</div>
+
+<div class="hint">DOKUN &amp; SÜRÜKLE</div>
+
+<div id="menu-cta">
+  <div class="label">Giriş için...</div>
+  <div class="arrow">▼</div>
+</div>
+
+<script type="importmap">
+{
+  "imports": {
+    "three": "https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js",
+    "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/"
+  }
+}
+</script>
+
+<script type="module">
+import * as THREE from 'three';
+import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
+import { CSS3DRenderer, CSS3DObject } from 'three/addons/renderers/CSS3DRenderer.js';
+
+const isMobile = window.matchMedia('(max-width: 720px)').matches;
+
+// ============ WEBGL SCENE ============
+const scene = new THREE.Scene();
+scene.background = new THREE.Color(0xf4efe4);
+scene.fog = new THREE.Fog(0xf4efe4, 40, 90);
+
+const camera = new THREE.PerspectiveCamera(
+  isMobile ? 62 : 52,
+  window.innerWidth / window.innerHeight, 0.1, 300
+);
+
+const renderer = new THREE.WebGLRenderer({ antialias: !isMobile, alpha: true });
+renderer.setSize(window.innerWidth, window.innerHeight);
+renderer.setPixelRatio(Math.min(devicePixelRatio, isMobile ? 1.5 : 2));
+renderer.toneMapping = THREE.ACESFilmicToneMapping;
+renderer.toneMappingExposure = 1.05;
+document.getElementById('webgl').appendChild(renderer.domElement);
+
+// ============ CSS3D SCENE ============
+const cssScene = new THREE.Scene();
+const cssRenderer = new CSS3DRenderer();
+cssRenderer.setSize(window.innerWidth, window.innerHeight);
+cssRenderer.domElement.style.position = 'absolute';
+cssRenderer.domElement.style.top = '0';
+document.getElementById('css3d').appendChild(cssRenderer.domElement);
+
+// ============ CONTROLS ============
+const controls = new OrbitControls(camera, cssRenderer.domElement);
+controls.enableDamping = true;
+controls.dampingFactor = 0.08;
+controls.minDistance = 6;
+controls.maxDistance = 60;
+controls.minPolarAngle = 0.15;
+controls.maxPolarAngle = Math.PI * 0.58;
+controls.touches = {
+  ONE: THREE.TOUCH.ROTATE,
+  TWO: THREE.TOUCH.DOLLY_PAN
+};
+
+// Menu camera vs full camera
+const MENU_CAM    = new THREE.Vector3(2, 14.5, 13);
+const MENU_TARGET = new THREE.Vector3(0, 14.5, 1.5);
+const FULL_CAM    = new THREE.Vector3(0, 6, isMobile ? 30 : 24);
+const FULL_TARGET = new THREE.Vector3(0, 3, 0);
+
+camera.position.copy(MENU_CAM);
+controls.target.copy(MENU_TARGET);
+controls.update();
+
+// ============ SKY / FLOOR / GRID ============
+const sky = new THREE.Mesh(
+  new THREE.SphereGeometry(120, 32, 32),
+  new THREE.ShaderMaterial({
+    side: THREE.BackSide,
+    uniforms: {
+      top:    { value: new THREE.Color(0xede5cf) },
+      bottom: { value: new THREE.Color(0xf4efe4) }
+    },
+    vertexShader: `varying vec3 vPos; void main(){ vPos = position; gl_Position = projectionMatrix * modelViewMatrix * vec4(position,1.0); }`,
+    fragmentShader: `varying vec3 vPos; uniform vec3 top; uniform vec3 bottom;
+      void main(){ float h = normalize(vPos).y*0.5+0.5; gl_FragColor = vec4(mix(bottom, top, pow(h,0.7)), 1.0); }`
+  })
+);
+scene.add(sky);
+
+const floor = new THREE.Mesh(
+  new THREE.CircleGeometry(60, 64),
+  new THREE.MeshStandardMaterial({ color: 0xf4efe4, roughness: 0.95 })
+);
+floor.rotation.x = -Math.PI / 2;
+floor.position.y = -4;
+scene.add(floor);
+
+// (ızgara kaldırıldı — yerine aşağıdaki yatay saat geldi)
+
+// ============ LIGHTS ============
+scene.add(new THREE.AmbientLight(0xfff4dc, 0.75));
+const key = new THREE.DirectionalLight(0xffe6c0, 0.9);
+key.position.set(8, 16, 10);
+scene.add(key);
+const rim = new THREE.DirectionalLight(0xffffff, 0.4);
+rim.position.set(-12, 8, -8);
+scene.add(rim);
+const redPoint = new THREE.PointLight(0xc73c24, 2.8, 30);
+redPoint.position.set(0, 9, 2);
+scene.add(redPoint);
+
+// ============ RED PRISM (proper 3D, gem/crystal shape) ============
+const PRISM_COLOR = 0xc73c24;
+const diamond = new THREE.Mesh(
+  new THREE.OctahedronGeometry(1.4, 0),
+  new THREE.MeshStandardMaterial({
+    color: PRISM_COLOR,
+    metalness: 0.25,
+    roughness: 0.28,
+    emissive: PRISM_COLOR,
+    emissiveIntensity: 0.12,
+    flatShading: true
+  })
+);
+diamond.scale.set(1.2, 1.55, 1.2); // hafif uzun — prizma hissi
+diamond.position.set(0, 11, 0);
+scene.add(diamond);
+
+const diamondGlow = new THREE.Mesh(
+  new THREE.SphereGeometry(2.2, 24, 24),
+  new THREE.ShaderMaterial({
+    transparent: true,
+    blending: THREE.AdditiveBlending,
+    depthWrite: false,
+    uniforms: { c: { value: new THREE.Color(PRISM_COLOR) } },
+    vertexShader: `varying vec3 vN; void main(){ vN=normalize(normalMatrix*normal); gl_Position=projectionMatrix*modelViewMatrix*vec4(position,1.0); }`,
+    fragmentShader: `varying vec3 vN; uniform vec3 c; void main(){ float i=pow(1.0-abs(vN.z), 2.5); gl_FragColor=vec4(c*i, i*0.4); }`
+  })
+);
+diamondGlow.position.copy(diamond.position);
+scene.add(diamondGlow);
+
+// ============ BLUE SOURCE (external — api) ============
+const SOURCE_COLOR = 0x2a68c8;
+const sourceMesh = new THREE.Mesh(
+  new THREE.IcosahedronGeometry(0.9, 1),
+  new THREE.MeshStandardMaterial({
+    color: SOURCE_COLOR,
+    metalness: 0.25,
+    roughness: 0.35,
+    emissive: SOURCE_COLOR,
+    emissiveIntensity: 0.18
+  })
+);
+sourceMesh.position.set(0, 18, 3);
+scene.add(sourceMesh);
+
+const sourceGlow = new THREE.Mesh(
+  new THREE.SphereGeometry(1.5, 24, 24),
+  new THREE.ShaderMaterial({
+    transparent: true,
+    blending: THREE.AdditiveBlending,
+    depthWrite: false,
+    uniforms: { c: { value: new THREE.Color(SOURCE_COLOR) } },
+    vertexShader: `varying vec3 vN; void main(){ vN=normalize(normalMatrix*normal); gl_Position=projectionMatrix*modelViewMatrix*vec4(position,1.0); }`,
+    fragmentShader: `varying vec3 vN; uniform vec3 c; void main(){ float i=pow(1.0-abs(vN.z), 2.5); gl_FragColor=vec4(c*i, i*0.55); }`
+  })
+);
+sourceGlow.position.copy(sourceMesh.position);
+scene.add(sourceGlow);
+
+const bluePoint = new THREE.PointLight(SOURCE_COLOR, 2.2, 30);
+bluePoint.position.copy(sourceMesh.position);
+scene.add(bluePoint);
+
+// ============ GREEN FEED LINE (source → prism) ============
+const PACKET_GREEN = 0x5f8247;
+const FEED_A = new THREE.Vector3(0, 18, 3);
+const FEED_B = new THREE.Vector3(0, 11.7, 0.2);
+const feedGeo = new THREE.BufferGeometry().setFromPoints([FEED_A, FEED_B]);
+const feedMat = new THREE.LineDashedMaterial({
+  color: PACKET_GREEN, dashSize: 0.42, gapSize: 0.28,
+  transparent: true, opacity: 0.85
+});
+const feedLine = new THREE.Line(feedGeo, feedMat);
+feedLine.computeLineDistances();
+scene.add(feedLine);
+
+// Animated green packet
+const packet = new THREE.Mesh(
+  new THREE.SphereGeometry(0.22, 16, 16),
+  new THREE.MeshStandardMaterial({
+    color: PACKET_GREEN,
+    emissive: PACKET_GREEN,
+    emissiveIntensity: 0.75,
+    metalness: 0.1,
+    roughness: 0.3
+  })
+);
+scene.add(packet);
+
+const packetGlow = new THREE.Mesh(
+  new THREE.SphereGeometry(0.5, 16, 16),
+  new THREE.MeshBasicMaterial({
+    color: PACKET_GREEN, transparent: true, opacity: 0.3,
+    blending: THREE.AdditiveBlending, depthWrite: false
+  })
+);
+scene.add(packetGlow);
+
+// ============ YERDEKI SAAT (ızgara yerine) ============
+// Floor'un üzerinde yatay duran, ızgara kadar büyük, silik bir saat.
+// Akrep-yelkovan saat yönünde, normalinden biraz hızlandırılmış şekilde dönüyor.
+const clockGroup = new THREE.Group();
+clockGroup.position.set(0, -3.93, 0);
+clockGroup.rotation.x = -Math.PI / 2; // X ekseninde dönük — yüzü yukarı bakıyor
+scene.add(clockGroup);
+
+const CLOCK_R   = 38;          // ızgara (80/2=40) ile uyumlu
+const clockInk  = 0x141210;
+const clockRed  = 0xc73c24;
+
+// Dış halka (rim) — en belirgin, yine de silik
+clockGroup.add(new THREE.Mesh(
+  new THREE.TorusGeometry(CLOCK_R, 0.14, 10, 180),
+  new THREE.MeshBasicMaterial({
+    color: clockInk, transparent: true, opacity: 0.22, depthWrite: false
+  })
+));
+// İnce iç halka
+clockGroup.add(new THREE.Mesh(
+  new THREE.TorusGeometry(CLOCK_R - 1.4, 0.05, 10, 180),
+  new THREE.MeshBasicMaterial({
+    color: clockInk, transparent: true, opacity: 0.13, depthWrite: false
+  })
+));
+// Çok silik bir orta halka (ızgara hissi kalsın)
+clockGroup.add(new THREE.Mesh(
+  new THREE.TorusGeometry(CLOCK_R * 0.6, 0.04, 10, 160),
+  new THREE.MeshBasicMaterial({
+    color: clockInk, transparent: true, opacity: 0.08, depthWrite: false
+  })
+));
+
+// 12 saat işareti — 12/3/6/9 daha uzun ve kalın
+for (let i = 0; i < 12; i++) {
+  const angle = (i / 12) * Math.PI * 2;
+  const cardinal = (i % 3 === 0);
+  const len = cardinal ? 3.2 : 1.4;
+  const wid = cardinal ? 0.32 : 0.14;
+  const op  = cardinal ? 0.26 : 0.14;
+  const mark = new THREE.Mesh(
+    new THREE.PlaneGeometry(wid, len),
+    new THREE.MeshBasicMaterial({
+      color: clockInk, transparent: true, opacity: op,
+      depthWrite: false, side: THREE.DoubleSide
+    })
+  );
+  const r = CLOCK_R - len / 2 - 0.7;
+  mark.position.set(Math.cos(angle) * r, Math.sin(angle) * r, 0.02);
+  mark.rotation.z = angle - Math.PI / 2;
+  clockGroup.add(mark);
+}
+
+// Ok (hand) üretici — ucu sivrilen iğne, düz/silik
+function makeHand(length, baseW, color, opacity) {
+  const s = new THREE.Shape();
+  s.moveTo(-baseW, -1.6);
+  s.lineTo( baseW, -1.6);
+  s.lineTo( baseW * 0.5, length * 0.72);
+  s.lineTo( baseW * 0.2, length * 0.90);
+  s.lineTo( 0,           length);
+  s.lineTo(-baseW * 0.2, length * 0.90);
+  s.lineTo(-baseW * 0.5, length * 0.72);
+  s.lineTo(-baseW, -1.6);
+  const geo = new THREE.ShapeGeometry(s);
+  return new THREE.Mesh(geo, new THREE.MeshBasicMaterial({
+    color, transparent: true, opacity, depthWrite: false, side: THREE.DoubleSide
+  }));
+}
+
+// yelkovan (minute) — uzun, ince, siyah-silik
+const minuteHand = makeHand(CLOCK_R * 0.86, 0.75, clockInk, 0.30);
+minuteHand.position.z = 0.04;
+clockGroup.add(minuteHand);
+
+// akrep (hour) — kısa, biraz kalın, kırmızı-silik
+const hourHand = makeHand(CLOCK_R * 0.54, 1.15, clockRed, 0.40);
+hourHand.position.z = 0.06;
+clockGroup.add(hourHand);
+
+// merkez kapak
+const clockCap = new THREE.Mesh(
+  new THREE.CylinderGeometry(1.0, 1.0, 0.16, 32),
+  new THREE.MeshStandardMaterial({
+    color: clockRed, roughness: 0.5, metalness: 0.2,
+    emissive: clockRed, emissiveIntensity: 0.08,
+    transparent: true, opacity: 0.55
+  })
+);
+clockCap.rotation.x = Math.PI / 2;
+clockCap.position.z = 0.1;
+clockGroup.add(clockCap);
+
+// ======================================================================
+// Yukarıdaki 7 nesne (sky, floor, grid, diamond, diamondGlow, sourceMesh,
+// sourceGlow, feedLine, packet, packetGlow) MENÜ HÂLİ — her zaman görünür.
+// Aşağıdaki HER ŞEY bloom olana kadar scale=0 ile saklanacak.
+// ======================================================================
+const coreSet = new Set([
+  sky, floor,
+  diamond, diamondGlow,
+  sourceMesh, sourceGlow,
+  feedLine, packet, packetGlow,
+  clockGroup
+]);
+
+// ============ GIANT 01/02/03 LABELS ============
+function bigNumber(x, y, z, label) {
+  const el = document.createElement('div');
+  el.style.fontFamily = "'Newsreader', Georgia, serif";
+  el.style.fontSize = '240px';
+  el.style.fontWeight = '500';
+  el.style.fontStyle = 'italic';
+  el.style.color = 'rgba(20,18,16,0.08)';
+  el.style.letterSpacing = '-0.05em';
+  el.style.lineHeight = '0.8';
+  el.style.pointerEvents = 'none';
+  el.textContent = label;
+  const o = new CSS3DObject(el);
+  o.position.set(x, y, z);
+  o.scale.set(0.02, 0.02, 0.02);
+  cssScene.add(o);
+  return o;
+}
+bigNumber(-14, 8, -18, '01');
+bigNumber(  0, 8, -22, '02');
+bigNumber( 14, 8, -18, '03');
+
+// ============ PAPER SCRAPS ============
+const scraps = [];
+const paperMat = new THREE.MeshStandardMaterial({
+  color: 0xf4efe4, roughness: 0.95, metalness: 0, side: THREE.DoubleSide
+});
+const paperMatWarm = new THREE.MeshStandardMaterial({
+  color: 0xede5cf, roughness: 0.95, metalness: 0, side: THREE.DoubleSide
+});
+const paperCount = isMobile ? 14 : 28;
+for (let i = 0; i < paperCount; i++) {
+  const w = 1 + Math.random() * 1.6;
+  const h = 0.7 + Math.random() * 1.2;
+  const geo = new THREE.PlaneGeometry(w, h);
+  const m = new THREE.Mesh(geo, i % 2 ? paperMat : paperMatWarm);
+  const r = 18 + Math.random() * 14;
+  const a = Math.random() * Math.PI * 2;
+  m.position.set(Math.cos(a) * r, Math.random() * 10 - 1, Math.sin(a) * r);
+  m.rotation.x = (Math.random() - 0.5) * 0.8;
+  m.rotation.y = Math.random() * Math.PI;
+  m.rotation.z = (Math.random() - 0.5) * 0.8;
+  m.userData = {
+    baseY: m.position.y,
+    phase: Math.random() * Math.PI * 2,
+    speed: 0.3 + Math.random() * 0.5,
+    rot: (Math.random() - 0.5) * 0.004
+  };
+  scene.add(m);
+  scraps.push(m);
+}
+
+// ============ RED ACCENT CUBES ============
+const redCubes = [];
+const cubeMat = new THREE.MeshStandardMaterial({
+  color: 0xc73c24, roughness: 0.5, metalness: 0.2,
+  emissive: 0xc73c24, emissiveIntensity: 0.05
+});
+for (let i = 0; i < 8; i++) {
+  const g = new THREE.BoxGeometry(0.3, 0.3, 0.3);
+  const m = new THREE.Mesh(g, cubeMat);
+  const r = 12 + Math.random() * 10;
+  const a = Math.random() * Math.PI * 2;
+  m.position.set(Math.cos(a) * r, Math.random() * 8, Math.sin(a) * r);
+  m.userData = { phase: Math.random() * Math.PI * 2, baseY: m.position.y };
+  scene.add(m);
+  redCubes.push(m);
+}
+
+// ============ CSS3D CARDS ============
+const cardData = [
+  {
+    id: 'hero', cls: 'p-card hero',
+    pos: [0, 3.5, 0], rotY: 0,
+    html: `
+      <div class="brand">◆ &nbsp; erdogan.kim</div>
+      <h1>Karmaşık <em>sistemleri</em><br/>sakin kararlarla.</h1>
+      <div class="roles">
+        <span class="chip ink">Yazılım Mimarı</span>
+        <span class="chip">Danışman</span>
+        <span class="chip red">Eğitmen</span>
+      </div>
+    `
+  },
+  {
+    id: 'mimar', cls: 'p-card mimar',
+    pos: [-10.5, 0.5, 5.5], rotY: Math.PI / 7,
+    html: `
+      <div class="label"><span class="num">A</span> MİMAR</div>
+      <h3>Sistemin <em>omurgasını</em> kurmak.</h3>
+      <p>Uzun dönemli olarak bir ürün ekibine katılıyor; teknik vizyonu kod, insan ve süreç eksenlerinde birlikte şekillendiriyorum.</p>
+      <ul>
+        <li>Domain-driven tasarım</li>
+        <li>Event-driven mimari</li>
+        <li>Bulut &amp; platform stratejisi</li>
+        <li>Teknik yol haritası</li>
+      </ul>
+    `
+  },
+  {
+    id: 'danisman', cls: 'p-card danisman',
+    pos: [0, -1, 8], rotY: 0,
+    html: `
+      <div class="label"><span class="num">B</span> DANIŞMAN</div>
+      <h3>Kritik karar anında <em>yanında</em>.</h3>
+      <p>Kısa ve yoğun programlarla ekiplere bağımsız bir göz sunuyorum. Architecture review'dan karar atölyelerine.</p>
+      <ul>
+        <li>Mimari değerlendirme (2–4 hafta)</li>
+        <li>Event storming atölyesi</li>
+        <li>Teknik due diligence</li>
+        <li>ADR &amp; dokümantasyon kültürü</li>
+      </ul>
+    `
+  },
+  {
+    id: 'egitmen', cls: 'p-card egitmen',
+    pos: [10.5, 0.5, 5.5], rotY: -Math.PI / 7,
+    html: `
+      <div class="label"><span class="num">C</span> EĞİTMEN</div>
+      <h3>Mühendisleri <em>bir üst</em> seviyeye.</h3>
+      <p>Şirket içi özel programlar ve kamuya açık atölyeler. Teori değil, somut kararlar üzerinden.</p>
+      <ul>
+        <li>Yazılım mimarisi temelleri</li>
+        <li>Dağıtık sistem tasarımı</li>
+        <li>DDD &amp; modelleme atölyesi</li>
+        <li>Senior → Staff geçiş programı</li>
+      </ul>
+    `
+  },
+  {
+    id: 'kim', cls: 'p-card kim',
+    pos: [-13, 5.5, -9], rotY: Math.PI / 5,
+    html: `
+      <div class="label"><span class="num">02</span> KİM</div>
+      <h3>Kaotik görüneni <em>anlaşılır</em> hâle getirmek.</h3>
+      <p class="lead">Ankara'da, babamın getirdiği ikinci el bilgisayarla başladı. O günden bu yana bankalardan e-ticarete, sağlıktan oyun arka uçlarına dek birçok sistemde çalıştım.</p>
+      <div class="pullquote">
+        İyi bir mimar, çizdiği her çizgiden önce neyi çizmeyeceğine karar verendir.
+      </div>
+    `
+  },
+  {
+    id: 'yazilar', cls: 'p-card writing',
+    pos: [13, 5.5, -9], rotY: -Math.PI / 5,
+    html: `
+      <div class="label"><span class="num">03</span> YAZILAR</div>
+      <h3>Bir probleme yakınken yazılmış <em>notlar</em>.</h3>
+      <div class="row"><span class="t"><a href="#">Bounded context üzerine notlar</a></span><span class="d">12 NİS</span></div>
+      <div class="row"><span class="t"><a href="#">Geri alınamayan kararlar</a></span><span class="d">28 MAR</span></div>
+      <div class="row"><span class="t"><a href="#">ADR'nin terapötik faydaları</a></span><span class="d">14 MAR</span></div>
+      <div class="row"><span class="t"><a href="#">"Basit tut" demek kolay</a></span><span class="d">2 MAR</span></div>
+    `
+  },
+  {
+    id: 'talks', cls: 'p-card talks',
+    pos: [0, 7, -14], rotY: 0,
+    html: `
+      <div class="label"><span class="num">04</span> KONUŞMALAR &amp; EĞİTİMLER</div>
+      <h3>Sahnede, atölyede, ekibin <em>içinde</em>.</h3>
+      <div class="row"><span class="t">Yazılım Mimarisi Atölyesi</span><span class="d">MAY 2026</span></div>
+      <div class="row"><span class="t">Dağıtık Sistemlerde Karar Almak</span><span class="d">MAR 2026</span></div>
+      <div class="row"><span class="t">Senior → Staff Programı</span><span class="d">KIŞ 2026</span></div>
+      <div class="row"><span class="t">Event Storming 101</span><span class="d">KAS 2025</span></div>
+    `
+  },
+  {
+    id: 'contact', cls: 'p-card contact',
+    pos: [0, -4.5, -4], rotY: 0, rotX: -0.18,
+    html: `
+      <div class="label"><span class="num">05</span> İLETİŞİM</div>
+      <h3>Bir <em>fikrin</em> mi var? Yaz.</h3>
+      <p>İlk cevap genellikle 24 saat içinde.</p>
+      <div class="row"><span class="t">E-posta</span><span class="d"><a href="mailto:merhaba@erdogan.kim">merhaba@erdogan.kim</a></span></div>
+      <div class="row"><span class="t">Danışmanlık</span><span class="d"><a href="#">Tanışma →</a></span></div>
+      <div class="row"><span class="t">LinkedIn</span><span class="d"><a href="#">/in/erdoganozturk</a></span></div>
+      <div class="row"><span class="t">Bülten</span><span class="d"><a href="#">Ayda bir ✉</a></span></div>
+    `
+  }
+];
+
+const cardScale = isMobile ? 0.015 : 0.02;
+const cssObjects = [];
+for (const c of cardData) {
+  const el = document.createElement('div');
+  el.className = c.cls;
+  el.innerHTML = c.html;
+  const obj = new CSS3DObject(el);
+  obj.position.set(...c.pos);
+  obj.rotation.y = c.rotY || 0;
+  obj.rotation.x = c.rotX || 0;
+  obj.scale.set(cardScale, cardScale, cardScale);
+  cssScene.add(obj);
+  cssObjects.push({ obj, data: c });
+
+  // red dotted line from prism to each content card (except hero)
+  if (c.id !== 'hero') {
+    const pts = [
+      new THREE.Vector3(0, 11, 0),
+      new THREE.Vector3(c.pos[0], c.pos[1] + 0.5, c.pos[2])
+    ];
+    const g = new THREE.BufferGeometry().setFromPoints(pts);
+    const m = new THREE.LineDashedMaterial({
+      color: 0xc73c24, dashSize: 0.3, gapSize: 0.2, transparent: true, opacity: 0.45
+    });
+    const line = new THREE.Line(g, m);
+    line.computeLineDistances();
+    scene.add(line);
+  }
+}
+
+// ============ EDGE LABELS (Cypher tadında) ============
+const edgeLabels = {
+  mimar: ':DESIGNS', danisman: ':ADVISES', egitmen: ':TEACHES',
+  kim: ':IS', yazilar: ':WROTE', talks: ':SPOKE_AT', contact: ':REACHED_VIA'
+};
+for (const c of cardData) {
+  if (c.id === 'hero' || !edgeLabels[c.id]) continue;
+  const mid = new THREE.Vector3(
+    (0 + c.pos[0]) / 2,
+    (11 + c.pos[1] + 0.5) / 2,
+    (0 + c.pos[2]) / 2
+  );
+  const el = document.createElement('div');
+  el.className = 'edge-label';
+  el.textContent = edgeLabels[c.id];
+  const o = new CSS3DObject(el);
+  o.position.copy(mid);
+  o.rotation.y = Math.atan2(-c.pos[2], -c.pos[0]) + Math.PI / 2;
+  o.scale.set(cardScale * 0.75, cardScale * 0.75, cardScale * 0.75);
+  cssScene.add(o);
+}
+
+// ============ GRAPH SATELLITE NODES ============
+const graphNodes = [];
+const graphNodeData = [
+  { label: '(:Post)',      color: 0x141210, offset: [ 4.2, 11.6,  1.2] },
+  { label: '(:Workshop)',  color: 0xc73c24, offset: [-3.8, 12.2,  1.8] },
+  { label: '(:Client)',    color: 0x141210, offset: [ 1.6, 13.8, -3.4] },
+  { label: '(:Talk)',      color: 0x141210, offset: [-1.4, 10.1, -3.6] },
+  { label: '(:ADR)',       color: 0xc73c24, offset: [ 3.6,  9.2, -2.4] }
+];
+for (const n of graphNodeData) {
+  const s = new THREE.Mesh(
+    new THREE.SphereGeometry(0.28, 24, 24),
+    new THREE.MeshStandardMaterial({
+      color: n.color,
+      metalness: n.color === 0xc73c24 ? 0.15 : 0.3,
+      roughness: 0.35,
+      emissive: n.color,
+      emissiveIntensity: n.color === 0xc73c24 ? 0.2 : 0.05
+    })
+  );
+  s.position.set(...n.offset);
+  s.userData = { base: [...n.offset], phase: Math.random() * Math.PI * 2 };
+  scene.add(s);
+  graphNodes.push(s);
+
+  const g = new THREE.BufferGeometry().setFromPoints([
+    new THREE.Vector3(0, 11, 0),
+    new THREE.Vector3(...n.offset)
+  ]);
+  const lm = new THREE.LineBasicMaterial({
+    color: 0x141210, transparent: true, opacity: 0.35
+  });
+  scene.add(new THREE.Line(g, lm));
+
+  const el = document.createElement('div');
+  el.className = 'node-tag' + (n.color === 0xc73c24 ? ' red' : '');
+  el.textContent = n.label;
+  const o = new CSS3DObject(el);
+  o.position.set(n.offset[0], n.offset[1] + 0.55, n.offset[2]);
+  o.scale.set(cardScale * 0.7, cardScale * 0.7, cardScale * 0.7);
+  cssScene.add(o);
+}
+
+// ============ CYPHER SNIPPET CARD ============
+(() => {
+  const el = document.createElement('div');
+  el.className = 'data-card cypher';
+  el.innerHTML = `<div class="dc-head"><span><span class="dot">◆</span> <b>GRAPH VIEW</b></span><span>neo4j · cypher</span></div><span class="com">// kim ne yapar?</span>
+<span class="kw">MATCH</span> (a:<span class="ident">Architect</span> {id:<span class="str">'erdogan'</span>})
+      -[r]-&gt;(n)
+<span class="kw">RETURN</span> type(r), n.title
+<span class="kw">ORDER BY</span> r.at <span class="kw">DESC</span>
+<span class="kw">LIMIT</span> 5;`;
+  const o = new CSS3DObject(el);
+  o.position.set(-16, 2.5, -3);
+  o.rotation.y = Math.PI / 5.5;
+  o.rotation.x = -0.04;
+  o.scale.set(cardScale * 0.95, cardScale * 0.95, cardScale * 0.95);
+  cssScene.add(o);
+})();
+
+// ============ T-SQL SNIPPET CARD ============
+(() => {
+  const el = document.createElement('div');
+  el.className = 'data-card';
+  el.innerHTML = `<div class="dc-head"><span><span class="dot">◆</span> <b>RELATIONAL VIEW</b></span><span>mssql · t-sql</span></div><span class="com">-- aynı soru, farklı gözle</span>
+<span class="kw">SELECT</span>  w.title, a.name, w.held_at
+<span class="kw">FROM</span>    dbo.architects      a
+<span class="kw">JOIN</span>    dbo.workshops       w
+        <span class="kw">ON</span> w.host_id = a.id
+<span class="kw">WHERE</span>   a.city = <span class="str">N'İstanbul'</span>
+<span class="kw">ORDER BY</span> w.held_at <span class="kw">DESC</span>;`;
+  const o = new CSS3DObject(el);
+  o.position.set(16, 2.5, -3);
+  o.rotation.y = -Math.PI / 5.5;
+  o.rotation.x = -0.04;
+  o.scale.set(cardScale * 0.95, cardScale * 0.95, cardScale * 0.95);
+  cssScene.add(o);
+})();
+
+// ============ RELATIONAL TABLE CARD ============
+(() => {
+  const el = document.createElement('div');
+  el.className = 'table-card';
+  el.innerHTML = `
+    <div class="tc-head"><span><span class="icon">◆</span> dbo.architect_log</span><span>7 rows</span></div>
+    <table>
+      <thead><tr><th>id</th><th>action</th><th>subject</th><th>at</th></tr></thead>
+      <tbody>
+        <tr><td><span class="type">01</span></td><td>designs</td><td>event-bus v3</td><td><span class="mut">2026-04-12</span></td></tr>
+        <tr><td><span class="type">02</span></td><td>advises</td><td>Fintech Co.</td><td><span class="mut">2026-04-05</span></td></tr>
+        <tr><td><span class="type">03</span></td><td>teaches</td><td>DDD Atölye</td><td><span class="mut">2026-03-28</span></td></tr>
+        <tr><td><span class="type">04</span></td><td>wrote</td><td>ADR #014</td><td><span class="mut">2026-03-14</span></td></tr>
+        <tr><td><span class="type">05</span></td><td>spoke_at</td><td>DevTurkey</td><td><span class="mut">2026-03-04</span></td></tr>
+      </tbody>
+    </table>
+    <div class="tc-foot">
+      <span><span class="g"></span><span class="ok">OK · 5 ms</span></span>
+      <span>PK: id · IDX: at</span>
+    </div>
+  `;
+  const o = new CSS3DObject(el);
+  o.position.set(16, -3, -10);
+  o.rotation.y = -Math.PI / 6;
+  o.rotation.x = 0.1;
+  o.scale.set(cardScale * 0.95, cardScale * 0.95, cardScale * 0.95);
+  cssScene.add(o);
+})();
+
+// ============ GRAPH EXAMPLE CARD ============
+(() => {
+  const el = document.createElement('div');
+  el.className = 'data-card cypher';
+  el.innerHTML = `<div class="dc-head"><span><span class="dot">◆</span> <b>GRAPH · EXAMPLE</b></span><span>same data</span></div>(:<span class="ident">Architect</span> {name:<span class="str">'Erdoğan'</span>})
+   -[:<span class="kw">DESIGNED</span> {year:2026}]-&gt;
+(:<span class="ident">System</span> {title:<span class="str">'event-bus v3'</span>})
+
+(:<span class="ident">Architect</span>)
+   -[:<span class="kw">TAUGHT</span>]-&gt; (:<span class="ident">Workshop</span> {name:<span class="str">'DDD'</span>})
+
+(:<span class="ident">Architect</span>)
+   -[:<span class="kw">SPOKE_AT</span>]-&gt; (:<span class="ident">Talk</span> {event:<span class="str">'DevTurkey'</span>})`;
+  const o = new CSS3DObject(el);
+  o.position.set(-16, -3, -10);
+  o.rotation.y = Math.PI / 6;
+  o.rotation.x = 0.1;
+  o.scale.set(cardScale * 0.95, cardScale * 0.95, cardScale * 0.95);
+  cssScene.add(o);
+})();
+
+// ============ rows ⇄ edges ⇄ json BANNER ============
+(() => {
+  const el = document.createElement('div');
+  el.style.fontFamily = "var(--serif)";
+  el.style.fontSize = '42px';
+  el.style.fontStyle = 'italic';
+  el.style.color = 'rgba(20,18,16,0.55)';
+  el.style.letterSpacing = '-0.01em';
+  el.style.textAlign = 'center';
+  el.style.padding = '10px 22px';
+  el.style.borderTop = '1.5px solid rgba(20,18,16,0.5)';
+  el.style.borderBottom = '1.5px solid rgba(20,18,16,0.5)';
+  el.style.whiteSpace = 'nowrap';
+  el.style.background = 'transparent';
+  el.innerHTML = `rows <span style="color:#c73c24;font-style:normal;margin:0 14px;">⇄</span> edges <span style="color:#2a68c8;font-style:normal;margin:0 14px;">⇄</span> json`;
+  const o = new CSS3DObject(el);
+  o.position.set(0, 22, -6);
+  o.scale.set(cardScale * 0.9, cardScale * 0.9, cardScale * 0.9);
+  cssScene.add(o);
+})();
+
+// ============ COLUMN BEAMS (floor hint) ============
+for (let i = -3; i <= 3; i++) {
+  const beam = new THREE.Mesh(
+    new THREE.PlaneGeometry(0.14, 40),
+    new THREE.MeshBasicMaterial({
+      color: 0x141210, transparent: true, opacity: 0.06
+    })
+  );
+  beam.rotation.x = -Math.PI / 2;
+  beam.rotation.z = Math.PI / 2;
+  beam.position.set(i * 3.8, -3.98, -2);
+  scene.add(beam);
+}
+
+// ============ BRIDGE DASHED LINE (SQL ↔ Cypher) ============
+(() => {
+  const bridgePts = [
+    new THREE.Vector3(-15, 2.5, -3),
+    new THREE.Vector3(-7, 4, -2),
+    new THREE.Vector3(0, 5, -1),
+    new THREE.Vector3(7, 4, -2),
+    new THREE.Vector3(15, 2.5, -3)
+  ];
+  const g = new THREE.BufferGeometry().setFromPoints(bridgePts);
+  const m = new THREE.LineDashedMaterial({
+    color: 0xc73c24, dashSize: 0.45, gapSize: 0.3,
+    transparent: true, opacity: 0.55
+  });
+  const line = new THREE.Line(g, m);
+  line.computeLineDistances();
+  scene.add(line);
+})();
+
+// ============ SECONDARY BLUE BRANCHES (source feeds data cards) ============
+(() => {
+  const branches = [
+    [new THREE.Vector3(0, 18, 3), new THREE.Vector3(16, -3, -10)],
+    [new THREE.Vector3(0, 18, 3), new THREE.Vector3(-16, -3, -10)],
+    [new THREE.Vector3(0, 18, 3), new THREE.Vector3(16,  2.5, -3)],
+    [new THREE.Vector3(0, 18, 3), new THREE.Vector3(-16, 2.5, -3)]
+  ];
+  for (const pts of branches) {
+    const g = new THREE.BufferGeometry().setFromPoints(pts);
+    const m = new THREE.LineDashedMaterial({
+      color: 0x2a68c8, dashSize: 0.32, gapSize: 0.36,
+      transparent: true, opacity: 0.25
+    });
+    const ln = new THREE.Line(g, m);
+    ln.computeLineDistances();
+    scene.add(ln);
+  }
+})();
+
+// ============ HTTP REQUEST CARD ============
+(() => {
+  const el = document.createElement('div');
+  el.className = 'data-card api';
+  el.innerHTML = `<div class="dc-head"><span><span class="dot">◆</span> <b>EXTERNAL · HTTPS</b></span><span>outgoing request</span></div><span class="method">GET</span> https://api.erdogan.kim/me
+<span class="kw">Accept</span>: application/json
+<span class="kw">User-Agent</span>: erdogan.kim/1.0
+<span class="kw">If-None-Match</span>: <span class="str">"w/4f2c"</span>
+
+<span class="com">// sunucu cevap verdi →</span>
+<span class="status">200 OK</span> <span class="punct">·</span> 42 ms <span class="punct">·</span> application/json`;
+  const o = new CSS3DObject(el);
+  o.position.set(-11, 14.5, 6);
+  o.rotation.y = Math.PI / 5.5;
+  o.rotation.x = 0.05;
+  o.scale.set(cardScale * 0.95, cardScale * 0.95, cardScale * 0.95);
+  cssScene.add(o);
+})();
+
+// ============ JSON RESPONSE CARD ============
+(() => {
+  const el = document.createElement('div');
+  el.className = 'data-card api';
+  el.innerHTML = `<div class="dc-head"><span><span class="dot">◆</span> <b>RESPONSE · JSON</b></span><span>application/json</span></div><span class="punct">{</span>
+  <span class="key">"name"</span>: <span class="str">"Erdoğan Öztürk"</span><span class="punct">,</span>
+  <span class="key">"roles"</span>: <span class="punct">[</span><span class="str">"architect"</span><span class="punct">, </span><span class="str">"consultant"</span><span class="punct">, </span><span class="str">"educator"</span><span class="punct">],</span>
+  <span class="key">"city"</span>: <span class="str">"İstanbul"</span><span class="punct">,</span>
+  <span class="key">"available"</span>: <span class="bool">true</span><span class="punct">,</span>
+  <span class="key">"stack"</span>: <span class="punct">[</span><span class="str">"ddd"</span><span class="punct">, </span><span class="str">"event-driven"</span><span class="punct">, </span><span class="str">"rust"</span><span class="punct">],</span>
+  <span class="key">"posts"</span>: <span class="num">42</span><span class="punct">,</span>
+  <span class="key">"links"</span>: <span class="punct">{</span>
+    <span class="key">"email"</span>:   <span class="str">"merhaba@erdogan.kim"</span><span class="punct">,</span>
+    <span class="key">"writing"</span>: <span class="str">"/yazilar"</span>
+  <span class="punct">}</span>
+<span class="punct">}</span>`;
+  const o = new CSS3DObject(el);
+  o.position.set(11, 14.5, 6);
+  o.rotation.y = -Math.PI / 5.5;
+  o.rotation.x = 0.05;
+  o.scale.set(cardScale * 0.95, cardScale * 0.95, cardScale * 0.95);
+  cssScene.add(o);
+})();
+
+// ======================================================================
+// DEFER: tüm menü-dışı nesneleri tara, scale=0 ile sakla, bloom'da geri aç
+// ======================================================================
+const deferred = [];
+function collectDeferred() {
+  for (const obj of scene.children) {
+    if (coreSet.has(obj)) continue;
+    if (obj.isLight) continue;
+    deferred.push({
+      obj,
+      sx: obj.scale.x, sy: obj.scale.y, sz: obj.scale.z
+    });
+    obj.scale.set(0.0001, 0.0001, 0.0001);
+  }
+  for (const obj of cssScene.children) {
+    deferred.push({
+      obj,
+      sx: obj.scale.x, sy: obj.scale.y, sz: obj.scale.z
+    });
+    obj.scale.set(0.0001, 0.0001, 0.0001);
+  }
+}
+collectDeferred();
+
+// ======================================================================
+// BLOOM — menüden tam sahneye geçiş
+// ======================================================================
+let bloomStarted = false;
+let bloomStartTime = 0;
+let bloomProgress = 0;
+const BLOOM_DURATION = 1.35;
+
+function startBloom() {
+  if (bloomStarted) return;
+  bloomStarted = true;
+  bloomStartTime = clock.getElapsedTime();
+  document.getElementById('menu-cta').classList.add('gone');
+  const hint = document.querySelector('.hint');
+  if (hint) hint.classList.add('gone');
+  // unlock full camera distance range
+  controls.maxDistance = 60;
+}
+
+// first tap/click anywhere triggers bloom
+renderer.domElement.addEventListener('pointerdown', startBloom, { passive: true });
+cssRenderer.domElement.addEventListener('pointerdown', startBloom, { passive: true });
+document.getElementById('menu-cta').addEventListener('click', startBloom);
+
+// ============ RESIZE ============
+window.addEventListener('resize', () => {
+  camera.aspect = window.innerWidth / window.innerHeight;
+  camera.updateProjectionMatrix();
+  renderer.setSize(window.innerWidth, window.innerHeight);
+  cssRenderer.setSize(window.innerWidth, window.innerHeight);
+});
+
+// ============ ANIMATE ============
+const clock = new THREE.Clock();
+const lerpV = new THREE.Vector3();
+
+function animate() {
+  const t = clock.getElapsedTime();
+
+  // ----- Bloom progress -----
+  if (bloomStarted && bloomProgress < 1) {
+    const elapsed = t - bloomStartTime;
+    bloomProgress = Math.min(1, elapsed / BLOOM_DURATION);
+    const eased = 1 - Math.pow(1 - bloomProgress, 3); // easeOutCubic
+
+    // scale all deferred objects
+    for (const d of deferred) {
+      d.obj.scale.set(d.sx * eased, d.sy * eased, d.sz * eased);
+    }
+
+    // camera pullback
+    camera.position.lerpVectors(MENU_CAM, FULL_CAM, eased);
+    lerpV.lerpVectors(MENU_TARGET, FULL_TARGET, eased);
+    controls.target.copy(lerpV);
+  }
+
+  // ----- Red prism (always visible) -----
+  diamond.rotation.y = t * 0.35;
+  diamond.rotation.z = Math.sin(t * 0.5) * 0.12;
+  diamond.position.y = 11 + Math.sin(t * 1.2) * 0.2;
+  diamondGlow.position.copy(diamond.position);
+  diamondGlow.scale.setScalar(1 + Math.sin(t * 1.2) * 0.05);
+
+  // ----- Blue source (always visible) -----
+  sourceMesh.rotation.y = t * 0.35;
+  sourceMesh.rotation.x = Math.sin(t * 0.7) * 0.25;
+  const hb = 1 + Math.abs(Math.sin(t * 2.6)) * 0.1;
+  sourceMesh.scale.setScalar(hb);
+  sourceGlow.scale.setScalar(1.1 + Math.abs(Math.sin(t * 2.6)) * 0.2);
+  bluePoint.intensity = 1.6 + Math.abs(Math.sin(t * 2.6)) * 1.4;
+
+  // ----- Green packet on green feed line (always visible) -----
+  const tp = (t * 0.36) % 1;
+  packet.position.lerpVectors(FEED_A, FEED_B, tp);
+  packetGlow.position.copy(packet.position);
+  const pulse = Math.sin(tp * Math.PI);
+  packet.scale.setScalar(0.7 + pulse * 0.6);
+  packetGlow.scale.setScalar(0.8 + pulse * 1.2);
+
+  // ----- Akrep-yelkovan (always visible) -----
+  // Normalinden biraz hızlandırılmış, saat yönünde (12 → 1 → 2 → 3 → ...)
+  const MINUTE_PERIOD = 15;   // saniye/tur  (normal 60s, ~4x hızlı)
+  const HOUR_PERIOD   = 180;  // saniye/tur  (1:12 oranı korundu)
+  minuteHand.rotation.z = -(t / MINUTE_PERIOD) * Math.PI * 2;
+  hourHand.rotation.z   = -(t / HOUR_PERIOD)   * Math.PI * 2;
+
+  // ----- Deferred scene animations (only run after bloom ~started so nothing flickers at 0 scale) -----
+  if (bloomStarted) {
+    for (const s of scraps) {
+      const d = s.userData;
+      s.position.y = d.baseY + Math.sin(t * d.speed + d.phase) * 0.6;
+      s.rotation.z += d.rot;
+      s.rotation.y += d.rot * 0.5;
+    }
+    for (const m of redCubes) {
+      const d = m.userData;
+      m.position.y = d.baseY + Math.sin(t * 0.8 + d.phase) * 0.5;
+      m.rotation.x += 0.005;
+      m.rotation.y += 0.007;
+    }
+    for (const s of graphNodes) {
+      const [bx, by, bz] = s.userData.base;
+      const ph = s.userData.phase;
+      s.position.x = bx + Math.sin(t * 0.4 + ph) * 0.35;
+      s.position.y = by + Math.cos(t * 0.6 + ph) * 0.25;
+      s.position.z = bz + Math.sin(t * 0.35 + ph * 1.3) * 0.35;
+    }
+  }
+
+  controls.update();
+  renderer.render(scene, camera);
+  cssRenderer.render(cssScene, camera);
+
+  requestAnimationFrame(animate);
+}
+
+animate();
+
+setTimeout(() => document.getElementById('loading').classList.add('gone'), 400);
+</script>
+
+</body>
+</html>

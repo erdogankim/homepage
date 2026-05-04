@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<meta name="theme-color" content="#f4efe4" />
+<title>erdogan.kim · taslak arşivi</title>
+<style>
+  :root {
+    --paper: #f4efe4;
+    --paper-warm: #ede5cf;
+    --ink: #141210;
+    --ink-soft: #3a342c;
+    --muted: #7a7267;
+    --line: #14121022;
+    --line-strong: #141210;
+    --red: #c73c24;
+    --blue: #2a68c8;
+    --green: #5f8247;
+    --serif: "Newsreader", "Iowan Old Style", "Palatino", Georgia, serif;
+    --sans: -apple-system, BlinkMacSystemFont, "Inter", "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    --mono: "JetBrains Mono", "SF Mono", ui-monospace, Menlo, Consolas, monospace;
+  }
+  *, *::before, *::after { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; background: var(--paper); color: var(--ink); }
+  body {
+    font-family: var(--sans);
+    font-size: 17px;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    -webkit-text-size-adjust: 100%;
+  }
+  a { color: var(--ink); text-decoration: none; }
+  .wrap { max-width: 1100px; margin: 0 auto; padding: 0 24px; }
+  @media (min-width: 720px) { .wrap { padding: 0 40px; } }
+
+  .topbar {
+    border-bottom: 1.5px solid var(--line-strong);
+    font-family: var(--mono);
+    font-size: 11.5px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+  }
+  .topbar .inner {
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 14px 0; gap: 16px;
+  }
+  .topbar .brand b { color: var(--ink); font-weight: 700; }
+  .topbar .dot { color: var(--red); }
+  .topbar .meta { color: var(--muted); display: none; }
+  @media (min-width: 720px) { .topbar .meta { display: flex; gap: 18px; } }
+
+  header.hero {
+    padding: 56px 0 48px;
+    border-bottom: 1.5px solid var(--line-strong);
+  }
+  @media (min-width: 720px) { header.hero { padding: 88px 0 80px; } }
+  header.hero .eyebrow {
+    display: inline-flex; align-items: center; gap: 10px;
+    font-family: var(--mono);
+    font-size: 11.5px; letter-spacing: 0.16em; text-transform: uppercase;
+    color: var(--red);
+    border: 1.5px solid var(--red);
+    border-radius: 999px;
+    padding: 5px 12px;
+    margin-bottom: 24px;
+  }
+  header.hero .eyebrow .pulse {
+    width: 6px; height: 6px; border-radius: 50%; background: var(--red);
+    animation: pulse 1.6s infinite;
+  }
+  @keyframes pulse { 0%,100%{opacity:1;} 50%{opacity:.2;} }
+  header.hero h1 {
+    font-family: var(--serif);
+    font-weight: 500;
+    font-size: clamp(40px, 8vw, 84px);
+    line-height: 0.96;
+    letter-spacing: -0.03em;
+    margin: 0 0 20px;
+    max-width: 16ch;
+  }
+  header.hero h1 em { color: var(--red); font-style: italic; }
+  header.hero p {
+    font-family: var(--serif);
+    font-size: clamp(17px, 2.4vw, 22px);
+    color: var(--ink-soft);
+    max-width: 58ch;
+    margin: 0;
+  }
+  header.hero .legend {
+    display: flex; flex-wrap: wrap; gap: 14px;
+    margin-top: 32px;
+    font-family: var(--mono);
+    font-size: 11.5px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+  .legend .k {
+    display: inline-flex; align-items: center; gap: 8px;
+    padding: 5px 10px;
+    border: 1.5px solid var(--line-strong);
+  }
+  .legend .k .s { width: 10px; height: 10px; display: inline-block; }
+  .legend .k .s.r { background: var(--red); }
+  .legend .k .s.b { background: var(--blue); }
+  .legend .k .s.g { background: var(--green); }
+  .legend .k .s.i { background: var(--ink); }
+
+  section { padding: 56px 0; border-bottom: 1.5px solid var(--line-strong); }
+  @media (min-width: 720px) { section { padding: 80px 0; } }
+
+  .sec-head {
+    display: grid; grid-template-columns: 1fr; gap: 10px; margin-bottom: 36px;
+  }
+  @media (min-width: 720px) { .sec-head { grid-template-columns: 200px 1fr; gap: 40px; } }
+  .sec-head .label {
+    font-family: var(--mono);
+    font-size: 11.5px; letter-spacing: 0.2em; text-transform: uppercase;
+    color: var(--muted);
+    padding-top: 8px;
+  }
+  .sec-head .label .num { color: var(--red); font-weight: 700; margin-right: 6px; }
+  .sec-head h2 {
+    font-family: var(--serif); font-weight: 500;
+    font-size: clamp(26px, 4.5vw, 42px);
+    line-height: 1.08;
+    letter-spacing: -0.02em;
+    margin: 0; max-width: 20ch;
+  }
+  .sec-head h2 em { color: var(--red); font-style: italic; }
+
+  /* cards grid */
+  .cards {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+  @media (min-width: 720px) { .cards { grid-template-columns: repeat(2, 1fr); gap: 22px; } }
+  @media (min-width: 1000px) { .cards { grid-template-columns: repeat(3, 1fr); } }
+
+  .card {
+    display: flex; flex-direction: column;
+    background: var(--paper);
+    border: 1.5px solid var(--line-strong);
+    padding: 24px 22px;
+    min-height: 280px;
+    position: relative;
+    transition: transform .18s, box-shadow .18s;
+  }
+  .card:hover {
+    transform: translateY(-2px);
+    box-shadow: 8px 10px 0 rgba(20,18,16,0.1);
+  }
+  .card .idx {
+    font-family: var(--mono);
+    font-size: 10.5px;
+    letter-spacing: 0.2em;
+    color: var(--red);
+    text-transform: uppercase;
+    margin-bottom: 12px;
+  }
+  .card h3 {
+    font-family: var(--serif); font-weight: 500;
+    font-size: 24px;
+    line-height: 1.15;
+    letter-spacing: -0.01em;
+    margin: 0 0 10px;
+  }
+  .card h3 em { color: var(--red); font-style: italic; }
+  .card p {
+    font-size: 14.5px;
+    color: var(--ink-soft);
+    margin: 0 0 14px;
+    line-height: 1.55;
+  }
+  .card .tags {
+    display: flex; flex-wrap: wrap; gap: 6px;
+    margin-bottom: 14px;
+  }
+  .card .tag {
+    font-family: var(--mono);
+    font-size: 10.5px;
+    padding: 3px 8px;
+    border: 1.5px solid var(--ink);
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+  }
+  .card .tag.red { background: var(--red); color: var(--paper); border-color: var(--red); }
+  .card .tag.blue { background: var(--blue); color: var(--paper); border-color: var(--blue); }
+  .card .tag.green { background: var(--green); color: var(--paper); border-color: var(--green); }
+  .card .tag.ink { background: var(--ink); color: var(--paper); }
+  .card .open {
+    margin-top: auto;
+    display: flex; align-items: center; justify-content: space-between;
+    padding-top: 14px;
+    border-top: 1px solid var(--line);
+    font-family: var(--mono);
+    font-size: 12px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--ink);
+  }
+  .card .open .arr { color: var(--red); font-size: 18px; }
+  .card.latest { background: var(--paper-warm); }
+  .card.latest::before {
+    content: "SON"; position: absolute; top: -10px; right: 12px;
+    font-family: var(--mono); font-size: 10.5px; letter-spacing: 0.2em;
+    padding: 3px 8px; background: var(--red); color: var(--paper);
+  }
+
+  /* story section */
+  .story p {
+    font-family: var(--serif);
+    font-size: clamp(17px, 2.1vw, 20px);
+    line-height: 1.65;
+    color: var(--ink);
+    margin: 0 0 16px;
+    max-width: 68ch;
+  }
+  .story p:first-child::first-letter {
+    float: left;
+    font-size: 4.2em;
+    font-weight: 500;
+    line-height: 0.85;
+    margin: 6px 12px 0 0;
+    color: var(--red);
+  }
+  .story .pullquote {
+    font-family: var(--serif);
+    font-style: italic;
+    font-size: clamp(20px, 3vw, 28px);
+    line-height: 1.35;
+    border-left: 3px solid var(--red);
+    padding: 10px 0 10px 22px;
+    margin: 32px 0;
+    color: var(--ink);
+  }
+
+  footer {
+    padding: 32px 0 56px;
+    font-family: var(--mono);
+    font-size: 11.5px;
+    letter-spacing: 0.08em;
+    color: var(--muted);
+    text-transform: uppercase;
+    display: flex; flex-wrap: wrap; justify-content: space-between; gap: 10px;
+  }
+  footer b { color: var(--ink); font-weight: 600; }
+  footer .dot { color: var(--red); }
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <div class="wrap inner">
+    <span class="brand"><span class="dot">◆</span> <b>erdogan.kim</b> · taslak arşivi</span>
+    <div class="meta">
+      <span>D:\erdogan.kim</span>
+      <span>6 TASLAK</span>
+      <span>NİSAN 2026</span>
+    </div>
+    <span>v0.6</span>
+  </div>
+</div>
+
+<header class="hero">
+  <div class="wrap">
+    <span class="eyebrow"><span class="pulse"></span> YEREL TASLAK ARŞİVİ · HEPSİ TEK DOSYA</span>
+    <h1>erdogan.kim<br/><em>tasarım günlüğü</em></h1>
+    <p>
+      Yazılım mimarı, danışmanı ve eğitmeni için bir kişisel site arıyoruz.
+      Şimdiye kadar beş farklı taslak çıktı — iki boyutlu editöryalden
+      üç boyutlu bir veri manzarasına kadar. Her birini ayrı bir dosya olarak
+      aşağıda bırakıyorum.
+    </p>
+    <div class="legend">
+      <span class="k"><span class="s r"></span> KIRMIZI · GRAPH / CYPHER</span>
+      <span class="k"><span class="s i"></span> SİYAH · RELATIONAL / T-SQL</span>
+      <span class="k"><span class="s b"></span> MAVİ · EXTERNAL / JSON</span>
+      <span class="k"><span class="s g"></span> YEŞİL · AKAN VERİ</span>
+    </div>
+  </div>
+</header>
+
+<section>
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="label"><span class="num">01</span> TASLAKLAR</div>
+      <h2>Beş <em>farklı ton</em>, aynı kişi.</h2>
+    </div>
+
+    <div class="cards">
+
+      <a class="card" href="01-soyut-3d-sahne.html">
+        <div class="idx">01 · İLK 3D DENEY</div>
+        <h3>Soyut 3D Sahne</h3>
+        <p>Erken bir 3D deneyi — yüzen geometrik formlar, parçacık alanı, parlayan bir merkez küre. Kişisel siteden bağımsız; olasılıkları görmek için.</p>
+        <div class="tags">
+          <span class="tag ink">Three.js</span>
+          <span class="tag">Sandbox</span>
+        </div>
+        <span class="open"><span>AÇ</span><span class="arr">→</span></span>
+      </a>
+
+      <a class="card" href="02-kisisel-site-koyu.html">
+        <div class="idx">02 · KOYU EDITORIAL</div>
+        <h3>Kişisel site — <em>koyu</em> ton</h3>
+        <p>İlk kişisel site taslağı. Koyu zemin, sıcak turuncu aksan, serif tipografi. "Kim, Şimdi, Yazılar, İletişim" bölümleri; sessiz ve editöryal.</p>
+        <div class="tags">
+          <span class="tag ink">2D</span>
+          <span class="tag">Koyu tema</span>
+        </div>
+        <span class="open"><span>AÇ</span><span class="arr">→</span></span>
+      </a>
+
+      <a class="card" href="03-kisisel-site-3d.html">
+        <div class="idx">03 · İLK 3D SİTE</div>
+        <h3>Kişisel site — <em>3D</em> uzay</h3>
+        <p>İçerik panellerinin uzayda asıldığı ilk 3D site. Merkezde döner bir elmas; etrafında "Kim, Şimdi, Yazılar, İletişim" CSS3D panelleri.</p>
+        <div class="tags">
+          <span class="tag ink">3D</span>
+          <span class="tag">CSS3DRenderer</span>
+        </div>
+        <span class="open"><span>AÇ</span><span class="arr">→</span></span>
+      </a>
+
+      <a class="card" href="04-editorial-magazine.html">
+        <div class="idx">04 · EDITORIAL MAGAZINE</div>
+        <h3>Editorial — <em>mimar, danışman, eğitmen</em></h3>
+        <p>Krem kağıt zemin, siyah ve kırmızı. Üç rolü omurga yapan tam responsive 2D site: pillar grid, hikâye, yazılar, konuşmalar, referanslar, CTA.</p>
+        <div class="tags">
+          <span class="tag red">Yeni tarz</span>
+          <span class="tag">Mobil uyumlu</span>
+          <span class="tag">2D</span>
+        </div>
+        <span class="open"><span>AÇ</span><span class="arr">→</span></span>
+      </a>
+
+      <a class="card" href="05-editorial-3d-data.html">
+        <div class="idx">05 · EDITORIAL 3D · DATA</div>
+        <h3>3D editorial + <em>veri katmanları</em></h3>
+        <p>Krem 3D sahnede üç rol kartı, Cypher ve T-SQL kod panoları, JSON dönen bir dış API kaynağı, edge etiketleri, akan yeşil veri paketi, yerde silik dönen büyük saat — <b>rows ⇄ edges ⇄ json</b>.</p>
+        <div class="tags">
+          <span class="tag red">Graph</span>
+          <span class="tag ink">Relational</span>
+          <span class="tag blue">JSON</span>
+          <span class="tag green">Akan veri</span>
+        </div>
+        <span class="open"><span>AÇ</span><span class="arr">→</span></span>
+      </a>
+
+      <a class="card latest" href="06-editorial-3d-kariyer.html">
+        <div class="idx">06 · EDITORIAL 3D · KARİYER</div>
+        <h3>Üç rol, kendi rengiyle + <em>19 yıllık kariyer</em></h3>
+        <p>En güncel hâl. <b>Mimarlık</b> derin teal-mavi, <b>Danışmanlık</b> terracotta, <b>Eğitmenlik</b> zeytin yeşili. 19 yıllık kariyer, dört sanatsal CV kartı olarak sahnede dağılıyor — Tübitak-SAGE, İTÜ, YCP, Mercedes-Benz, Wirecard, PAYCORE, Architecht, Bilge Adam, BT Akademi ve fazlası.</p>
+        <div class="tags">
+          <span class="tag" style="background:#2c5a7a;color:#f4efe4;border-color:#2c5a7a">Mimarlık</span>
+          <span class="tag" style="background:#b25a3e;color:#f4efe4;border-color:#b25a3e">Danışmanlık</span>
+          <span class="tag" style="background:#6e8c4a;color:#f4efe4;border-color:#6e8c4a">Eğitmenlik</span>
+          <span class="tag">19 yıl</span>
+          <span class="tag">CV</span>
+        </div>
+        <span class="open"><span>EN SON · AÇ</span><span class="arr">→</span></span>
+      </a>
+
+    </div>
+  </div>
+</section>
+
+<section class="story">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="label"><span class="num">02</span> HİKÂYE</div>
+      <h2>Nereden <em>nereye</em> geldik?</h2>
+    </div>
+
+    <p>
+      İlk deney, bir web sitesi bile değildi — sadece 3 boyutlu ortamda nelerin mümkün olduğunu görmek için
+      yüzen geometrik formlar ve bir parçacık alanıydı. Tarayıcıda, kod yazmadan, sadece bakılabilir bir şey.
+    </p>
+    <p>
+      Oradan ilk kişisel site taslağına geçtik: koyu zeminde sakin, editöryal bir ton.
+      Sonra onu 3D bir uzaya taşıdık — aynı içerikleri CSS3D panelleri olarak havada asılı duran bir sahneye.
+    </p>
+    <p>
+      Ardından tasarım dilini tamamen değiştirdik: krem kağıt, siyah ink, kırmızı vurgu.
+      Üç rol — <b>mimar, danışman, eğitmen</b> — sitenin omurgası oldu. Magazine tarzı, mobil uyumlu bir düzen.
+    </p>
+    <div class="pullquote">
+      Sonra o editöryal tonu 3D'ye taşıdık. Kartlar kağıttan nesnelere dönüştü, aralarına veri modelinin dilini serpiştirdik.
+    </div>
+    <p>
+      Bugün gelinen yerde sahne artık bir mimarın kafasındaki görüntüye benziyor:
+      solunda graph (Cypher), sağında relational (T-SQL), üstünde ise JSON döndüren bir dış kaynak.
+      Bağlantıların üstünde Cypher tadında ilişki etiketleri, ince mavi çizgilerin üzerinde
+      yavaşça süzülen yeşil bir paket. Üç bakış, aynı kişi.
+    </p>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap" style="display:flex; justify-content:space-between; width:100%; flex-wrap:wrap; gap:10px;">
+    <span>© 2026 <b>erdogan.kim</b> · taslak arşivi <span class="dot">◆</span></span>
+    <span>D:\erdogan.kim · <b>5 DOSYA</b></span>
+  </div>
+</footer>
+
+</body>
+</html>

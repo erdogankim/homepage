@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Erdoğan Öztürk — Yazılım Mimarı</title>
+<meta name="description" content="Erdoğan Öztürk'ün kişisel günlüğü. Yazılım mimarisi, dağıtık sistemler ve iyi kod üzerine notlar." />
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ctext y='24' font-size='24'%3E%E2%97%86%3C/text%3E%3C/svg%3E" />
+<style>
+  :root {
+    --bg: #0e0f12;
+    --bg-alt: #15171c;
+    --fg: #e7e7ea;
+    --fg-muted: #8b8e97;
+    --line: #23262d;
+    --accent: #f0a45a;
+    --accent-soft: #f0a45a22;
+    --mono: "JetBrains Mono", "SF Mono", ui-monospace, Menlo, Consolas, monospace;
+    --serif: "Newsreader", "Iowan Old Style", "Palatino", Georgia, serif;
+    --sans: -apple-system, BlinkMacSystemFont, "Inter", "Segoe UI", Roboto, sans-serif;
+  }
+
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--fg);
+    font-family: var(--sans);
+    font-size: 17px;
+    line-height: 1.65;
+    -webkit-font-smoothing: antialiased;
+  }
+  a { color: var(--fg); text-decoration: none; border-bottom: 1px solid var(--line); transition: color .15s, border-color .15s; }
+  a:hover { color: var(--accent); border-color: var(--accent); }
+
+  .wrap { max-width: 780px; margin: 0 auto; padding: 0 28px; }
+
+  /* ---- Nav ---- */
+  nav.top {
+    position: sticky; top: 0; z-index: 20;
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    background: rgba(14,15,18,0.72);
+    border-bottom: 1px solid var(--line);
+  }
+  nav.top .wrap {
+    display: flex; align-items: center; justify-content: space-between;
+    padding-top: 16px; padding-bottom: 16px;
+  }
+  .brand {
+    font-family: var(--mono);
+    font-size: 14px;
+    letter-spacing: 0.02em;
+    border: none;
+  }
+  .brand .dot { color: var(--accent); }
+  .nav-links { display: flex; gap: 22px; font-size: 14px; }
+  .nav-links a { border: none; color: var(--fg-muted); }
+  .nav-links a:hover { color: var(--fg); }
+
+  /* ---- Hero ---- */
+  header.hero {
+    padding: 110px 0 80px;
+    border-bottom: 1px solid var(--line);
+    position: relative;
+    overflow: hidden;
+  }
+  header.hero::before {
+    content: "";
+    position: absolute; inset: 0;
+    background:
+      radial-gradient(600px circle at 80% 10%, #f0a45a18, transparent 60%),
+      radial-gradient(500px circle at 10% 90%, #5a9ff022, transparent 60%);
+    pointer-events: none;
+  }
+  .eyebrow {
+    font-family: var(--mono);
+    font-size: 12.5px;
+    color: var(--accent);
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    margin-bottom: 22px;
+  }
+  h1 {
+    font-family: var(--serif);
+    font-weight: 500;
+    font-size: clamp(40px, 6.5vw, 64px);
+    line-height: 1.05;
+    letter-spacing: -0.02em;
+    margin: 0 0 22px;
+  }
+  h1 .light { color: var(--fg-muted); font-style: italic; }
+  .lede {
+    font-size: 19px;
+    color: var(--fg-muted);
+    max-width: 620px;
+    margin: 0 0 36px;
+  }
+  .lede b { color: var(--fg); font-weight: 500; }
+  .hero-meta {
+    display: flex; flex-wrap: wrap; gap: 28px;
+    font-family: var(--mono); font-size: 13px;
+    color: var(--fg-muted);
+    border-top: 1px solid var(--line);
+    padding-top: 22px;
+  }
+  .hero-meta span b { color: var(--fg); font-weight: 500; }
+
+  /* ---- Section ---- */
+  section { padding: 72px 0; border-bottom: 1px solid var(--line); }
+  section h2 {
+    font-family: var(--mono);
+    font-size: 13px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--fg-muted);
+    margin: 0 0 28px;
+    font-weight: 500;
+  }
+  section h2::before {
+    content: "§ ";
+    color: var(--accent);
+  }
+
+  /* ---- About ---- */
+  .about p {
+    font-family: var(--serif);
+    font-size: 20px;
+    line-height: 1.7;
+    margin: 0 0 22px;
+  }
+  .about p:first-of-type::first-letter {
+    font-size: 3.4em;
+    float: left;
+    line-height: 0.9;
+    margin: 6px 10px 0 0;
+    color: var(--accent);
+    font-weight: 500;
+  }
+  .pull {
+    font-family: var(--serif);
+    font-style: italic;
+    font-size: 22px;
+    line-height: 1.5;
+    color: var(--fg);
+    border-left: 2px solid var(--accent);
+    padding: 6px 0 6px 20px;
+    margin: 36px 0;
+  }
+
+  /* ---- Now ---- */
+  .now-grid {
+    display: grid;
+    grid-template-columns: 140px 1fr;
+    gap: 18px 28px;
+    font-size: 16px;
+  }
+  .now-grid dt {
+    font-family: var(--mono);
+    font-size: 12.5px;
+    color: var(--fg-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    padding-top: 4px;
+  }
+  .now-grid dd { margin: 0; }
+  .tags { display: flex; flex-wrap: wrap; gap: 8px; }
+  .tag {
+    font-family: var(--mono);
+    font-size: 12px;
+    padding: 4px 10px;
+    border: 1px solid var(--line);
+    border-radius: 20px;
+    color: var(--fg-muted);
+  }
+  .tag:hover { color: var(--accent); border-color: var(--accent); }
+
+  /* ---- Writing ---- */
+  .posts { list-style: none; padding: 0; margin: 0; }
+  .posts li {
+    display: grid;
+    grid-template-columns: 110px 1fr auto;
+    gap: 24px;
+    align-items: baseline;
+    padding: 22px 0;
+    border-top: 1px solid var(--line);
+  }
+  .posts li:last-child { border-bottom: 1px solid var(--line); }
+  .posts .date {
+    font-family: var(--mono);
+    font-size: 13px;
+    color: var(--fg-muted);
+  }
+  .posts .title a {
+    font-size: 18px;
+    font-weight: 500;
+    border: none;
+  }
+  .posts .title .sub {
+    display: block;
+    font-size: 14px;
+    color: var(--fg-muted);
+    margin-top: 4px;
+    font-weight: 400;
+  }
+  .posts .read {
+    font-family: var(--mono);
+    font-size: 12px;
+    color: var(--fg-muted);
+  }
+
+  /* ---- Contact ---- */
+  .contact-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 16px;
+    margin-top: 8px;
+  }
+  .contact-card {
+    border: 1px solid var(--line);
+    padding: 20px;
+    border-radius: 8px;
+    transition: border-color .15s, transform .15s;
+    display: block;
+  }
+  .contact-card:hover {
+    border-color: var(--accent);
+    transform: translateY(-2px);
+  }
+  .contact-card .k {
+    font-family: var(--mono);
+    font-size: 11.5px;
+    color: var(--fg-muted);
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    margin-bottom: 6px;
+  }
+  .contact-card .v {
+    font-family: var(--mono);
+    font-size: 15px;
+    color: var(--fg);
+  }
+
+  /* ---- Footer ---- */
+  footer {
+    padding: 44px 0 60px;
+    font-family: var(--mono);
+    font-size: 12.5px;
+    color: var(--fg-muted);
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+  footer a { border: none; color: var(--fg-muted); }
+  footer a:hover { color: var(--accent); }
+
+  @media (max-width: 640px) {
+    .posts li { grid-template-columns: 1fr; gap: 4px; }
+    .posts .read { display: none; }
+    .now-grid { grid-template-columns: 1fr; gap: 4px 0; }
+    .now-grid dd { margin-bottom: 14px; }
+    .nav-links { gap: 16px; }
+    section { padding: 54px 0; }
+    header.hero { padding: 72px 0 56px; }
+  }
+</style>
+</head>
+<body>
+
+<nav class="top">
+  <div class="wrap">
+    <a href="/" class="brand"><span class="dot">◆</span>&nbsp;erdogan.kim</a>
+    <div class="nav-links">
+      <a href="#kim">Kim</a>
+      <a href="#simdi">Şimdi</a>
+      <a href="#yazilar">Yazılar</a>
+      <a href="#iletisim">İletişim</a>
+    </div>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="wrap">
+    <div class="eyebrow">Yazılım Mimarı · İstanbul</div>
+    <h1>Erdoğan Öztürk.<br/><span class="light">Sistemler tasarlar, kod yazar, yazar.</span></h1>
+    <p class="lede">
+      Karmaşık sistemlerin arkasındaki <b>basitliği</b> bulmaya çalışıyorum.
+      Uzun yıllardır büyük ölçekli, dağıtık yazılımlar tasarlıyor;
+      ekiplere iyi kararların nasıl alınacağını aktarıyorum.
+      Bu, zaman içinde öğrendiklerimin, hâlâ merak ettiklerimin
+      ve günlük düşüncelerimin küçük defteri.
+    </p>
+    <div class="hero-meta">
+      <span><b>15+</b> yıl endüstri deneyimi</span>
+      <span><b>Dağıtık sistemler</b> · <b>Cloud</b> · <b>DDD</b></span>
+      <span>Şu an: <b>Principal Architect</b></span>
+    </div>
+  </div>
+</header>
+
+<section id="kim" class="about">
+  <div class="wrap">
+    <h2>Kim</h2>
+    <p>
+      Ankara'nın bir mahallesinde, babamın getirdiği ikinci el bir bilgisayarla başladı her şey.
+      O makinede derlenen ilk "Merhaba dünya"dan bu yana geçen yıllarda
+      bankalardan e-ticaret platformlarına, sağlık sistemlerinden oyun arka uçlarına kadar
+      birbirinden farklı alanlarda yazılımlar tasarladım. Ama aslında hep aynı işi yaptım:
+      kaotik görüneni anlaşılır hâle getirmek.
+    </p>
+
+    <p>
+      Yazılım mimarisi benim için kutuları çizgilerle birbirine bağlamaktan çok,
+      <em>insanlarla</em> ilgili bir disiplin. Bir sistemin dayanıklılığı, onu kuran ekibin
+      birbirini ne kadar iyi anladığıyla doğru orantılı. Bu yüzden en çok üzerinde çalıştığım şey,
+      takımların ortak bir dil konuşmasını sağlamak — sınırları net, seçimleri bilinçli,
+      kararları yazılı hale getirmek.
+    </p>
+
+    <div class="pull">
+      "İyi bir mimar, çizdiği her çizgiden önce neyi çizmeyeceğine karar verendir."
+    </div>
+
+    <p>
+      Ben sessiz sabahları seviyorum. Güne bir bardak filtre kahve ve boş bir not defteriyle başlarım.
+      Önemli kararların çoğunu klavyeye dokunmadan, kalemle alırım.
+      Kod yazmayı hâlâ bırakmadım — çünkü mimari, kodun parçalarından kopunca slayta dönüşüyor.
+    </p>
+
+    <p>
+      Buradaki yazılar, genellikle bir problemin içinden çıktığım anın sıcaklığıyla yazılıyor.
+      Hiçbiri kesin cevap değil; çoğu, yıllar sonra geri dönüp kendimle anlaşamadığım notlar olacak.
+      Ve bu tam olarak istediğim şey.
+    </p>
+  </div>
+</section>
+
+<section id="simdi">
+  <div class="wrap">
+    <h2>Şimdi</h2>
+    <dl class="now-grid">
+      <dt>Çalışma</dt>
+      <dd>Büyük ölçekli bir ödeme platformunun mimarisini event-driven bir modele taşıyoruz. Öğrendiklerim yavaş yavaş buraya düşecek.</dd>
+
+      <dt>Okuma</dt>
+      <dd><em>Team Topologies</em> — Skelton &amp; Pais. İkinci okuma, altını çizmekten sayfalar turuncu.</dd>
+
+      <dt>Kurcaladığım</dt>
+      <dd>
+        <div class="tags">
+          <span class="tag">Rust</span>
+          <span class="tag">Temporal.io</span>
+          <span class="tag">OpenTelemetry</span>
+          <span class="tag">CRDTs</span>
+          <span class="tag">DuckDB</span>
+        </div>
+      </dd>
+
+      <dt>Düşündüğüm</dt>
+      <dd>"Monolit mi mikro mu" tartışmasının yanlış soru olduğu, doğru sorunun <em>"sınır nerede?"</em> olduğu üzerine.</dd>
+
+      <dt>Konum</dt>
+      <dd>İstanbul · Kadıköy</dd>
+    </dl>
+  </div>
+</section>
+
+<section id="yazilar">
+  <div class="wrap">
+    <h2>Son Yazılar</h2>
+    <ul class="posts">
+      <li>
+        <span class="date">12 Nisan 2026</span>
+        <span class="title">
+          <a href="#">Sınırları doğru çizmek: bounded context üzerine notlar</a>
+          <span class="sub">DDD'nin en çok yanlış anlaşılan kısmı sanırım bu.</span>
+        </span>
+        <span class="read">9 dk</span>
+      </li>
+      <li>
+        <span class="date">28 Mart 2026</span>
+        <span class="title">
+          <a href="#">Event-driven mimaride geri alınamayan kararlar</a>
+          <span class="sub">Bir mesaj yayınladığında, onu geri alamazsın. Tasarımın başladığı yer burası.</span>
+        </span>
+        <span class="read">12 dk</span>
+      </li>
+      <li>
+        <span class="date">14 Mart 2026</span>
+        <span class="title">
+          <a href="#">ADR yazmanın terapötik faydaları</a>
+          <span class="sub">Karar kayıtları bir dokümantasyon aracı değil; bir düşünme aracıdır.</span>
+        </span>
+        <span class="read">6 dk</span>
+      </li>
+      <li>
+        <span class="date">2 Mart 2026</span>
+        <span class="title">
+          <a href="#">"Basit tut" demek kolay: peki gerçekte nasıl?</a>
+          <span class="sub">Basitlik, bir son değil; sürekli verilen bir kavgadır.</span>
+        </span>
+        <span class="read">8 dk</span>
+      </li>
+      <li>
+        <span class="date">19 Şubat 2026</span>
+        <span class="title">
+          <a href="#">Bir mimarın günlük rutini</a>
+          <span class="sub">Toplantıların arasında düşünmek için alan açmak.</span>
+        </span>
+        <span class="read">5 dk</span>
+      </li>
+      <li>
+        <span class="date">3 Şubat 2026</span>
+        <span class="title">
+          <a href="#">Ekiplere mimari kararları nasıl anlatırım</a>
+          <span class="sub">Çizim değil, hikâye. İkna değil, davet.</span>
+        </span>
+        <span class="read">7 dk</span>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<section id="iletisim">
+  <div class="wrap">
+    <h2>İletişim</h2>
+    <p style="color: var(--fg-muted); margin-top:-6px; margin-bottom: 24px;">
+      Yeni bir problemin üzerinde konuşmak, bir yazıyı tartışmak ya da sadece selam vermek istersen:
+    </p>
+    <div class="contact-grid">
+      <a class="contact-card" href="mailto:merhaba@erdogan.kim">
+        <div class="k">E-posta</div>
+        <div class="v">merhaba@erdogan.kim</div>
+      </a>
+      <a class="contact-card" href="#">
+        <div class="k">GitHub</div>
+        <div class="v">@erdoganozturk</div>
+      </a>
+      <a class="contact-card" href="#">
+        <div class="k">LinkedIn</div>
+        <div class="v">/in/erdoganozturk</div>
+      </a>
+      <a class="contact-card" href="/feed.xml">
+        <div class="k">RSS</div>
+        <div class="v">feed.xml</div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap" style="display:flex; justify-content:space-between; width:100%; flex-wrap:wrap; gap:12px;">
+    <span>© 2026 Erdoğan Öztürk · erdogan.kim</span>
+    <span>Bu site elle yazılmıştır. Takip yok, reklam yok.</span>
+  </div>
+</footer>
+
+</body>
+</html>
