@@ -1140,128 +1140,110 @@ const m0 = new THREE.Group();
   monuments.push({ id: 'intro', group: m0, baseRot: [0, 0, 0] });
 }
 
-// 001 / ROLLER — üç wireframe küp, üçü farklı ölçek (A B C)
+// 001 / ROLLER (Müfredatlar'a transit) — üç wireframe küp + her küpte mini graph diyagramı
 const m1 = new THREE.Group();
 {
-  const a = edgeBox(2.4, 3.0, 2.4, matInk); a.position.set(-3.4, 0, 0);
-  const b = edgeBox(2.4, 4.5, 2.4, matAccent); b.position.set(0, 0.75, 0);
-  const c = edgeBox(2.4, 2.2, 2.4, matInk); c.position.set(3.4, -0.4, 0);
-  m1.add(a, b, c);
-
-  // küpleri birleştiren ince çizgiler
-  const linkPts = [
-    new THREE.Vector3(-3.4, 1.5, 0),
-    new THREE.Vector3(0, 3, 0),
-    new THREE.Vector3(3.4, 0.7, 0)
+  const cubes = [
+    { x: -3.4, y: 0,    w: 2.4, h: 3.0, d: 2.4, mat: matInk },
+    { x: 0,    y: 0.75, w: 2.4, h: 4.5, d: 2.4, mat: matAccent },
+    { x: 3.4,  y: -0.4, w: 2.4, h: 2.2, d: 2.4, mat: matInk }
   ];
-  const linkGeo = new THREE.BufferGeometry().setFromPoints(linkPts);
-  const link = new THREE.Line(linkGeo, matInkSoft);
-  m1.add(link);
 
-  m1.position.set(20, 1.5, 0);
-  scene.add(m1);
-  monuments.push({ id: 'roles', group: m1, baseRot: [0, 0, 0] });
-}
-
-// 002 / KARİYER (Müfredatlar transit) — küp kolonu + her küpte mini graph diyagramı
-const m2 = new THREE.Group();
-{
-  const N = 19;
-
-  // Düğüm (sphere) ve iç-küp kenarı (line) materyalleri
   const nodeMat = new THREE.MeshBasicMaterial({ color: ACCENT });
   const innerEdgeMat = new THREE.LineBasicMaterial({
     color: INK, transparent: true, opacity: 0.55
   });
   const interEdgeMat = new THREE.LineBasicMaterial({
-    color: ACCENT, transparent: true, opacity: 0.35
+    color: ACCENT, transparent: true, opacity: 0.45
   });
 
-  // Pseudo-rastgele (seed = cube index) — sayfa her yenilendiğinde stabil görünüm
+  // Pseudo-rastgele · seed = küp index'i (her sayfada stabil görünüm)
   const rng = (n) => {
     const s = Math.sin(n * 12.9898 + 78.233) * 43758.5453;
     return s - Math.floor(s);
   };
 
-  // Her küp için bir referans düğümü saklayıp küpler arası hat için kullanacağız
   const cubeAnchors = [];
 
-  for (let i = 0; i < N; i++) {
-    const sz = 0.55 + (i / N) * 1.0;
-    const h = 0.45;
-    const yPos = i * 0.6 - (N * 0.6) / 2;
-    const yRot = (i / N) * Math.PI * 0.6;
-
-    // Küp grubu — küpün edge'i + içindeki graph birlikte döner
+  cubes.forEach((c, i) => {
     const cubeGroup = new THREE.Group();
-    cubeGroup.position.y = yPos;
-    cubeGroup.rotation.y = yRot;
+    cubeGroup.position.set(c.x, c.y, 0);
 
-    const edge = edgeBox(sz, h, sz, i === N - 1 ? matAccent : matInk);
+    const edge = edgeBox(c.w, c.h, c.d, c.mat);
     cubeGroup.add(edge);
 
-    // İç graph: 3..5 düğüm
-    const nodeCount = 3 + Math.floor(rng(i * 3.1) * 3);
+    // İç graph: 5..7 düğüm (büyük küp = daha çok düğüm)
+    const nodeCount = 5 + Math.floor(rng(i * 3.7) * 3);
     const nodes = [];
     for (let n = 0; n < nodeCount; n++) {
-      const r = 0.045 + rng(i * 7 + n) * 0.015;
-      const sph = new THREE.Mesh(new THREE.SphereGeometry(r, 8, 6), nodeMat);
+      const r = 0.07 + rng(i * 5 + n) * 0.04;
+      const sph = new THREE.Mesh(new THREE.SphereGeometry(r, 10, 8), nodeMat);
       sph.position.set(
-        (rng(i * 11 + n * 2) - 0.5) * sz * 0.7,
-        (rng(i * 13 + n * 3) - 0.5) * h * 0.65,
-        (rng(i * 17 + n * 5) - 0.5) * sz * 0.7
+        (rng(i * 11 + n * 2) - 0.5) * c.w * 0.7,
+        (rng(i * 13 + n * 3) - 0.5) * c.h * 0.7,
+        (rng(i * 17 + n * 5) - 0.5) * c.d * 0.7
       );
       cubeGroup.add(sph);
       nodes.push(sph);
     }
 
-    // İç kenarlar — her düğümü 1-2 komşuya bağla
+    // İç kenarlar — her düğümü 1-2 komşusuna bağla
     for (let a = 0; a < nodes.length; a++) {
       const b = nodes[(a + 1) % nodes.length];
       cubeGroup.add(new THREE.Line(
         new THREE.BufferGeometry().setFromPoints([nodes[a].position, b.position]),
         innerEdgeMat
       ));
-      if (a % 2 === 0 && nodes.length > 3) {
-        const c = nodes[(a + 2) % nodes.length];
+      if (a % 2 === 0) {
+        const cc = nodes[(a + 2) % nodes.length];
         cubeGroup.add(new THREE.Line(
-          new THREE.BufferGeometry().setFromPoints([nodes[a].position, c.position]),
+          new THREE.BufferGeometry().setFromPoints([nodes[a].position, cc.position]),
           innerEdgeMat
         ));
       }
     }
 
-    // Bu küp için bir "anchor" düğümü seç — küpler arası hat oradan çıkacak
-    const anchorLocal = nodes[Math.floor(rng(i * 19) * nodes.length)].position.clone();
-    // Küpün rotation+position'ını uygulayıp m2-uzayındaki konumu hesapla
-    const cubeMtx = new THREE.Matrix4()
-      .makeRotationY(yRot)
-      .setPosition(0, yPos, 0);
-    const anchorM2 = anchorLocal.clone().applyMatrix4(cubeMtx);
-    cubeAnchors.push(anchorM2);
+    // Anchor — küpler arası hat oradan çıkacak (m1-uzayındaki konum)
+    const anchorIdx = Math.floor(rng(i * 19) * nodes.length);
+    const anchorM1 = nodes[anchorIdx].position.clone()
+      .add(new THREE.Vector3(c.x, c.y, 0));
+    cubeAnchors.push(anchorM1);
 
-    m2.add(cubeGroup);
-  }
+    m1.add(cubeGroup);
+  });
 
-  // Küpler arası mesaj hatları — her komşu küp arasında, ve birkaç uzun atlayan "skip" hattı
-  for (let i = 0; i < cubeAnchors.length - 1; i++) {
-    m2.add(new THREE.Line(
-      new THREE.BufferGeometry().setFromPoints([cubeAnchors[i], cubeAnchors[i + 1]]),
-      interEdgeMat
-    ));
-  }
-  // Mimaride bağımsız servisler arası iletişim hissi: 4 uzun atlama hattı
-  const skips = [[1, 6], [4, 11], [8, 15], [12, 17]];
-  for (const [a, b] of skips) {
-    if (a < cubeAnchors.length && b < cubeAnchors.length) {
-      m2.add(new THREE.Line(
-        new THREE.BufferGeometry().setFromPoints([cubeAnchors[a], cubeAnchors[b]]),
-        interEdgeMat
-      ));
-    }
-  }
+  // Küpler arası iletişim hatları (komşu + uzun atlama)
+  m1.add(new THREE.Line(
+    new THREE.BufferGeometry().setFromPoints([cubeAnchors[0], cubeAnchors[1]]),
+    interEdgeMat
+  ));
+  m1.add(new THREE.Line(
+    new THREE.BufferGeometry().setFromPoints([cubeAnchors[1], cubeAnchors[2]]),
+    interEdgeMat
+  ));
+  // Skip-link: 1 ↔ 3 (uzak servis-servis)
+  m1.add(new THREE.Line(
+    new THREE.BufferGeometry().setFromPoints([cubeAnchors[0], cubeAnchors[2]]),
+    interEdgeMat
+  ));
 
-  // dikey çizgi ekseni (mevcut)
+  m1.position.set(20, 1.5, 0);
+  scene.add(m1);
+  monuments.push({ id: 'roles', group: m1, baseRot: [0, 0, 0] });
+}
+
+// 002 / KARİYER — uzun, dikey wireframe sütun (timeline of cubes)
+const m2 = new THREE.Group();
+{
+  const N = 19; // 19 yıl
+  for (let i = 0; i < N; i++) {
+    const sz = 0.55 + (i / N) * 1.0;
+    const m = edgeBox(sz, 0.45, sz, i === N - 1 ? matAccent : matInk);
+    m.position.y = i * 0.6 - (N * 0.6) / 2;
+    m.rotation.y = (i / N) * Math.PI * 0.6;
+    m2.add(m);
+  }
+  // dikey çizgi ekseni
   const axisGeo = new THREE.BufferGeometry().setFromPoints([
     new THREE.Vector3(0, -8, 0),
     new THREE.Vector3(0, 8, 0)
