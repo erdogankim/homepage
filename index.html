@@ -414,7 +414,7 @@
     .cv-row { grid-template-columns: 80px 1fr; gap: 10px; }
   }
 
-  /* Orgs (kurumlar) */
+  /* Müfredat track grid (orgs-* — generic 4-col cell ızgarası) */
   .orgs-intro {
     max-width: 760px;
     font-size: 16px;
@@ -666,7 +666,7 @@
     <a href="#s-intro" data-nav>Intro</a>
     <a href="#s-roles" data-nav>Roller</a>
     <a href="#s-career" data-nav>Kariyer</a>
-    <a href="#s-kurumlar" data-nav>Kurumlar</a>
+    <a href="#s-mufredat" data-nav>Müfredatlar</a>
     <a href="#s-talks" data-nav>Konuşmalar</a>
     <a href="#s-contact" data-nav>İletişim</a>
   </nav>
@@ -963,59 +963,62 @@
     </div>
   </section>
 
-  <!-- ============ 003 / KURUMLAR ============ -->
-  <section id="s-kurumlar" class="section">
+  <!-- ============ 003 / KURUMSAL MÜFREDATLAR ============ -->
+  <section id="s-mufredat" class="section">
     <div class="grid">
       <div class="sec-head">
         <span class="num">003</span>
-        <span class="label"><span>Kurumlar</span><span class="right">Mimari · Danışmanlık · Eğitim</span></span>
+        <span class="label"><span>Kurumsal Müfredatlar</span><span class="right">4 Track · 16 Modül · Pattern-First</span></span>
       </div>
 
       <h2 class="titanic" style="font-size:clamp(40px,8vw,108px);margin-bottom:30px;">
-        Birlikte <span class="accent">çalıştığım.</span>
+        Pattern <span class="accent">okuyan ekip.</span>
       </h2>
 
       <p class="orgs-intro">
-        19 yıllık yolda bankacılıktan savunma sanayine, otomotivden ödeme sistemlerine
-        uzanan bir çeşitlilikte ekiplere katıldım, danışmanlık verdim, mühendisleri yetiştirdim.
-        Aşağıda kurumların bir kısmı.
+        Mühendisin işi tek bir framework'ü kullanmak değil, sorunun şeklini görüp doğru deseni seçmektir.
+        Kurumsal Müfredatlar; ekipleri katalogdaki bir deseni tanımak yerine
+        <em>neden, ne zaman ve hangi maliyetle</em> uygulanacağına karar verecek olgunluğa taşır.
+        Dört müfredat; on altı modül; tamamı atölye temelli.
       </p>
 
       <div class="orgs-section">
-        <div class="orgs-head"><span class="orgs-tag">A</span> Mimari &amp; Danışmanlık</div>
+        <div class="orgs-head"><span class="orgs-tag">A</span> Kurumsal Mimari Desenleri · PoEAA</div>
         <div class="orgs-grid">
-          <div class="org-cell"><div class="org-name">Architecht</div><div class="org-meta">Kuveyt-Türk · Bankacılık · 2023–</div></div>
-          <div class="org-cell"><div class="org-name">Tübitak-SAGE</div><div class="org-meta">Savunma · Mimar · 2021–22</div></div>
-          <div class="org-cell"><div class="org-name">PAYCORE</div><div class="org-meta">Ödeme · Danışman · 2022</div></div>
-          <div class="org-cell"><div class="org-name">Mercedes-Benz Türk</div><div class="org-meta">Otomotiv · Danışman · 2020–21</div></div>
-          <div class="org-cell"><div class="org-name">Wirecard</div><div class="org-meta">Fintech · Danışman · 2019–20</div></div>
-          <div class="org-cell"><div class="org-name">YCP Bilgi Teknolojileri</div><div class="org-meta">Ar/Ge Direktörü · 2016–19</div></div>
-          <div class="org-cell"><div class="org-name">İstanbul Teknik Üniversitesi</div><div class="org-meta">Bilgi İşlem · Mimar · 2014–15</div></div>
-          <div class="org-cell"><div class="org-name">Anadolu Sigorta</div><div class="org-meta">Sigorta · Rücu/Hasar projeleri</div></div>
-          <div class="org-cell"><div class="org-name">Biometrik Perkotek</div><div class="org-meta">Biyometri · Danışman · 2016</div></div>
-          <div class="org-cell"><div class="org-name">Ajanspress Medya Takip</div><div class="org-meta">Medya · Mimari · 2016</div></div>
-          <div class="org-cell"><div class="org-name">Saat &amp; Saat Mağazacılık</div><div class="org-meta">Perakende · Mimari · 2016</div></div>
-          <div class="org-cell"><div class="org-name">Çolakoğlu Holding</div><div class="org-meta">Texas, USA · ERP · 2015–16</div></div>
+          <div class="org-cell"><div class="org-name">Domain Logic</div><div class="org-meta">Transaction Script · Domain Model · Service Layer</div></div>
+          <div class="org-cell"><div class="org-name">Data Source</div><div class="org-meta">Active Record · Data Mapper · Repository · Gateway</div></div>
+          <div class="org-cell"><div class="org-name">Object-Relational</div><div class="org-meta">Unit of Work · Identity Map · Lazy Load · Inheritance</div></div>
+          <div class="org-cell"><div class="org-name">Web Presentation</div><div class="org-meta">MVC · Front Controller · Template View · BFF</div></div>
         </div>
       </div>
 
       <div class="orgs-section">
-        <div class="orgs-head"><span class="orgs-tag">B</span> Kurumsal Eğitim</div>
+        <div class="orgs-head"><span class="orgs-tag">B</span> Domain-Driven Design · Stratejik &amp; Taktik</div>
         <div class="orgs-grid">
-          <div class="org-cell"><div class="org-name">TSK</div><div class="org-meta">Türk Silahlı Kuvvetleri · Yazılım eğitimi</div></div>
-          <div class="org-cell"><div class="org-name">Fresenius Medical</div><div class="org-meta">Sağlık · OOP · SOLID · TFS</div></div>
-          <div class="org-cell"><div class="org-name">Zorlu Holding</div><div class="org-meta">Holding · Katmanlı Mimari · SCRUM</div></div>
-          <div class="org-cell"><div class="org-name">Petkim PetroKimya</div><div class="org-meta">Petrokimya · İleri Yazılım Teknikleri</div></div>
+          <div class="org-cell"><div class="org-name">Stratejik DDD</div><div class="org-meta">Bounded Context · Subdomain · Context Map</div></div>
+          <div class="org-cell"><div class="org-name">Taktik DDD</div><div class="org-meta">Aggregate · Entity · Value Object · Domain Event</div></div>
+          <div class="org-cell"><div class="org-name">Modelleme Atölyesi</div><div class="org-meta">Event Storming · Example Mapping · Domain Story</div></div>
+          <div class="org-cell"><div class="org-name">Ports &amp; Adapters</div><div class="org-meta">Hexagonal · Onion · Clean · Vertical Slice</div></div>
         </div>
       </div>
 
       <div class="orgs-section">
-        <div class="orgs-head"><span class="orgs-tag">C</span> Eğitim Kurumları · Master Trainer</div>
+        <div class="orgs-head"><span class="orgs-tag">C</span> Dağıtık Sistem Desenleri · Microservices</div>
         <div class="orgs-grid">
-          <div class="org-cell"><div class="org-name">Bilge Adam Bilişim</div><div class="org-meta">Birim Müdürü · Master Trainer · 2013–14</div></div>
-          <div class="org-cell"><div class="org-name">BT Akademi</div><div class="org-meta">Eğitmen · ≈150 grup · 2015–19</div></div>
-          <div class="org-cell"><div class="org-name">Uzman Bilişim Akademisi</div><div class="org-meta">Eğitmen · 900+ saat · 2008–09</div></div>
-          <div class="org-cell"><div class="org-name">Kariyer Mimarı</div><div class="org-meta">Serbest eğitmen · 2019–20</div></div>
+          <div class="org-cell"><div class="org-name">Servis Topolojisi</div><div class="org-meta">DB-per-Service · API Gateway · BFF · Sidecar</div></div>
+          <div class="org-cell"><div class="org-name">Mesaj &amp; Tutarlılık</div><div class="org-meta">Saga · Outbox · Inbox · Idempotency Key</div></div>
+          <div class="org-cell"><div class="org-name">CQRS / Event Sourcing</div><div class="org-meta">Komut/Sorgu Ayrımı · Event Store · Projeksiyon</div></div>
+          <div class="org-cell"><div class="org-name">Resilience</div><div class="org-meta">Circuit Breaker · Bulkhead · Retry · Timeout · Backpressure</div></div>
+        </div>
+      </div>
+
+      <div class="orgs-section">
+        <div class="orgs-head"><span class="orgs-tag">D</span> Enterprise Integration Patterns · Hohpe</div>
+        <div class="orgs-grid">
+          <div class="org-cell"><div class="org-name">Mesajlaşma Temelleri</div><div class="org-meta">Channel · Endpoint · Message · Pipes &amp; Filters</div></div>
+          <div class="org-cell"><div class="org-name">Yönlendirme</div><div class="org-meta">Content-Based Router · Splitter · Aggregator · Filter</div></div>
+          <div class="org-cell"><div class="org-name">Dönüştürme</div><div class="org-meta">Message Translator · Envelope · Normalizer · Enricher</div></div>
+          <div class="org-cell"><div class="org-name">Uçnokta Davranışı</div><div class="org-meta">Polling Consumer · Idempotent Receiver · Dead Letter</div></div>
         </div>
       </div>
     </div>
@@ -1325,7 +1328,7 @@ const waypoints = [
   { pos: [100,  1.6,  5.8], lookAt: [100,  1.4, 0] },   // contact
 ];
 
-const sectionIds = ['s-intro','s-roles','s-career','s-kurumlar','s-talks','s-contact'];
+const sectionIds = ['s-intro','s-roles','s-career','s-mufredat','s-talks','s-contact'];
 const sectionLabels = ['000 / INTRO','001 / ROLLER','002 / KARİYER','003 / KURUMLAR','004 / KONUŞMALAR','005 / İLETİŞİM'];
 
 /* ============ SCROLL HANDLING ============ */
