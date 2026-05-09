@@ -5,9 +5,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
 <meta name="theme-color" content="#ffffff" />
 
-<title>Erdoğan Öztürk — Yazılım Mimarı, Danışmanı, Eğitmeni · 19 yıl · erdogan.kim</title>
+<title>Erdoğan Öztürk — Yazılım Mimarı, Eğitmen, Danışman · erdogan.kim</title>
 
-<meta name="description" content="Erdoğan Öztürk. 19 yıllık yazılım mimarı, danışman ve eğitmen. Tübitak-SAGE, İTÜ, YCP, Mercedes-Benz, Wirecard, PAYCORE, Architecht. Antalya merkezli." />
+<meta name="description" content="Erdoğan Öztürk. 19 yıllık yazılım mimarı, eğitmen ve danışman. Tübitak-SAGE, İTÜ, YCP, Mercedes-Benz, Wirecard, PAYCORE, Architecht. Antalya merkezli." />
 <meta name="author" content="Erdoğan Öztürk" />
 <meta name="robots" content="noindex, nofollow, noarchive" />
 <link rel="canonical" href="https://erdogan.kim/" />
@@ -414,7 +414,7 @@
     .cv-row { grid-template-columns: 80px 1fr; gap: 10px; }
   }
 
-  /* Orgs (kurumlar) */
+  /* Müfredat track grid (orgs-* — generic 4-col cell ızgarası) */
   .orgs-intro {
     max-width: 760px;
     font-size: 16px;
@@ -655,18 +655,17 @@
 </head>
 <body>
 
-<div id="loading"><span><span class="blk">█</span> ATLAS · INITIALIZING</span></div>
+<div id="loading"><span><span class="blk">█</span> <span style="text-transform:none">erdogan.kim</span> · YÜKLENİYOR…</span></div>
 
 <div id="progress"></div>
 
 <header class="top-frame">
   <div class="brand">ERDOGAN<span class="accent">.</span>KIM <span style="opacity:.5">/ test</span></div>
-  <div class="center">BRUTALIST ATLAS · SCROLL-DRIVEN · 2026</div>
   <nav>
-    <a href="#s-intro" data-nav>Intro</a>
+    <a href="#s-intro" data-nav>Giriş</a>
     <a href="#s-roles" data-nav>Roller</a>
+    <a href="#s-mufredat" data-nav>Müfredatlar</a>
     <a href="#s-career" data-nav>Kariyer</a>
-    <a href="#s-kurumlar" data-nav>Kurumlar</a>
     <a href="#s-talks" data-nav>Konuşmalar</a>
     <a href="#s-contact" data-nav>İletişim</a>
   </nav>
@@ -681,32 +680,17 @@
     <div class="grid">
       <div class="sec-head">
         <span class="num">000</span>
-        <span class="label"><span>Intro</span><span class="right">Erdoğan Öztürk</span></span>
+        <span class="label"><span>Giriş</span><span class="right">Erdoğan Öztürk</span></span>
       </div>
 
       <h1 class="titanic">
-        <span class="stroke">Yazılım</span><br/>
-        <span>Mimarı,</span><br/>
-        <span class="accent">Danışmanı,</span><br/>
-        <span>Eğitmeni.</span>
-        <span class="small" style="color:var(--muted);font-weight:500;letter-spacing:.04em;text-transform:none;">19 yıl · Antalya · Uzaktan çalışmaya açık.</span>
+        <span class="stroke">Yazılım Mimarı,</span><br/>
+        <span>Danışman,</span><br/>
+        <span class="accent">Eğitmen.</span>
       </h1>
 
-      <div class="lead">
-        <p>
-          Karmaşık sistemleri deneyim taşıyan kararlarla tasarlıyorum. Tübitak-SAGE, İTÜ, YCP, Mercedes-Benz, Wirecard, PAYCORE, Architecht (Kuveyt-Türk) gibi kurumlarda mimar/danışman olarak çalıştım; Bilge Adam ve BT Akademi'de Master Trainer olarak yüzlerce mühendis yetiştirdim.
-        </p>
-        <div class="meta">
-          <div><b>DENEYİM</b> 19 yıl</div>
-          <div><b>KONUM</b> Antalya · Kepez</div>
-          <div><b>DİL</b> TR · EN</div>
-          <div><b>ÇALIŞMA</b> Uzaktan</div>
-          <div><b>YANIT</b> ≈ 24 saat</div>
-        </div>
-      </div>
-
       <div class="scroll-hint">
-        <span>Scroll · gezinmeye başla</span>
+        <span>Akış · gezinmeye başla</span>
         <span class="arrow"></span>
       </div>
     </div>
@@ -730,7 +714,7 @@
             <span class="letter">A</span>
             <span class="tag">Mimar</span>
           </div>
-          <h3>Sistemin omurgasını kurmak</h3>
+          <h3>Sistemin omurgasını kurmak ve korumak</h3>
           <p>Uzun dönemli olarak bir ürün ekibine katılıyor; teknik vizyonu kod, insan ve süreç eksenlerinde birlikte şekillendiriyorum.</p>
           <ul>
             <li>Domain-driven tasarım</li>
@@ -760,7 +744,7 @@
             <span class="letter">C</span>
             <span class="tag">Eğitmen</span>
           </div>
-          <h3>Mühendisleri bir üst seviyeye taşımak</h3>
+          <h3>Geliştiricileri bir üst seviyeye taşımak</h3>
           <p>Şirket içi özel programlar ve kamuya açık atölyeler. Teori değil, somut kararlar üzerinden.</p>
           <ul>
             <li>Yazılım mimarisi temelleri</li>
@@ -772,21 +756,85 @@
       </div>
 
       <div class="pull">
-        İyi bir mimar, çizdiği her çizgiden önce <span style="color:var(--accent)">neyi çizmeyeceğine</span> karar verendir.
+        İyi bir mimar, daha önce yaptığını ve yazdığını <span style="color:var(--accent)">tekrar yaptırtmayacak ve yazdırmayacak</span> sistemi kurgulayandır.
       </div>
     </div>
   </section>
 
-  <!-- ============ 002 / KARİYER ============ -->
-  <section id="s-career" class="section">
+  <!-- ============ 002 / KURUMSAL MÜFREDATLAR ============ -->
+  <section id="s-mufredat" class="section">
     <div class="grid">
       <div class="sec-head">
         <span class="num">002</span>
+        <span class="label"><span>Kurumsal Müfredatlar</span><span class="right">4 Track · 16 Modül · Pattern-First</span></span>
+      </div>
+
+      <h2 class="titanic" style="font-size:clamp(40px,8vw,108px);margin-bottom:30px;">
+        Aynı <span class="accent">örüntüyü</span> konuşabilen ekip.
+      </h2>
+
+      <p class="orgs-intro">
+        Geliştiricinin işi tek bir framework'ü kullanmak değil, sorunun şeklini görüp doğru deseni seçmektir.
+        Yapay zeka kullanarak geliştirme yapan geliştiricilerin artık içinde bulunduğumuz yapay zeka çağında
+        bunu hangi dil ile geliştirdikleri ve hangi ortamlarda nasıl yayınladıkları — yani
+        <em>kodlama dili bağımsızlığı</em> ve <em>geliştirme ortamı bağımsızlığı</em> — hali hazırda önemini yitirmiş oldu.
+        Kurumsal Müfredatlar; ekipleri katalogdaki bir deseni tanımak yerine
+        <em>neden, ne zaman ve hangi maliyetle</em> uygulanacağına karar verecek olgunluğa taşır.
+        Dört müfredat; on altı modül; profesyonel IoT sistemleri; tamamı atölye temelli.
+      </p>
+
+      <div class="orgs-section">
+        <div class="orgs-head"><span class="orgs-tag">A</span> Kurumsal Mimari Desenleri · PoEAA</div>
+        <div class="orgs-grid">
+          <div class="org-cell"><div class="org-name">Domain Logic</div><div class="org-meta">Transaction Script · Domain Model · Service Layer</div></div>
+          <div class="org-cell"><div class="org-name">Data Source</div><div class="org-meta">Active Record · Data Mapper · Repository · Gateway</div></div>
+          <div class="org-cell"><div class="org-name">Object-Relational</div><div class="org-meta">Unit of Work · Identity Map · Lazy Load · Inheritance</div></div>
+          <div class="org-cell"><div class="org-name">Web Presentation</div><div class="org-meta">MVC · Front Controller · Template View · BFF</div></div>
+        </div>
+      </div>
+
+      <div class="orgs-section">
+        <div class="orgs-head"><span class="orgs-tag">B</span> Domain-Driven Design · Stratejik &amp; Taktik</div>
+        <div class="orgs-grid">
+          <div class="org-cell"><div class="org-name">Stratejik DDD</div><div class="org-meta">Bounded Context · Subdomain · Context Map</div></div>
+          <div class="org-cell"><div class="org-name">Taktik DDD</div><div class="org-meta">Aggregate · Entity · Value Object · Domain Event</div></div>
+          <div class="org-cell"><div class="org-name">Modelleme Atölyesi</div><div class="org-meta">Event Storming · Example Mapping · Domain Story</div></div>
+          <div class="org-cell"><div class="org-name">Ports &amp; Adapters</div><div class="org-meta">Hexagonal · Onion · Clean · Vertical Slice</div></div>
+        </div>
+      </div>
+
+      <div class="orgs-section">
+        <div class="orgs-head"><span class="orgs-tag">C</span> Dağıtık Sistem Desenleri · Microservices</div>
+        <div class="orgs-grid">
+          <div class="org-cell"><div class="org-name">Servis Topolojisi</div><div class="org-meta">DB-per-Service · API Gateway · BFF · Sidecar</div></div>
+          <div class="org-cell"><div class="org-name">Mesaj &amp; Tutarlılık</div><div class="org-meta">Saga · Outbox · Inbox · Idempotency Key</div></div>
+          <div class="org-cell"><div class="org-name">CQRS / Event Sourcing</div><div class="org-meta">Komut/Sorgu Ayrımı · Event Store · Projeksiyon</div></div>
+          <div class="org-cell"><div class="org-name">Resilience</div><div class="org-meta">Circuit Breaker · Bulkhead · Retry · Timeout · Backpressure</div></div>
+        </div>
+      </div>
+
+      <div class="orgs-section">
+        <div class="orgs-head"><span class="orgs-tag">D</span> Enterprise Integration Patterns · Hohpe</div>
+        <div class="orgs-grid">
+          <div class="org-cell"><div class="org-name">Mesajlaşma Temelleri</div><div class="org-meta">Channel · Endpoint · Message · Pipes &amp; Filters</div></div>
+          <div class="org-cell"><div class="org-name">Yönlendirme</div><div class="org-meta">Content-Based Router · Splitter · Aggregator · Filter</div></div>
+          <div class="org-cell"><div class="org-name">Dönüştürme</div><div class="org-meta">Message Translator · Envelope · Normalizer · Enricher</div></div>
+          <div class="org-cell"><div class="org-name">Uçnokta Davranışı</div><div class="org-meta">Polling Consumer · Idempotent Receiver · Dead Letter</div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 003 / KARİYER ============ -->
+  <section id="s-career" class="section">
+    <div class="grid">
+      <div class="sec-head">
+        <span class="num">003</span>
         <span class="label"><span>Kariyer · 19 yıl</span><span class="right">Tübitak-SAGE → Architecht</span></span>
       </div>
 
       <h2 class="titanic" style="font-size:clamp(40px,8vw,108px);margin-bottom:30px;">
-        <span class="stroke">19 yıl</span><br/>4 katmanda.
+        <span class="stroke">4 parçada</span><br/>19 yıllık deneyim.
       </h2>
 
       <!-- Mimari -->
@@ -815,15 +863,7 @@
               <span class="stack">C# · ASP.NET MVC/Web API · EF · Xamarin · Angular 6 · Vuforia AR</span>
             </span>
           </div>
-          <div class="cv-row">
-            <span class="when">2014<br/>2015</span>
-            <span class="what">
-              <div class="co">İTÜ Bilgi İşlem Daire Başkanlığı</div>
-              <div class="role">Yazılım Mimarı (outsource · Bilge Adam) · İstanbul</div>
-              <div class="desc">Yurt &amp; Konaklama, Lojman, Yemekhane Otomasyonları. Takım liderliği.</div>
-              <span class="stack">ASP.NET MVC · EF · jQuery · DI · SOLID</span>
-            </span>
-          </div>
+          <div class="cv-row"><span class="when">2014<br/>2015</span><span class="what"><div class="co">İTÜ Bilgi İşlem</div><div class="role">Yazılım Mimarı (outsource · Bilge Adam) · İstanbul · Yurt/Lojman/Yemekhane otomasyonları, takım liderliği</div></span></div>
         </div>
       </div>
 
@@ -861,39 +901,13 @@
               <span class="stack">.NET Core · Angular 7 · RabbitMQ · Docker · MSSQL · EF Core</span>
             </span>
           </div>
-          <div class="cv-row">
-            <span class="when">2019<br/>2020</span>
-            <span class="what">
-              <div class="co">Wirecard</div>
-              <div class="role">Proje Danışmanı · İstanbul</div>
-              <div class="desc">İç finans uygulamalarının mimari desteği; framework ve altyapı geliştirme.</div>
-            </span>
-          </div>
+          <div class="cv-row"><span class="when">2019<br/>2020</span><span class="what"><div class="co">Wirecard</div><div class="role">Proje Danışmanı · İstanbul · İç finans uygulamaları mimarisi, framework ve altyapı geliştirme</div></span></div>
           <div class="cv-row">
             <span class="when">2016</span>
             <span class="what">
-              <div class="co">Biometrik Perkotek</div>
-              <div class="role">Proje Danışmanı · İstanbul</div>
-              <div class="desc">Parmak izi/yüz tanıma/retina cihazlarına entegre framework. Bilgi Aktar 7.0, Geçiş Kontrol 7.0, Yemekhane 7.0.</div>
-              <span class="stack">C#.NET WinForm · MSSQL · EF · DevExpress · PostSharp</span>
-            </span>
-          </div>
-          <div class="cv-row">
-            <span class="when">2016</span>
-            <span class="what">
-              <div class="co">Ajanspress Medya Takip</div>
-              <div class="role">Startup Proje Danışmanı · İstanbul</div>
-              <div class="desc">Yeni medya takip sistemi için mimari ve altyapı; ekip yetiştirme.</div>
-              <span class="stack">Angular 2 · Node JS · MongoDB</span>
-            </span>
-          </div>
-          <div class="cv-row">
-            <span class="when">2016</span>
-            <span class="what">
-              <div class="co">Saat &amp; Saat Mağazacılık</div>
-              <div class="role">Startup Proje Danışmanı · İstanbul</div>
-              <div class="desc">Online mağaza + CRM mimari ve altyapı; iç ekibe İleri Yazılım Teknikleri eğitimi.</div>
-              <span class="stack">Plug-in mimari · IoC · ASP.NET MVC · EF Code First</span>
+              <div class="co">Biometrik Perkotek · Ajanspress · Saat &amp; Saat</div>
+              <div class="role">Startup Mimari &amp; Danışmanlık · İstanbul · 3 paralel görev</div>
+              <div class="desc">Biyometri (parmak izi/yüz/retina cihaz framework'ü) · medya takip sistemi (Angular 2 · Node · Mongo) · online perakende + CRM (plug-in mimari · IoC · EF Code First).</div>
             </span>
           </div>
         </div>
@@ -907,14 +921,6 @@
           <span class="count">4 kurum · 150+ grup</span>
         </div>
         <div class="rhs">
-          <div class="cv-row">
-            <span class="when">2019<br/>2020</span>
-            <span class="what">
-              <div class="co">Kariyer Mimarı</div>
-              <div class="role">Yazılım Eğitmeni · İstanbul · serbest</div>
-              <div class="desc">Başlangıç seviyeden ileri seviyeye eğitimler.</div>
-            </span>
-          </div>
           <div class="cv-row">
             <span class="when">2015<br/>2019</span>
             <span class="what">
@@ -931,14 +937,8 @@
               <div class="desc">6 grup × 300 saat MCSD eğitimi. TSK, Fresenius Medical, Zorlu Holding kurumsal eğitimleri. Yeni eğitmenlere Master Trainer.</div>
             </span>
           </div>
-          <div class="cv-row">
-            <span class="when">2008<br/>2009</span>
-            <span class="what">
-              <div class="co">Uzman Bilişim Akademisi</div>
-              <div class="role">Yazılım Geliştirme Eğitmeni · Konya</div>
-              <div class="desc">2 grup × 450 saat Microsoft Sertifikalı Yazılım Uzmanlığı. Petkim PetroKimya'ya ileri düzey yazılım danışmanlığı.</div>
-            </span>
-          </div>
+          <div class="cv-row"><span class="when">2019<br/>2020</span><span class="what"><div class="co">Kariyer Mimarı</div><div class="role">Yazılım Eğitmeni · serbest · Başlangıçtan ileri seviyeye eğitimler</div></span></div>
+          <div class="cv-row"><span class="when">2008<br/>2009</span><span class="what"><div class="co">Uzman Bilişim Akademisi</div><div class="role">Yazılım Geliştirme Eğitmeni · Konya · 2 grup × 450 saat MCSD; Petkim ileri yazılım danışmanlığı</div></span></div>
         </div>
       </div>
 
@@ -960,64 +960,6 @@
         </div>
       </div>
 
-    </div>
-  </section>
-
-  <!-- ============ 003 / KURUMLAR ============ -->
-  <section id="s-kurumlar" class="section">
-    <div class="grid">
-      <div class="sec-head">
-        <span class="num">003</span>
-        <span class="label"><span>Kurumlar</span><span class="right">Mimari · Danışmanlık · Eğitim</span></span>
-      </div>
-
-      <h2 class="titanic" style="font-size:clamp(40px,8vw,108px);margin-bottom:30px;">
-        Birlikte <span class="accent">çalıştığım.</span>
-      </h2>
-
-      <p class="orgs-intro">
-        19 yıllık yolda bankacılıktan savunma sanayine, otomotivden ödeme sistemlerine
-        uzanan bir çeşitlilikte ekiplere katıldım, danışmanlık verdim, mühendisleri yetiştirdim.
-        Aşağıda kurumların bir kısmı.
-      </p>
-
-      <div class="orgs-section">
-        <div class="orgs-head"><span class="orgs-tag">A</span> Mimari &amp; Danışmanlık</div>
-        <div class="orgs-grid">
-          <div class="org-cell"><div class="org-name">Architecht</div><div class="org-meta">Kuveyt-Türk · Bankacılık · 2023–</div></div>
-          <div class="org-cell"><div class="org-name">Tübitak-SAGE</div><div class="org-meta">Savunma · Mimar · 2021–22</div></div>
-          <div class="org-cell"><div class="org-name">PAYCORE</div><div class="org-meta">Ödeme · Danışman · 2022</div></div>
-          <div class="org-cell"><div class="org-name">Mercedes-Benz Türk</div><div class="org-meta">Otomotiv · Danışman · 2020–21</div></div>
-          <div class="org-cell"><div class="org-name">Wirecard</div><div class="org-meta">Fintech · Danışman · 2019–20</div></div>
-          <div class="org-cell"><div class="org-name">YCP Bilgi Teknolojileri</div><div class="org-meta">Ar/Ge Direktörü · 2016–19</div></div>
-          <div class="org-cell"><div class="org-name">İstanbul Teknik Üniversitesi</div><div class="org-meta">Bilgi İşlem · Mimar · 2014–15</div></div>
-          <div class="org-cell"><div class="org-name">Anadolu Sigorta</div><div class="org-meta">Sigorta · Rücu/Hasar projeleri</div></div>
-          <div class="org-cell"><div class="org-name">Biometrik Perkotek</div><div class="org-meta">Biyometri · Danışman · 2016</div></div>
-          <div class="org-cell"><div class="org-name">Ajanspress Medya Takip</div><div class="org-meta">Medya · Mimari · 2016</div></div>
-          <div class="org-cell"><div class="org-name">Saat &amp; Saat Mağazacılık</div><div class="org-meta">Perakende · Mimari · 2016</div></div>
-          <div class="org-cell"><div class="org-name">Çolakoğlu Holding</div><div class="org-meta">Texas, USA · ERP · 2015–16</div></div>
-        </div>
-      </div>
-
-      <div class="orgs-section">
-        <div class="orgs-head"><span class="orgs-tag">B</span> Kurumsal Eğitim</div>
-        <div class="orgs-grid">
-          <div class="org-cell"><div class="org-name">TSK</div><div class="org-meta">Türk Silahlı Kuvvetleri · Yazılım eğitimi</div></div>
-          <div class="org-cell"><div class="org-name">Fresenius Medical</div><div class="org-meta">Sağlık · OOP · SOLID · TFS</div></div>
-          <div class="org-cell"><div class="org-name">Zorlu Holding</div><div class="org-meta">Holding · Katmanlı Mimari · SCRUM</div></div>
-          <div class="org-cell"><div class="org-name">Petkim PetroKimya</div><div class="org-meta">Petrokimya · İleri Yazılım Teknikleri</div></div>
-        </div>
-      </div>
-
-      <div class="orgs-section">
-        <div class="orgs-head"><span class="orgs-tag">C</span> Eğitim Kurumları · Master Trainer</div>
-        <div class="orgs-grid">
-          <div class="org-cell"><div class="org-name">Bilge Adam Bilişim</div><div class="org-meta">Birim Müdürü · Master Trainer · 2013–14</div></div>
-          <div class="org-cell"><div class="org-name">BT Akademi</div><div class="org-meta">Eğitmen · ≈150 grup · 2015–19</div></div>
-          <div class="org-cell"><div class="org-name">Uzman Bilişim Akademisi</div><div class="org-meta">Eğitmen · 900+ saat · 2008–09</div></div>
-          <div class="org-cell"><div class="org-name">Kariyer Mimarı</div><div class="org-meta">Serbest eğitmen · 2019–20</div></div>
-        </div>
-      </div>
     </div>
   </section>
 
@@ -1075,48 +1017,39 @@
     <div class="grid">
       <div class="sec-head">
         <span class="num" style="color:var(--accent)">005</span>
-        <span class="label"><span>İletişim</span><span class="right">Yanıt ≈ 24 saat</span></span>
+        <span class="label"><span>İletişim</span></span>
       </div>
 
       <h2 class="titanic" style="font-size:clamp(40px,8vw,108px);margin-bottom:30px;color:var(--bg)">
-        Bir <span class="accent">fikrin</span> mi var?<br/>
         <span class="stroke">Yaz.</span>
       </h2>
 
       <div class="contact-grid">
         <div class="col">
           <h3>Doğrudan Hat</h3>
-          <div class="row"><span class="k">E-posta</span><span class="v"><a href="mailto:ezterk@gmail.com">ezterk@gmail.com</a></span></div>
-          <div class="row"><span class="k">Telefon</span><span class="v"><a href="tel:+905075915566">+90 (507) 591 55 66</a></span></div>
-          <div class="row"><span class="k">Konum</span><span class="v">Antalya · Kepez · Türkiye</span></div>
-          <div class="row"><span class="k">Çalışma</span><span class="v">Uzaktan · Tam zamanlı / proje</span></div>
+          <div class="row"><span class="k">E-posta</span><span class="v"><a href="mailto:iletisim@erdogan.kim">iletisim@erdogan.kim</a></span></div>
+          <div class="row"><span class="k">Telefon</span><span class="v"><a href="tel:+905075915566">+90 (507) 591 55 66</a><a href="https://wa.me/905075915566" aria-label="WhatsApp" target="_blank" rel="noopener" style="border-bottom:none;display:inline-flex;align-items:center;margin-left:10px;vertical-align:middle"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" style="display:block"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg></a></span></div>
         </div>
         <div class="col">
           <h3>Profil</h3>
           <div class="row"><span class="k">LinkedIn</span><span class="v"><a href="https://linkedin.com/in/erdoganozturk" rel="me">/in/erdoganozturk</a></span></div>
-          <div class="row"><span class="k">GitHub</span><span class="v"><a href="https://github.com/erdoganozturk" rel="me">/erdoganozturk</a></span></div>
+          <div class="row"><span class="k">GitHub</span><span class="v"><a href="https://github.com/erdogankim" rel="me">/erdogankim</a></span></div>
           <div class="row"><span class="k">Site</span><span class="v"><a href="/">erdogan.kim</a></span></div>
-          <div class="row"><span class="k">Dil</span><span class="v">Türkçe · English</span></div>
         </div>
       </div>
 
-      <p class="closing">
-        Yeni bir projeye giriyorsan, bir ekibe eşlik edecek birini arıyorsan ya da sadece bir yazıyı tartışmak istiyorsan — yaz. İlk cevap genellikle 24 saat içinde gelir.
-      </p>
     </div>
   </section>
 
   <footer class="tail">
     <div>© 2026 <b>ERDOĞAN ÖZTÜRK</b></div>
-    <div>BRUTALIST ATLAS · <span class="accent">v0.1</span></div>
-    <div>ANTALYA · TR</div>
   </footer>
 
 </main>
 
 <div class="bottom-hud">
-  <div class="left">SECTION <b id="hud-sec">000 / INTRO</b></div>
-  <div class="right">SCROLL <b id="hud-prog">0%</b> · <span class="accent">CAM</span> ATLAS</div>
+  <div class="left">BÖLÜM <b id="hud-sec">000 / GİRİŞ</b></div>
+  <div class="right">AKIŞ <b id="hud-prog">0%</b></div>
 </div>
 
 <script type="importmap">
@@ -1207,23 +1140,92 @@ const m0 = new THREE.Group();
   monuments.push({ id: 'intro', group: m0, baseRot: [0, 0, 0] });
 }
 
-// 001 / ROLLER — üç wireframe küp, üçü farklı ölçek (A B C)
+// 001 / ROLLER (Müfredatlar'a transit) — üç wireframe küp + her küpte mini graph diyagramı
 const m1 = new THREE.Group();
 {
-  const a = edgeBox(2.4, 3.0, 2.4, matInk); a.position.set(-3.4, 0, 0);
-  const b = edgeBox(2.4, 4.5, 2.4, matAccent); b.position.set(0, 0.75, 0);
-  const c = edgeBox(2.4, 2.2, 2.4, matInk); c.position.set(3.4, -0.4, 0);
-  m1.add(a, b, c);
-
-  // küpleri birleştiren ince çizgiler
-  const linkPts = [
-    new THREE.Vector3(-3.4, 1.5, 0),
-    new THREE.Vector3(0, 3, 0),
-    new THREE.Vector3(3.4, 0.7, 0)
+  const cubes = [
+    { x: -3.4, y: 0,    w: 2.4, h: 3.0, d: 2.4, mat: matInk },
+    { x: 0,    y: 0.75, w: 2.4, h: 4.5, d: 2.4, mat: matAccent },
+    { x: 3.4,  y: -0.4, w: 2.4, h: 2.2, d: 2.4, mat: matInk }
   ];
-  const linkGeo = new THREE.BufferGeometry().setFromPoints(linkPts);
-  const link = new THREE.Line(linkGeo, matInkSoft);
-  m1.add(link);
+
+  const nodeMat = new THREE.MeshBasicMaterial({ color: ACCENT });
+  const innerEdgeMat = new THREE.LineBasicMaterial({
+    color: INK, transparent: true, opacity: 0.55
+  });
+  const interEdgeMat = new THREE.LineBasicMaterial({
+    color: ACCENT, transparent: true, opacity: 0.45
+  });
+
+  // Pseudo-rastgele · seed = küp index'i (her sayfada stabil görünüm)
+  const rng = (n) => {
+    const s = Math.sin(n * 12.9898 + 78.233) * 43758.5453;
+    return s - Math.floor(s);
+  };
+
+  const cubeAnchors = [];
+
+  cubes.forEach((c, i) => {
+    const cubeGroup = new THREE.Group();
+    cubeGroup.position.set(c.x, c.y, 0);
+
+    const edge = edgeBox(c.w, c.h, c.d, c.mat);
+    cubeGroup.add(edge);
+
+    // İç graph: 5..7 düğüm (büyük küp = daha çok düğüm)
+    const nodeCount = 5 + Math.floor(rng(i * 3.7) * 3);
+    const nodes = [];
+    for (let n = 0; n < nodeCount; n++) {
+      const r = 0.07 + rng(i * 5 + n) * 0.04;
+      const sph = new THREE.Mesh(new THREE.SphereGeometry(r, 10, 8), nodeMat);
+      sph.position.set(
+        (rng(i * 11 + n * 2) - 0.5) * c.w * 0.7,
+        (rng(i * 13 + n * 3) - 0.5) * c.h * 0.7,
+        (rng(i * 17 + n * 5) - 0.5) * c.d * 0.7
+      );
+      cubeGroup.add(sph);
+      nodes.push(sph);
+    }
+
+    // İç kenarlar — her düğümü 1-2 komşusuna bağla
+    for (let a = 0; a < nodes.length; a++) {
+      const b = nodes[(a + 1) % nodes.length];
+      cubeGroup.add(new THREE.Line(
+        new THREE.BufferGeometry().setFromPoints([nodes[a].position, b.position]),
+        innerEdgeMat
+      ));
+      if (a % 2 === 0) {
+        const cc = nodes[(a + 2) % nodes.length];
+        cubeGroup.add(new THREE.Line(
+          new THREE.BufferGeometry().setFromPoints([nodes[a].position, cc.position]),
+          innerEdgeMat
+        ));
+      }
+    }
+
+    // Anchor — küpler arası hat oradan çıkacak (m1-uzayındaki konum)
+    const anchorIdx = Math.floor(rng(i * 19) * nodes.length);
+    const anchorM1 = nodes[anchorIdx].position.clone()
+      .add(new THREE.Vector3(c.x, c.y, 0));
+    cubeAnchors.push(anchorM1);
+
+    m1.add(cubeGroup);
+  });
+
+  // Küpler arası iletişim hatları (komşu + uzun atlama)
+  m1.add(new THREE.Line(
+    new THREE.BufferGeometry().setFromPoints([cubeAnchors[0], cubeAnchors[1]]),
+    interEdgeMat
+  ));
+  m1.add(new THREE.Line(
+    new THREE.BufferGeometry().setFromPoints([cubeAnchors[1], cubeAnchors[2]]),
+    interEdgeMat
+  ));
+  // Skip-link: 1 ↔ 3 (uzak servis-servis)
+  m1.add(new THREE.Line(
+    new THREE.BufferGeometry().setFromPoints([cubeAnchors[0], cubeAnchors[2]]),
+    interEdgeMat
+  ));
 
   m1.position.set(20, 1.5, 0);
   scene.add(m1);
@@ -1325,8 +1327,8 @@ const waypoints = [
   { pos: [100,  1.6,  5.8], lookAt: [100,  1.4, 0] },   // contact
 ];
 
-const sectionIds = ['s-intro','s-roles','s-career','s-kurumlar','s-talks','s-contact'];
-const sectionLabels = ['000 / INTRO','001 / ROLLER','002 / KARİYER','003 / KURUMLAR','004 / KONUŞMALAR','005 / İLETİŞİM'];
+const sectionIds = ['s-intro','s-roles','s-mufredat','s-career','s-talks','s-contact'];
+const sectionLabels = ['000 / GİRİŞ','001 / ROLLER','002 / MÜFREDATLAR','003 / KARİYER','004 / KONUŞMALAR','005 / İLETİŞİM'];
 
 /* ============ SCROLL HANDLING ============ */
 const progressEl = document.getElementById('progress');
