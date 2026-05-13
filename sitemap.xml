@@ -4,21 +4,18 @@
 
   <url>
     <loc>https://erdogan.kim/</loc>
-    <lastmod>2026-04-22</lastmod>
-    <changefreq>weekly</changefreq>
+    <lastmod>2026-05-13</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>1.0</priority>
     <xhtml:link rel="alternate" hreflang="tr" href="https://erdogan.kim/" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://erdogan.kim/" />
   </url>
 
-  <!-- Yazı sayfaları yayına alındıkça buraya eklenecek -->
-  <!--
   <url>
-    <loc>https://erdogan.kim/yazilar/bounded-context-uzerine-notlar</loc>
-    <lastmod>2026-04-12</lastmod>
+    <loc>https://erdogan.kim/referanslar/</loc>
+    <lastmod>2026-05-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
-  -->
 
 </urlset>
