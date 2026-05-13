@@ -1,5 +1,7 @@
 # erdogan.kim — robots.txt
-# Site geçici olarak yeniden tasarımda; tüm crawler'lara kapalı.
+# Tüm arama motorlarına açık.
 
 User-agent: *
-Disallow: /
+Allow: /
+
+Sitemap: https://erdogan.kim/sitemap.xml
