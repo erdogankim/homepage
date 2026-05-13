@@ -11,11 +11,4 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://erdogan.kim/" />
   </url>
 
-  <url>
-    <loc>https://erdogan.kim/referanslar/</loc>
-    <lastmod>2026-05-13</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
 </urlset>
