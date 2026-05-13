@@ -1,0 +1,572 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<meta name="theme-color" content="#ffffff" />
+
+<title>Referanslar — Erdoğan Öztürk · erdogan.kim</title>
+
+<meta name="description" content="Erdoğan Öztürk'ün çalıştığı kurumlar. 44 kurum, 7 sektörel küme: Kamu/Savunma, Bankacılık/Fintech, Telekom/BT, Sanayi/Otomotiv, Turizm/Havacılık, Sigorta, Tüketim/Hizmet." />
+<meta name="author" content="Erdoğan Öztürk" />
+<meta name="robots" content="noindex, nofollow, noarchive" />
+<link rel="canonical" href="https://erdogan.kim/referanslar/" />
+
+<style>
+  /* ============================================================
+     BRUTALIST ATLAS · monokrom + cobalt — Referanslar
+     Tasarım dili: Swiss/grotesk · sert kenarlar · 2px keskin çizgi
+     ============================================================ */
+  :root {
+    --bg: #ffffff;
+    --ink: #000000;
+    --ink-soft: #1a1a1a;
+    --muted: #5a5a5a;
+    --line: #000000;
+    --line-light: #e3e3e3;
+    --accent: #0033ff;
+    --accent-soft: #0033ff10;
+    --grotesk: "Inter", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    --mono: "JetBrains Mono", "SF Mono", ui-monospace, Menlo, Consolas, monospace;
+  }
+
+  *, *::before, *::after { box-sizing: border-box; }
+
+  html, body {
+    margin: 0; padding: 0;
+    background: var(--bg);
+    color: var(--ink);
+    font-family: var(--grotesk);
+    font-weight: 400;
+    -webkit-font-smoothing: antialiased;
+    -webkit-text-size-adjust: 100%;
+  }
+
+  /* Top frame · global navigation */
+  .top-frame {
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    z-index: 40;
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    align-items: center;
+    padding: 14px 18px;
+    background: var(--bg);
+    border-bottom: 2px solid var(--line);
+  }
+  .top-frame .brand { font-weight: 700; font-size: 13px; letter-spacing: -0.02em; }
+  .top-frame .brand .accent { color: var(--accent); }
+  .top-frame .center {
+    font-family: var(--mono);
+    font-size: 10px;
+    color: var(--muted);
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+  }
+  .top-frame nav {
+    display: flex;
+    justify-content: flex-end;
+    gap: 18px;
+  }
+  .top-frame nav a {
+    font-family: var(--mono);
+    font-size: 11px;
+    color: var(--ink);
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+    padding-bottom: 1px;
+    letter-spacing: 0.02em;
+    transition: color 0.15s, border-color 0.15s;
+  }
+  .top-frame nav a:hover { color: var(--accent); border-bottom-color: var(--accent); }
+  .top-frame nav a.active { border-bottom-color: var(--ink); }
+
+  @media (max-width: 720px) {
+    .top-frame { grid-template-columns: 1fr auto; padding: 10px 14px; }
+    .top-frame .center { display: none; }
+    .top-frame nav { gap: 12px; font-size: 10px; }
+    .top-frame nav a:nth-child(n+4) { display: none; }
+  }
+
+  /* Bottom HUD */
+  .bottom-hud {
+    position: fixed;
+    bottom: 0; left: 0; right: 0;
+    z-index: 40;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 9px 18px;
+    background: var(--bg);
+    border-top: 2px solid var(--line);
+    font-family: var(--mono);
+    font-size: 10px;
+    color: var(--muted);
+    letter-spacing: 0.03em;
+  }
+  .bottom-hud b { color: var(--ink); font-weight: 600; }
+  .bottom-hud .accent { color: var(--accent); }
+
+  @media (max-width: 720px) {
+    .bottom-hud { font-size: 9.5px; padding: 8px 12px; }
+    .bottom-hud .right { display: none; }
+  }
+
+  /* Main layout */
+  main {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 100px 24px 80px;
+  }
+
+  /* Page header */
+  .page-header {
+    border-bottom: 2px solid var(--line);
+    padding-bottom: 24px;
+    margin-bottom: 48px;
+  }
+  .page-header .label {
+    font-family: var(--mono);
+    font-size: 10px;
+    color: var(--accent);
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    margin-bottom: 12px;
+  }
+  .page-header h1 {
+    font-size: clamp(28px, 5vw, 48px);
+    font-weight: 800;
+    letter-spacing: -0.03em;
+    line-height: 1.05;
+    margin: 0 0 16px;
+  }
+  .page-header .subtitle {
+    font-size: 15px;
+    color: var(--muted);
+    line-height: 1.6;
+    max-width: 600px;
+    margin: 0;
+  }
+  .page-header .meta {
+    display: flex;
+    gap: 24px;
+    margin-top: 20px;
+    flex-wrap: wrap;
+  }
+  .page-header .meta-item {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+  }
+  .page-header .meta-item .val {
+    font-size: 22px;
+    font-weight: 800;
+    letter-spacing: -0.03em;
+    color: var(--accent);
+  }
+  .page-header .meta-item .key {
+    font-family: var(--mono);
+    font-size: 9px;
+    color: var(--muted);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+  }
+
+  /* Sector groups */
+  .ref-group {
+    margin-bottom: 48px;
+  }
+  .ref-group-header {
+    display: flex;
+    align-items: baseline;
+    gap: 12px;
+    border-top: 2px solid var(--line);
+    padding-top: 18px;
+    margin-bottom: 20px;
+  }
+  .ref-group-header .sector-num {
+    font-family: var(--mono);
+    font-size: 10px;
+    color: var(--muted);
+    letter-spacing: 0.06em;
+    min-width: 28px;
+  }
+  .ref-group-header h2 {
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    margin: 0;
+    flex: 1;
+  }
+  .ref-group-header .count {
+    font-family: var(--mono);
+    font-size: 10px;
+    color: var(--muted);
+    letter-spacing: 0.04em;
+  }
+
+  /* Client grid */
+  .ref-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 0;
+    border-left: 2px solid var(--line);
+    border-top: 2px solid var(--line);
+  }
+  .ref-card {
+    border-right: 2px solid var(--line);
+    border-bottom: 2px solid var(--line);
+    padding: 16px 18px;
+    transition: background 0.15s;
+  }
+  .ref-card:hover {
+    background: var(--accent-soft);
+  }
+  .ref-card .org-name {
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: -0.01em;
+    margin-bottom: 4px;
+    line-height: 1.3;
+  }
+  .ref-card .org-detail {
+    font-family: var(--mono);
+    font-size: 9.5px;
+    color: var(--muted);
+    letter-spacing: 0.02em;
+    line-height: 1.4;
+  }
+
+  @media (max-width: 720px) {
+    main { padding: 80px 16px 72px; }
+    .ref-grid { grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); }
+    .ref-card { padding: 12px 14px; }
+    .ref-card .org-name { font-size: 12px; }
+  }
+
+  /* Back link */
+  .back-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-family: var(--mono);
+    font-size: 11px;
+    color: var(--muted);
+    text-decoration: none;
+    border-bottom: 1px solid var(--line-light);
+    padding-bottom: 1px;
+    margin-bottom: 32px;
+    transition: color 0.15s, border-color 0.15s;
+  }
+  .back-link:hover { color: var(--accent); border-color: var(--accent); }
+</style>
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+<!-- Top Navigation -->
+<header class="top-frame">
+  <div class="brand">EÖ<span class="accent">.</span></div>
+  <div class="center">referanslar</div>
+  <nav>
+    <a href="/">Ana Sayfa</a>
+    <a href="/referanslar/" class="active">Referanslar</a>
+  </nav>
+</header>
+
+<!-- Main Content -->
+<main>
+
+  <a href="/" class="back-link">← erdogan.kim</a>
+
+  <!-- Page Header -->
+  <div class="page-header">
+    <div class="label">// referanslar</div>
+    <h1>Çalışılan Kurumlar</h1>
+    <p class="subtitle">
+      19 yıllık kariyer boyunca eğitim, danışmanlık ve yazılım mimarisi projelerinde
+      birlikte çalışılan kurum ve kuruluşlar.
+    </p>
+    <div class="meta">
+      <div class="meta-item">
+        <span class="val">44</span>
+        <span class="key">kurum</span>
+      </div>
+      <div class="meta-item">
+        <span class="val">7</span>
+        <span class="key">sektör</span>
+      </div>
+      <div class="meta-item">
+        <span class="val">19</span>
+        <span class="key">yıl deneyim</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Sektör 1: Kamu / Savunma -->
+  <section class="ref-group">
+    <div class="ref-group-header">
+      <span class="sector-num">01</span>
+      <h2>Kamu / Savunma</h2>
+      <span class="count">8 kurum</span>
+    </div>
+    <div class="ref-grid">
+      <div class="ref-card">
+        <div class="org-name">TÜBİTAK-SAGE</div>
+        <div class="org-detail">Savunma AR-GE</div>
+      </div>
+      <div class="ref-card">
+        <div class="org-name">TUSAŞ (TAI)</div>
+        <div class="org-detail">Türk Havacılık ve Uzay Sanayii</div>
+      </div>
+      <div class="ref-card">
+        <div class="org-name">Kara Kuvvetleri Komutanlığı</div>
+        <div class="org-detail">TSK</div>
+      </div>
+      <div class="ref-card">
+        <div class="org-name">Jandarma Genel Komutanlığı</div>
+        <div class="org-detail">İç Güvenlik</div>
+      </div>
+      <div class="ref-card">
+        <div class="org-name">Emniyet Genel Müdürlüğü</div>
+        <div class="org-detail">İçişleri Bakanlığı</div>
+      </div>
+      <div class="ref-card">
+        <div class="org-name">Milli Eğitim Bakanlığı</div>
+        <div class="org-detail">MEB</div>
+      </div>
+      <div class="ref-card">
+        <div class="org-name">Sosyal Güvenlik Kurumu</div>
+        <div class="org-detail">SGK</div>
+      </div>
+      <div class="ref-card">
+        <div class="org-name">Türksat</div>
+        <div class="org-detail">Uydu ve Kablo TV</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Sektör 2: Bankacılık / Fintech -->
+  <section class="ref-group">
+    <div class="ref-group-header">
+      <span class="sector-num">02</span>
+      <h2>Bankacılık / Fintech</h2>
+      <span class="count">10 kurum</span>
+    </div>
+    <div class="ref-grid">
+      <div class="ref-card">
+        <div class="org-name">Garanti Teknoloji</div>
+        <div class="org-detail">Bankacılık BT</div>
+      </div>
+      <div class="ref-card">
+        <div class="org-name">Ziraat Teknoloji</div>
+        <div class="org-detail">Bankacılık BT</div>
+      </div>
+      <div class="ref-card">
+        <div class="org-name">Türkiye Finans Katılım Bankası</div>
+        <div class="org-detail">Katılım Bankası</div>
+      </div>
+      <div class="ref-card">
+        <div class="org-name">Kuveyt Türk</div>
+        <div class="org-detail">Katılım Bankası</div>
+      </div>
+      <div class="ref-card">
+        <div class="org-name">QNB Finansbank</div>
+        <div class="org-detail">Özel Banka</div>
+      </div>
+      <div class="ref-card">
+        <div class="org-name">AnadoluBank</div>
+        <div class="org-detail">Özel Banka</div>
+      </div>
+      <div class="ref-card">
+        <div class="org-name">Wirecard</div>
+        <div class="org-detail">Ödeme Sistemleri</div>
+      </div>
+      <div class="ref-card">
+        <div class="org-name">Paycore</div>
+        <div class="org-detail">Ödeme Teknolojileri</div>
+      </div>
+      <div class="ref-card">
+        <div class="org-name">Metropolcard</div>
+        <div class="org-detail">Kart / Ödeme</div>
+      </div>
+      <div class="ref-card">
+        <div class="org-name">Belbim A.Ş.</div>
+        <div class="org-detail">İBB Ödeme Sistemleri</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Sektör 3: Telekom / BT -->
+  <section class="ref-group">
+    <div class="ref-group-header">
+      <span class="sector-num">03</span>
+      <h2>Telekom / BT</h2>
+      <span class="count">8 kurum</span>
+    </div>
+    <div class="ref-grid">
+      <div class="ref-card">
+        <div class="org-name">Turkcell</div>
+        <div class="org-detail">Mobil Telekom</div>
+      </div>
+      <div class="ref-card">
+        <div class="org-name">Turkcell Global Bilgi</div>
+        <div class="org-detail">Müşteri Deneyimi</div>
+      </div>
+      <div class="ref-card">
+        <div class="org-name">İşNet</div>
+        <div class="org-detail">Kurumsal BT / İletişim</div>
+      </div>
+      <div class="ref-card">
+        <div class="org-name">Innova</div>
+        <div class="org-detail">BT Hizmetleri</div>
+      </div>
+      <div class="ref-card">
+        <div class="org-name">NetBT Danışmanlık</div>
+        <div class="org-detail">BT Danışmanlık</div>
+      </div>
+      <div class="ref-card">
+        <div class="org-name">VBT Bilgi Teknolojileri</div>
+        <div class="org-detail">Yazılım Danışmanlık</div>
+      </div>
+      <div class="ref-card">
+        <div class="org-name">Nebim Neyir</div>
+        <div class="org-detail">Perakende ERP</div>
+      </div>
+      <div class="ref-card">
+        <div class="org-name">Alfa Bilgisayar</div>
+        <div class="org-detail">Kurumsal Yazılım</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Sektör 4: Sanayi / Otomotiv -->
+  <section class="ref-group">
+    <div class="ref-group-header">
+      <span class="sector-num">04</span>
+      <h2>Sanayi / Otomotiv</h2>
+      <span class="count">5 kurum</span>
+    </div>
+    <div class="ref-grid">
+      <div class="ref-card">
+        <div class="org-name">Mercedes-Benz</div>
+        <div class="org-detail">Otomotiv</div>
+      </div>
+      <div class="ref-card">
+        <div class="org-name">Borusan</div>
+        <div class="org-detail">Sanayi Holding</div>
+      </div>
+      <div class="ref-card">
+        <div class="org-name">Çolakoğlu Metalurji</div>
+        <div class="org-detail">Demir-Çelik</div>
+      </div>
+      <div class="ref-card">
+        <div class="org-name">Siemens</div>
+        <div class="org-detail">Endüstri / Otomasyon</div>
+      </div>
+      <div class="ref-card">
+        <div class="org-name">Korteks</div>
+        <div class="org-detail">Tekstil / Polyester İplik</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Sektör 5: Turizm / Havacılık -->
+  <section class="ref-group">
+    <div class="ref-group-header">
+      <span class="sector-num">05</span>
+      <h2>Turizm / Havacılık</h2>
+      <span class="count">4 kurum</span>
+    </div>
+    <div class="ref-grid">
+      <div class="ref-card">
+        <div class="org-name">SunExpress</div>
+        <div class="org-detail">Havacılık</div>
+      </div>
+      <div class="ref-card">
+        <div class="org-name">Amadeus</div>
+        <div class="org-detail">Seyahat Teknolojisi (GDS)</div>
+      </div>
+      <div class="ref-card">
+        <div class="org-name">Setur</div>
+        <div class="org-detail">Turizm / Seyahat</div>
+      </div>
+      <div class="ref-card">
+        <div class="org-name">Tatilbudur</div>
+        <div class="org-detail">Online Tatil</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Sektör 6: Sigorta -->
+  <section class="ref-group">
+    <div class="ref-group-header">
+      <span class="sector-num">06</span>
+      <h2>Sigorta</h2>
+      <span class="count">3 kurum</span>
+    </div>
+    <div class="ref-grid">
+      <div class="ref-card">
+        <div class="org-name">Anadolu Sigorta</div>
+        <div class="org-detail">Sigorta</div>
+      </div>
+      <div class="ref-card">
+        <div class="org-name">Neova Sigorta</div>
+        <div class="org-detail">Sigorta</div>
+      </div>
+      <div class="ref-card">
+        <div class="org-name">Sompo Sigorta</div>
+        <div class="org-detail">Sigorta</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Sektör 7: Tüketim / Hizmet -->
+  <section class="ref-group">
+    <div class="ref-group-header">
+      <span class="sector-num">07</span>
+      <h2>Tüketim / Hizmet</h2>
+      <span class="count">6 kurum</span>
+    </div>
+    <div class="ref-grid">
+      <div class="ref-card">
+        <div class="org-name">Philip Morris SA</div>
+        <div class="org-detail">FMCG</div>
+      </div>
+      <div class="ref-card">
+        <div class="org-name">PwC</div>
+        <div class="org-detail">Denetim / Danışmanlık</div>
+      </div>
+      <div class="ref-card">
+        <div class="org-name">Ekol Lojistik</div>
+        <div class="org-detail">Lojistik / Taşımacılık</div>
+      </div>
+      <div class="ref-card">
+        <div class="org-name">Saat &amp; Saat</div>
+        <div class="org-detail">Perakende</div>
+      </div>
+      <div class="ref-card">
+        <div class="org-name">Lokman Hekim Ecza Deposu</div>
+        <div class="org-detail">Sağlık / Dağıtım</div>
+      </div>
+      <div class="ref-card">
+        <div class="org-name">Bantaş</div>
+        <div class="org-detail">Ambalaj / Üretim</div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- Bottom HUD -->
+<div class="bottom-hud">
+  <span><b>erdogan.kim</b> · referanslar <span class="accent">—</span> 44 kurum · 7 sektör</span>
+  <span class="right">antalya · türkiye</span>
+</div>
+
+</body>
+</html>
