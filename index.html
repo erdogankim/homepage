@@ -7,7 +7,7 @@
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
 <link href="https://fonts.googleapis.com" rel="preconnect"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
-<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Syne:wght@400;500;600;700;800&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@300;400;500;600&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet"/>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
 <style>
     * { margin: 0; padding: 0; box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
@@ -20,16 +20,12 @@
       font-family: 'JetBrains Mono', monospace;
     }
     
-    .font-syne {
-      font-family: 'Syne', sans-serif;
+    .font-inter {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
     }
 
     .font-jakarta {
-      font-family: 'Plus Jakarta Sans', sans-serif;
-    }
-
-    .font-cinzel {
-      font-family: 'Cinzel', serif;
+      font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
     }
     
     .font-mono-code {
@@ -274,55 +270,33 @@ animate();
 <!-- STITCH_THREEJS_END:ANIMATION_18 -->
 </div>
 <!-- Merkez Kart: Erdoğan Öztürk — Yazılım Mimarı / Danışman / Eğitmen -->
-<main class="relative z-10 w-full max-w-[94%] sm:max-w-2xl md:max-w-3xl px-2 sm:px-6 flex flex-col items-center justify-center my-auto pointer-events-none">
-  <div class="relative w-full py-6 sm:py-10 px-4 sm:px-10 rounded-2xl sm:rounded-3xl border border-white/[0.08] bg-[#080b12]/60 backdrop-blur-xl shadow-[0_20px_50px_-10px_rgba(0,0,0,0.85)] flex flex-col items-center text-center overflow-hidden">
+<main class="relative z-10 w-full max-w-[92%] sm:max-w-xl md:max-w-2xl px-2 sm:px-4 flex flex-col items-center justify-center my-auto pointer-events-none">
+  <div class="relative w-full py-8 sm:py-10 px-5 sm:px-10 rounded-xl sm:rounded-2xl border border-white/[0.08] bg-[#090c13]/70 backdrop-blur-2xl shadow-[0_24px_50px_-12px_rgba(0,0,0,0.9)] flex flex-col items-center text-center overflow-hidden">
     
-    <!-- Ambient Işık Atmosferi -->
-    <div class="absolute -top-20 left-1/2 -translate-x-1/2 w-80 sm:w-96 h-28 bg-cyan-500/15 blur-3xl pointer-events-none"></div>
-    <div class="absolute -bottom-20 left-1/2 -translate-x-1/2 w-80 sm:w-96 h-28 bg-amber-500/10 blur-3xl pointer-events-none"></div>
-
-    <!-- İsim Kurgusu: Syne Fontu + Prestijli Degrade Kontrastı -->
+    <!-- İsim Kurgusu: Olgun, Net ve Mimari Inter Tipografisi -->
     <div class="relative z-10 flex flex-col items-center">
-      <h1 class="text-2xl sm:text-4xl md:text-5xl font-syne font-bold text-white tracking-[0.04em] sm:tracking-[0.08em] text-center drop-shadow-[0_4px_24px_rgba(0,0,0,0.85)]">
-        <span class="font-medium text-slate-100">Erdoğan</span> <span class="font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-cyan-200 via-white to-amber-200">ÖZTÜRK</span>
+      <h1 class="text-xl sm:text-3xl md:text-4xl font-inter font-semibold tracking-[0.16em] sm:tracking-[0.22em] text-white uppercase drop-shadow-[0_2px_12px_rgba(255,255,255,0.1)]">
+        ERDOĞAN ÖZTÜRK
       </h1>
     </div>
 
-    <!-- İnce Mimari Işık Hattı -->
-    <div class="relative z-10 w-24 sm:w-44 h-[1px] my-4 sm:my-6 bg-gradient-to-r from-transparent via-cyan-400/50 via-amber-400/50 to-transparent"></div>
+    <!-- İnce Mimari Çizgi -->
+    <div class="relative z-10 w-16 sm:w-28 h-[1px] my-5 sm:my-6 bg-gradient-to-r from-transparent via-white/25 to-transparent"></div>
 
-    <!-- Roller: Mobilde ve Masaüstünde Mükemmel Ölçeklenen Kapsül Dizilimi -->
-    <div class="relative z-10 w-full flex flex-wrap items-center justify-center gap-2 sm:gap-3 md:gap-4 font-mono-code">
-      <!-- 1. Yazılım Mimarı -->
-      <div class="px-3.5 py-1.5 sm:px-4 sm:py-2 rounded-full border border-cyan-500/30 bg-cyan-950/20 backdrop-blur-md flex items-center justify-center gap-2 shadow-[0_0_15px_rgba(34,211,238,0.08)]">
-        <span class="w-1.5 h-1.5 rounded-full bg-cyan-400 shadow-[0_0_8px_#22d3ee]"></span>
-        <span class="text-[11px] sm:text-xs md:text-sm font-medium tracking-[0.14em] sm:tracking-[0.18em] text-cyan-300 uppercase whitespace-nowrap">
-          YAZILIM MİMARI
-        </span>
-      </div>
-
-      <!-- 2. Danışman -->
-      <div class="px-3.5 py-1.5 sm:px-4 sm:py-2 rounded-full border border-amber-500/30 bg-amber-950/20 backdrop-blur-md flex items-center justify-center gap-2 shadow-[0_0_15px_rgba(245,158,11,0.08)]">
-        <span class="w-1.5 h-1.5 rounded-full bg-amber-400 shadow-[0_0_8px_#f59e0b]"></span>
-        <span class="text-[11px] sm:text-xs md:text-sm font-medium tracking-[0.14em] sm:tracking-[0.18em] text-amber-300 uppercase whitespace-nowrap">
-          DANIŞMAN
-        </span>
-      </div>
-
-      <!-- 3. Eğitmen -->
-      <div class="px-3.5 py-1.5 sm:px-4 sm:py-2 rounded-full border border-emerald-500/30 bg-emerald-950/20 backdrop-blur-md flex items-center justify-center gap-2 shadow-[0_0_15px_rgba(16,185,129,0.08)]">
-        <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 shadow-[0_0_8px_#10b981]"></span>
-        <span class="text-[11px] sm:text-xs md:text-sm font-medium tracking-[0.14em] sm:tracking-[0.18em] text-emerald-300 uppercase whitespace-nowrap">
-          EĞİTMEN
-        </span>
-      </div>
+    <!-- Roller: Yalın, Sofistike ve Prestijli Mimari Akış -->
+    <div class="relative z-10 flex flex-col sm:flex-row items-center justify-center gap-2.5 sm:gap-4 md:gap-5 font-mono-code text-[11px] sm:text-xs md:text-sm tracking-[0.18em] text-slate-300 uppercase">
+      <span class="text-slate-200 font-medium">YAZILIM MİMARI</span>
+      <span class="hidden sm:inline-block text-white/20">/</span>
+      <span class="text-slate-200 font-medium">DANIŞMAN</span>
+      <span class="hidden sm:inline-block text-white/20">/</span>
+      <span class="text-slate-200 font-medium">EĞİTMEN</span>
     </div>
 
     <!-- Köşe Vurguları (Minimalist Precision Brackets) -->
-    <div class="absolute top-2.5 left-2.5 w-2 h-2 border-t border-l border-cyan-400/30"></div>
-    <div class="absolute top-2.5 right-2.5 w-2 h-2 border-t border-r border-cyan-400/30"></div>
-    <div class="absolute bottom-2.5 left-2.5 w-2 h-2 border-b border-l border-amber-400/30"></div>
-    <div class="absolute bottom-2.5 right-2.5 w-2 h-2 border-b border-r border-amber-400/30"></div>
+    <div class="absolute top-2.5 left-2.5 w-2 h-2 border-t border-l border-white/20"></div>
+    <div class="absolute top-2.5 right-2.5 w-2 h-2 border-t border-r border-white/20"></div>
+    <div class="absolute bottom-2.5 left-2.5 w-2 h-2 border-b border-l border-white/20"></div>
+    <div class="absolute bottom-2.5 right-2.5 w-2 h-2 border-b border-r border-white/20"></div>
   </div>
 </main>
 </body></html>
