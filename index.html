@@ -1,1594 +1,295 @@
 <!DOCTYPE html>
-<html lang="tr">
-<head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-<meta name="theme-color" content="#ffffff" />
 
-<title>Erdoğan Öztürk — Yazılım Mimarı, Danışman, Eğitmen</title>
-
-<meta name="description" content="Yazılım mimarı, danışman, eğitmen · 19 yıl. Kamu/savunma, bankacılık, sigorta, otomotiv, ödeme: Tübitak-SAGE, Mercedes-Benz, PAYCORE, Wirecard, Architecht." />
-<meta name="author" content="Erdoğan Öztürk" />
-<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
-<meta name="google-site-verification" content="ZwGc8YwnhHtWr3vE-8YDo5MIAhWCUWzLpGmXMOJzyuU" />
-<link rel="canonical" href="https://erdogan.kim/" />
-
-<meta property="og:type" content="profile" />
-<meta property="og:site_name" content="erdogan.kim" />
-<meta property="og:locale" content="tr_TR" />
-<meta property="og:url" content="https://erdogan.kim/" />
-<meta property="og:title" content="Erdoğan Öztürk — Yazılım Mimarı, Danışman, Eğitmen" />
-<meta property="og:description" content="Yazılım mimarı, danışman, eğitmen · 19 yıl. Kamu/savunma, bankacılık, sigorta, otomotiv, ödeme: Tübitak-SAGE, Mercedes-Benz, PAYCORE, Wirecard, Architecht." />
-<meta property="og:image" content="https://erdogan.kim/og.png" />
-<meta property="og:image:width" content="1200" />
-<meta property="og:image:height" content="630" />
-<meta property="og:image:alt" content="Erdoğan Öztürk — Yazılım Mimarı, Danışman, Eğitmen" />
-<meta property="profile:first_name" content="Erdoğan" />
-<meta property="profile:last_name" content="Öztürk" />
-
-<meta name="twitter:card" content="summary_large_image" />
-<meta name="twitter:title" content="Erdoğan Öztürk — Yazılım Mimarı, Danışman, Eğitmen" />
-<meta name="twitter:description" content="Yazılım mimarı, danışman, eğitmen · 19 yıl. Kamu/savunma, bankacılık, sigorta, otomotiv, ödeme: Tübitak-SAGE, Mercedes-Benz, PAYCORE, Wirecard, Architecht." />
-<meta name="twitter:image" content="https://erdogan.kim/og.png" />
-<meta name="twitter:image:alt" content="Erdoğan Öztürk — Yazılım Mimarı, Danışman, Eğitmen" />
-
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Person",
-  "name": "Erdoğan Öztürk",
-  "givenName": "Erdoğan",
-  "familyName": "Öztürk",
-  "jobTitle": "Yazılım Mimarı, Danışman, Eğitmen",
-  "description": "Yazılım mimarı, danışman, eğitmen · 19 yıl. Kamu/savunma, bankacılık, sigorta, otomotiv, ödeme alanlarında deneyim.",
-  "url": "https://erdogan.kim/",
-  "image": "https://erdogan.kim/og.png",
-  "email": "mailto:iletisim@erdogan.kim",
-  "telephone": "+90-507-591-55-66",
-  "sameAs": [
-    "https://linkedin.com/in/erdoganozturk",
-    "https://github.com/erdogankim"
-  ],
-  "knowsAbout": [
-    "Yazılım Mimarisi",
-    "Domain-Driven Design",
-    "Mikroservis Mimarisi",
-    "Enterprise Integration Patterns",
-    ".NET",
-    "C#",
-    "Bankacılık ve Ödeme Sistemleri",
-    "Kurumsal Yazılım Eğitimleri"
-  ],
-  "knowsLanguage": ["tr", "en"]
-}
-</script>
-
+<html lang="tr"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport"/>
+<title>erdogan.kim — Yazılım Mimarı / Danışman / Eğitmen</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&amp;family=JetBrains+Mono:wght@300;400;500;600&amp;family=Plus+Jakarta+Sans:wght@300;400;500;600&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
 <style>
-  /* ============================================================
-     BRUTALIST ATLAS · scroll-driven · monokrom + cobalt
-     Tasarım dili: Swiss/grotesk · sert kenarlar · 2px keskin çizgi
-     ============================================================ */
-  :root {
-    --bg: #ffffff;
-    --ink: #000000;
-    --ink-soft: #1a1a1a;
-    --muted: #5a5a5a;
-    --line: #000000;
-    --line-light: #e3e3e3;
-    --accent: #0033ff;        /* cobalt — tek vurgu */
-    --accent-soft: #0033ff10;
-    --grotesk: "Inter", "Helvetica Neue", Helvetica, Arial, sans-serif;
-    --mono: "JetBrains Mono", "SF Mono", ui-monospace, Menlo, Consolas, monospace;
-  }
+    * { margin: 0; padding: 0; box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
+    html, body {
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      background-color: #080a0f;
+      color: #f8fafc;
+      font-family: 'JetBrains Mono', monospace;
+    }
+    
+    .font-cinzel {
+      font-family: 'Cinzel', serif;
+    }
+    
+    .font-mono-code {
+      font-family: 'JetBrains Mono', monospace;
+    }
 
-  *, *::before, *::after { box-sizing: border-box; }
+    /* Glow ve Tipografi efektleri */
+    .glow-cyan {
+      text-shadow: 0 0 14px rgba(34, 211, 238, 0.8), 0 0 32px rgba(34, 211, 238, 0.45);
+    }
+    .glow-gold {
+      text-shadow: 0 0 14px rgba(245, 158, 11, 0.8), 0 0 32px rgba(245, 158, 11, 0.4);
+    }
+    .glow-silver {
+      text-shadow: 0 0 12px rgba(255, 255, 255, 0.7), 0 0 28px rgba(148, 163, 184, 0.4);
+    }
+    
+    /* İnce ışıltı çizgisi */
+    .subtle-line {
+      background: linear-gradient(90deg, transparent 0%, rgba(34, 211, 238, 0.6) 30%, rgba(245, 158, 11, 0.6) 70%, transparent 100%);
+    }
 
-  html, body {
-    margin: 0; padding: 0;
-    background: var(--bg);
-    color: var(--ink);
-    font-family: var(--grotesk);
-    font-weight: 400;
-    -webkit-font-smoothing: antialiased;
-    -webkit-text-size-adjust: 100%;
-    overscroll-behavior-y: none;
-  }
-
-  /* Fixed WebGL layer */
-  #webgl {
-    position: fixed;
-    inset: 0;
-    z-index: 0;
-    pointer-events: none;
-  }
-
-  /* Content scroller sits above WebGL */
-  #scroller {
-    position: relative;
-    z-index: 1;
-  }
-
-  /* Top progress bar */
-  #progress {
-    position: fixed;
-    top: 0; left: 0;
-    height: 3px;
-    width: 0%;
-    background: var(--accent);
-    z-index: 50;
-    transition: width 80ms linear;
-  }
-
-  /* Top frame · global navigation */
-  .top-frame {
-    position: fixed;
-    top: 0; left: 0; right: 0;
-    z-index: 40;
-    display: grid;
-    grid-template-columns: 1fr auto 1fr;
-    align-items: center;
-    padding: 14px 18px;
-    background: var(--bg);
-    border-bottom: 2px solid var(--line);
-    font-family: var(--mono);
-    font-size: 11px;
-    letter-spacing: 0.16em;
-    text-transform: uppercase;
-  }
-  .top-frame .brand { font-weight: 700; }
-  .top-frame .brand .accent { color: var(--accent); }
-  .top-frame .center {
-    text-align: center;
-    color: var(--muted);
-    font-size: 10.5px;
-    letter-spacing: 0.22em;
-  }
-  .top-frame nav {
-    display: flex; gap: 18px; justify-content: flex-end;
-  }
-  .top-frame nav a {
-    color: var(--ink);
-    text-decoration: none;
-    border-bottom: 1.5px solid transparent;
-    padding-bottom: 2px;
-    transition: border-color .15s, color .15s;
-  }
-  .top-frame nav a:hover { color: var(--accent); border-bottom-color: var(--accent); }
-  .top-frame nav a.active { border-bottom-color: var(--ink); }
-  @media (max-width: 720px) {
-    .top-frame { grid-template-columns: 1fr auto; padding: 10px 14px; }
-    .top-frame .center { display: none; }
-    .top-frame nav { gap: 12px; font-size: 10px; }
-    .top-frame nav a:nth-child(n+4) { display: none; }
-  }
-
-  /* Bottom HUD · location read-out */
-  .bottom-hud {
-    position: fixed;
-    bottom: 0; left: 0; right: 0;
-    z-index: 40;
-    display: flex;
-    justify-content: space-between;
-    padding: 10px 18px;
-    background: var(--bg);
-    border-top: 2px solid var(--line);
-    font-family: var(--mono);
-    font-size: 10.5px;
-    letter-spacing: 0.18em;
-    text-transform: uppercase;
-    color: var(--muted);
-  }
-  .bottom-hud b { color: var(--ink); font-weight: 600; }
-  .bottom-hud .accent { color: var(--accent); }
-  @media (max-width: 720px) {
-    .bottom-hud { font-size: 9.5px; padding: 8px 12px; }
-    .bottom-hud .right { display: none; }
-  }
-
-  /* Section grid */
-  .section {
-    position: relative;
-    min-height: 100vh;
-    padding: 90px 24px 80px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-  }
-  .section .grid {
-    max-width: 1180px;
-    margin: 0 auto;
-    width: 100%;
-  }
-
-  /* Section header */
-  .sec-head {
-    display: grid;
-    grid-template-columns: 110px 1fr;
-    gap: 18px;
-    align-items: baseline;
-    border-bottom: 2px solid var(--line);
-    padding-bottom: 10px;
-    margin-bottom: 36px;
-  }
-  .sec-head .num {
-    font-family: var(--mono);
-    font-size: 11px;
-    letter-spacing: 0.2em;
-    color: var(--accent);
-    font-weight: 700;
-  }
-  .sec-head .label {
-    font-family: var(--mono);
-    font-size: 11px;
-    letter-spacing: 0.22em;
-    text-transform: uppercase;
-    color: var(--muted);
-    font-weight: 500;
-    display: flex;
-    justify-content: space-between;
-  }
-  .sec-head .label .right { color: var(--ink); }
-
-  /* Massive title */
-  .titanic {
-    font-weight: 800;
-    line-height: 0.86;
-    letter-spacing: -0.045em;
-    font-size: clamp(48px, 11vw, 168px);
-    text-transform: uppercase;
-    margin: 0;
-  }
-  .titanic .accent { color: var(--accent); }
-  .titanic .stroke {
-    -webkit-text-stroke: 2px var(--ink);
-    color: transparent;
-  }
-  .titanic .small { font-size: 0.5em; letter-spacing: -0.02em; display: block; }
-
-  /* Hero */
-  #s-intro .grid { padding-top: 40px; }
-  #s-intro .lead {
-    margin-top: 36px;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 32px;
-    max-width: 880px;
-  }
-  #s-intro .lead p {
-    font-size: 17px;
-    line-height: 1.45;
-    color: var(--ink-soft);
-    margin: 0;
-  }
-  #s-intro .lead .meta {
-    border-left: 2px solid var(--accent);
-    padding-left: 16px;
-    font-family: var(--mono);
-    font-size: 11px;
-    letter-spacing: 0.16em;
-    text-transform: uppercase;
-    color: var(--ink);
-    line-height: 1.7;
-  }
-  #s-intro .lead .meta b { color: var(--accent); display: inline-block; min-width: 92px; }
-  #s-intro .scroll-hint {
-    margin-top: 56px;
-    font-family: var(--mono);
-    font-size: 10.5px;
-    letter-spacing: 0.3em;
-    text-transform: uppercase;
-    color: var(--muted);
-    display: inline-flex;
-    align-items: center;
-    gap: 12px;
-  }
-  #s-intro .scroll-hint .arrow {
-    display: inline-block;
-    width: 28px; height: 1.5px;
-    background: var(--accent);
-    position: relative;
-    animation: arrowSlide 1.6s ease-in-out infinite;
-  }
-  #s-intro .scroll-hint .arrow::after {
-    content: "";
-    position: absolute;
-    right: -1px; top: -3px;
-    width: 6px; height: 6px;
-    border-right: 1.5px solid var(--accent);
-    border-bottom: 1.5px solid var(--accent);
-    transform: rotate(-45deg);
-  }
-  @keyframes arrowSlide {
-    0%, 100% { transform: translateX(0); opacity: 1; }
-    50%      { transform: translateX(8px); opacity: 0.4; }
-  }
-  @media (max-width: 720px) {
-    #s-intro .lead { grid-template-columns: 1fr; gap: 20px; }
-  }
-
-  /* Roles */
-  .roles-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 0;
-    border: 2px solid var(--line);
-    background: var(--bg);
-  }
-  .role {
-    padding: 26px 24px;
-    border-right: 2px solid var(--line);
-    display: flex; flex-direction: column;
-  }
-  .role:last-child { border-right: none; }
-  .role .head {
-    display: flex; justify-content: space-between; align-items: baseline;
-    border-bottom: 1.5px solid var(--line);
-    padding-bottom: 12px;
-    margin-bottom: 18px;
-  }
-  .role .head .letter {
-    font-weight: 800;
-    font-size: 56px;
-    line-height: 0.85;
-    letter-spacing: -0.04em;
-  }
-  .role .head .tag {
-    font-family: var(--mono);
-    font-size: 10px;
-    letter-spacing: 0.22em;
-    text-transform: uppercase;
-    color: var(--muted);
-  }
-  .role h3 {
-    font-weight: 700;
-    font-size: 28px;
-    line-height: 1.05;
-    letter-spacing: -0.025em;
-    text-transform: uppercase;
-    margin: 0 0 14px;
-  }
-  .role p {
-    font-size: 14px;
-    line-height: 1.5;
-    color: var(--ink-soft);
-    margin: 0 0 18px;
-  }
-  .role ul {
-    list-style: none;
-    padding: 0; margin: auto 0 0;
-    border-top: 1.5px solid var(--line);
-  }
-  .role ul li {
-    font-family: var(--mono);
-    font-size: 11px;
-    letter-spacing: 0.04em;
-    padding: 8px 0;
-    border-bottom: 1px solid var(--line-light);
-    display: flex; gap: 8px;
-  }
-  .role ul li::before { content: "→"; color: var(--accent); }
-  .role.b { background: var(--bg); }
-  .role.b .head .letter { color: var(--accent); }
-  .role.c { background: var(--ink); color: var(--bg); }
-  .role.c .head { border-color: #ffffff60; }
-  .role.c .head .tag { color: #ffffff90; }
-  .role.c p { color: #ffffffc0; }
-  .role.c ul { border-color: #ffffff60; }
-  .role.c ul li { border-color: #ffffff20; }
-  .role.c ul li::before { color: var(--accent); }
-  @media (max-width: 880px) {
-    .roles-grid { grid-template-columns: 1fr; }
-    .role { border-right: none; border-bottom: 2px solid var(--line); }
-    .role:last-child { border-bottom: none; }
-  }
-
-  /* Career timeline */
-  .cv-block {
-    display: grid;
-    grid-template-columns: 200px 1fr;
-    gap: 32px;
-    padding: 26px 0;
-    border-top: 2px solid var(--line);
-  }
-  .cv-block:last-child { border-bottom: 2px solid var(--line); }
-  .cv-block .lhs {
-    font-family: var(--mono);
-    font-size: 11px;
-    letter-spacing: 0.16em;
-    text-transform: uppercase;
-    color: var(--muted);
-  }
-  .cv-block .lhs h3 {
-    font-family: var(--grotesk);
-    font-weight: 700;
-    font-size: 22px;
-    letter-spacing: -0.02em;
-    color: var(--ink);
-    margin: 0 0 6px;
-    text-transform: uppercase;
-  }
-  .cv-block .lhs .count {
-    color: var(--accent);
-    font-weight: 700;
-    margin-top: 12px;
-    display: block;
-  }
-  .cv-block .rhs { display: grid; gap: 18px; }
-  .cv-row {
-    display: grid;
-    grid-template-columns: 110px 1fr;
-    gap: 16px;
-    border-bottom: 1px solid var(--line-light);
-    padding-bottom: 14px;
-  }
-  .cv-row:last-child { border-bottom: none; padding-bottom: 0; }
-  .cv-row .when {
-    font-family: var(--mono);
-    font-size: 11px;
-    letter-spacing: 0.04em;
-    color: var(--ink);
-    font-weight: 700;
-    line-height: 1.4;
-  }
-  .cv-row .what .co {
-    font-weight: 700;
-    font-size: 16px;
-    letter-spacing: -0.01em;
-    text-transform: uppercase;
-  }
-  .cv-row .what .role {
-    font-family: var(--mono);
-    font-size: 10.5px;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
-    color: var(--muted);
-    margin: 4px 0 6px;
-  }
-  .cv-row .what .desc {
-    font-size: 13.5px;
-    line-height: 1.5;
-    color: var(--ink-soft);
-  }
-  .cv-row .what .stack {
-    font-family: var(--mono);
-    font-size: 10.5px;
-    letter-spacing: 0.02em;
-    color: var(--muted);
-    margin-top: 6px;
-    display: block;
-  }
-  .cv-block.danis .lhs h3,
-  .cv-block.danis .lhs .count { color: var(--accent); }
-  .cv-block.danis { background: var(--accent-soft); padding-left: 18px; padding-right: 18px; margin-left: -18px; margin-right: -18px; }
-  @media (max-width: 720px) {
-    .cv-block { grid-template-columns: 1fr; gap: 16px; }
-    .cv-row { grid-template-columns: 80px 1fr; gap: 10px; }
-  }
-
-  /* Müfredat track grid (orgs-* — generic 4-col cell ızgarası) */
-  .orgs-intro {
-    max-width: 760px;
-    font-size: 16px;
-    line-height: 1.55;
-    color: var(--ink-soft);
-    margin: 0 0 48px;
-  }
-  .orgs-section { margin-bottom: 48px; }
-  .orgs-section:last-child { margin-bottom: 0; }
-  .orgs-head {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    font-family: var(--mono);
-    font-size: 11.5px;
-    letter-spacing: 0.22em;
-    text-transform: uppercase;
-    color: var(--ink);
-    border-bottom: 2px solid var(--line);
-    padding-bottom: 10px;
-    margin-bottom: 0;
-  }
-  .orgs-head .orgs-tag {
-    background: var(--accent);
-    color: #fff;
-    padding: 4px 9px;
-    font-weight: 700;
-    letter-spacing: 0.15em;
-    line-height: 1;
-  }
-  .orgs-grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    border-left: 2px solid var(--line);
-  }
-  .org-cell {
-    border-right: 2px solid var(--line);
-    border-bottom: 2px solid var(--line);
-    padding: 22px 18px 24px;
-    background: var(--bg);
-    transition: background 0.18s ease;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    min-height: 124px;
-  }
-  .org-cell:hover { background: var(--accent-soft); }
-  .org-name {
-    font-weight: 800;
-    font-size: 19px;
-    letter-spacing: -0.02em;
-    line-height: 1.1;
-    margin-bottom: 14px;
-    color: var(--ink);
-  }
-  .org-meta {
-    font-family: var(--mono);
-    font-size: 10px;
-    letter-spacing: 0.12em;
-    text-transform: uppercase;
-    color: var(--muted);
-    line-height: 1.55;
-  }
-  @media (max-width: 900px) {
-    .orgs-grid { grid-template-columns: repeat(3, 1fr); }
-  }
-  @media (max-width: 720px) {
-    .orgs-grid { grid-template-columns: repeat(2, 1fr); }
-    .org-cell { min-height: 110px; padding: 18px 14px 20px; }
-    .org-name { font-size: 15.5px; margin-bottom: 10px; }
-    .org-meta { font-size: 9.5px; }
-  }
-
-  /* Writings & talks */
-  .writing-list, .talks-list {
-    list-style: none; padding: 0; margin: 0;
-    border-top: 2px solid var(--line);
-  }
-  .writing-list li, .talks-list li {
-    border-bottom: 1px solid var(--line-light);
-    padding: 18px 0;
-    display: grid;
-    grid-template-columns: 100px 1fr 100px;
-    gap: 18px;
-    align-items: baseline;
-  }
-  .writing-list li:last-child, .talks-list li:last-child { border-bottom: 2px solid var(--line); }
-  .writing-list li .num, .talks-list li .num {
-    font-family: var(--mono);
-    font-size: 11px;
-    letter-spacing: 0.16em;
-    color: var(--muted);
-  }
-  .writing-list li .ttl, .talks-list li .ttl {
-    font-weight: 700;
-    font-size: 22px;
-    letter-spacing: -0.02em;
-    color: var(--ink);
-    text-decoration: none;
-  }
-  .writing-list li .ttl:hover { color: var(--accent); }
-  .writing-list li .desc, .talks-list li .desc {
-    font-size: 13.5px;
-    color: var(--muted);
-    margin-top: 4px;
-    line-height: 1.45;
-  }
-  .writing-list li .when, .talks-list li .when {
-    font-family: var(--mono);
-    font-size: 11px;
-    letter-spacing: 0.16em;
-    text-transform: uppercase;
-    color: var(--ink);
-    text-align: right;
-    border-left: 2px solid var(--line);
-    padding-left: 12px;
-  }
-  @media (max-width: 720px) {
-    .writing-list li, .talks-list li { grid-template-columns: 1fr; gap: 6px; }
-    .writing-list li .when, .talks-list li .when { text-align: left; border-left: none; padding-left: 0; }
-  }
-
-  /* Contact */
-  .contact-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 0;
-    border: 2px solid var(--line);
-  }
-  .contact-grid .col { padding: 28px 24px; }
-  .contact-grid .col + .col { border-left: 2px solid var(--line); }
-  .contact-grid .col h3 {
-    font-family: var(--mono);
-    font-size: 11px;
-    letter-spacing: 0.22em;
-    text-transform: uppercase;
-    margin: 0 0 18px;
-    color: var(--accent);
-  }
-  .contact-grid .row {
-    display: grid;
-    grid-template-columns: 110px 1fr;
-    gap: 12px;
-    padding: 10px 0;
-    border-bottom: 1px solid var(--line-light);
-    font-size: 14px;
-  }
-  .contact-grid .row:last-child { border-bottom: none; }
-  .contact-grid .row .k {
-    font-family: var(--mono);
-    font-size: 10.5px;
-    letter-spacing: 0.16em;
-    text-transform: uppercase;
-    color: var(--muted);
-  }
-  .contact-grid .row .v a { color: var(--ink); text-decoration: none; border-bottom: 1.5px solid var(--ink); }
-  .contact-grid .row .v a:hover { color: var(--accent); border-color: var(--accent); }
-  .contact-grid .closing {
-    margin-top: 36px;
-    font-size: 16px;
-    line-height: 1.45;
-    color: var(--ink-soft);
-  }
-  @media (max-width: 720px) {
-    .contact-grid { grid-template-columns: 1fr; }
-    .contact-grid .col + .col { border-left: none; border-top: 2px solid var(--line); }
-  }
-
-  /* Footer */
-  footer.tail {
-    border-top: 2px solid var(--line);
-    margin-top: 80px;
-    padding: 30px 24px 90px;
-    font-family: var(--mono);
-    font-size: 11px;
-    letter-spacing: 0.16em;
-    text-transform: uppercase;
-    color: var(--muted);
-    display: flex; justify-content: space-between;
-    max-width: 1180px;
-    margin-left: auto; margin-right: auto;
-  }
-  footer.tail b { color: var(--ink); }
-  footer.tail .accent { color: var(--accent); }
-
-  /* Misc */
-  .pull {
-    border-left: 4px solid var(--accent);
-    padding: 14px 0 14px 18px;
-    margin: 22px 0;
-    font-size: 19px;
-    line-height: 1.4;
-    font-weight: 500;
-    letter-spacing: -0.01em;
-    color: var(--ink);
-    max-width: 720px;
-  }
-
-  /* Section background swatches (so 3D wireframes pop differently per section) */
-  #s-roles    { background: linear-gradient(180deg, transparent 0%, transparent 100%); }
-  #s-career   { background: var(--bg); }
-  #s-contact  { background: var(--ink); color: var(--bg); }
-  #s-contact .sec-head { border-color: var(--bg); }
-  #s-contact .sec-head .label { color: #ffffff90; }
-  #s-contact .sec-head .label .right { color: var(--bg); }
-  #s-contact .titanic.stroke { -webkit-text-stroke-color: var(--bg); }
-  #s-contact .contact-grid { border-color: var(--bg); }
-  #s-contact .contact-grid .col + .col { border-color: var(--bg); }
-  #s-contact .contact-grid .row { border-color: #ffffff20; }
-  #s-contact .contact-grid .row .v a { color: var(--bg); border-color: var(--bg); }
-  #s-contact .contact-grid .row .k { color: #ffffff80; }
-  #s-contact .contact-grid .closing { color: #ffffffc0; }
-
-  /* a11y · skip */
-  .sr-only {
-    position: absolute; width: 1px; height: 1px;
-    padding: 0; margin: -1px; overflow: hidden;
-    clip: rect(0,0,0,0); white-space: nowrap; border: 0;
-  }
-
-  /* Loading */
-  #loading {
-    position: fixed; inset: 0;
-    background: var(--bg);
-    display: flex; align-items: center; justify-content: center;
-    font-family: var(--mono);
-    font-size: 11px;
-    letter-spacing: 0.3em;
-    text-transform: uppercase;
-    color: var(--ink);
-    z-index: 100;
-    transition: opacity .5s;
-  }
-  #loading.gone { opacity: 0; pointer-events: none; }
-  #loading .blk { color: var(--accent); margin-right: 10px; animation: blk 1.1s infinite; }
-  @keyframes blk { 0%,55%{opacity:1} 56%,100%{opacity:.15} }
-</style>
+    /* Atmosferik arka plan aydınlatması */
+    .ambient-glow {
+      background: radial-gradient(circle at center, rgba(14, 165, 233, 0.12) 0%, rgba(245, 158, 11, 0.05) 50%, transparent 75%);
+    }
+  </style>
 </head>
-<body>
-
-<div id="loading"><span><span class="blk">█</span> <span style="text-transform:none">erdogan.kim</span> · YÜKLENİYOR…</span></div>
-
-<div id="progress"></div>
-
-<header class="top-frame">
-  <div class="brand">ERDOGAN<span class="accent">.</span>KIM</div>
-  <nav>
-    <a href="#s-intro" data-nav>Giriş</a>
-    <a href="#s-roles" data-nav>Roller</a>
-    <a href="#s-mufredat" data-nav>Müfredatlar</a>
-    <a href="#s-referanslar" data-nav>Referanslar</a>
-    <a href="#s-career" data-nav>Kariyer</a>
-    <a href="#s-contact" data-nav>İletişim</a>
-  </nav>
-</header>
-
-<canvas id="webgl"></canvas>
-
-<main id="scroller">
-
-  <!-- ============ 000 / INTRO ============ -->
-  <section id="s-intro" class="section">
-    <div class="grid">
-      <div class="sec-head">
-        <span class="num">000</span>
-        <span class="label"><span>Giriş</span><span class="right">Erdoğan Öztürk</span></span>
-      </div>
-
-      <h1 class="titanic">
-        <span class="stroke">Yazılım Mimarı,</span><br/>
-        <span>Danışman,</span><br/>
-        <span class="accent">Eğitmen.</span>
-      </h1>
-
-      <div class="scroll-hint">
-        <span>Akış · gezinmeye başla</span>
-        <span class="arrow"></span>
-      </div>
-    </div>
-  </section>
-
-  <!-- ============ 001 / ÜÇ ROL ============ -->
-  <section id="s-roles" class="section">
-    <div class="grid">
-      <div class="sec-head">
-        <span class="num">001</span>
-        <span class="label"><span>Çalışma Şekilleri</span><span class="right">Üç farklı masa, aynı disiplin</span></span>
-      </div>
-
-      <h2 class="titanic" style="font-size:clamp(40px,8vw,108px);margin-bottom:30px;">
-        Üç <span class="accent">rol</span>, bir <span class="stroke">disiplin</span>.
-      </h2>
-
-      <div class="roles-grid">
-        <div class="role a">
-          <div class="head">
-            <span class="letter">A</span>
-            <span class="tag">Mimar</span>
-          </div>
-          <h3>Sistemin omurgasını kurmak ve korumak</h3>
-          <p>Uzun dönemli olarak bir ürün ekibine katılıyor; teknik vizyonu kod, insan ve süreç eksenlerinde birlikte şekillendiriyorum.</p>
-          <ul>
-            <li>Domain-driven tasarım</li>
-            <li>Event-driven mimari</li>
-            <li>Bulut &amp; platform stratejisi</li>
-            <li>Teknik yol haritası</li>
-          </ul>
-        </div>
-
-        <div class="role b">
-          <div class="head">
-            <span class="letter">B</span>
-            <span class="tag">Danışman</span>
-          </div>
-          <h3>Kritik karar anında yanında olmak</h3>
-          <p>Kısa ve yoğun programlarla ekiplere bağımsız bir göz sunuyorum. Architecture review'dan karar atölyelerine.</p>
-          <ul>
-            <li>Mimari değerlendirme (2–4 hafta)</li>
-            <li>Event storming atölyesi</li>
-            <li>Teknik due diligence</li>
-            <li>ADR &amp; dokümantasyon kültürü</li>
-          </ul>
-        </div>
-
-        <div class="role c">
-          <div class="head">
-            <span class="letter">C</span>
-            <span class="tag">Eğitmen</span>
-          </div>
-          <h3>Geliştiricileri bir üst seviyeye taşımak</h3>
-          <p>Şirket içi özel programlar ve kamuya açık atölyeler. Teori değil, somut kararlar üzerinden.</p>
-          <ul>
-            <li>Yazılım mimarisi temelleri</li>
-            <li>Dağıtık sistem tasarımı</li>
-            <li>DDD &amp; modelleme atölyesi</li>
-            <li>Junior/Mid → Senior → Staff geçiş programı</li>
-          </ul>
-        </div>
-      </div>
-
-      <div class="pull">
-        İyi bir mimar, daha önce yaptığını ve yazdığını <span style="color:var(--accent)">tekrar yaptırtmayacak ve yazdırmayacak</span> sistemi kurgulayandır.
-      </div>
-    </div>
-  </section>
-
-  <!-- ============ 002 / KURUMSAL MÜFREDATLAR ============ -->
-  <section id="s-mufredat" class="section">
-    <div class="grid">
-      <div class="sec-head">
-        <span class="num">002</span>
-        <span class="label"><span>Kurumsal Müfredatlar</span><span class="right">4 Track · 16 Modül · Pattern-First</span></span>
-      </div>
-
-      <h2 class="titanic" style="font-size:clamp(40px,8vw,108px);margin-bottom:30px;">
-        Aynı <span class="accent">örüntüyü</span> konuşabilen ekip.
-      </h2>
-
-      <p class="orgs-intro">
-        Geliştiricinin işi tek bir framework'ü kullanmak değil, sorunun şeklini görüp doğru deseni seçmektir.
-        Yapay zeka kullanarak geliştirme yapan geliştiricilerin artık içinde bulunduğumuz yapay zeka çağında
-        bunu hangi dil ile geliştirdikleri ve hangi ortamlarda nasıl yayınladıkları — yani
-        <em>kodlama dili bağımsızlığı</em> ve <em>geliştirme ortamı bağımsızlığı</em> — hali hazırda önemini yitirmiş oldu.
-        Kurumsal Müfredatlar; ekipleri katalogdaki bir deseni tanımak yerine
-        <em>neden, ne zaman ve hangi maliyetle</em> uygulanacağına karar verecek olgunluğa taşır.
-        Dört müfredat; on altı modül; profesyonel IoT sistemleri; tamamı atölye temelli.
-      </p>
-
-      <div class="orgs-section">
-        <div class="orgs-head"><span class="orgs-tag">A</span> Kurumsal Mimari Desenleri · PoEAA</div>
-        <div class="orgs-grid">
-          <div class="org-cell"><div class="org-name">Domain Logic</div><div class="org-meta">Transaction Script · Domain Model · Service Layer</div></div>
-          <div class="org-cell"><div class="org-name">Data Source</div><div class="org-meta">Active Record · Data Mapper · Repository · Gateway</div></div>
-          <div class="org-cell"><div class="org-name">Object-Relational</div><div class="org-meta">Unit of Work · Identity Map · Lazy Load · Inheritance</div></div>
-          <div class="org-cell"><div class="org-name">Web Presentation</div><div class="org-meta">MVC · Front Controller · Template View · BFF</div></div>
-        </div>
-      </div>
-
-      <div class="orgs-section">
-        <div class="orgs-head"><span class="orgs-tag">B</span> Domain-Driven Design · Stratejik &amp; Taktik</div>
-        <div class="orgs-grid">
-          <div class="org-cell"><div class="org-name">Stratejik DDD</div><div class="org-meta">Bounded Context · Subdomain · Context Map</div></div>
-          <div class="org-cell"><div class="org-name">Taktik DDD</div><div class="org-meta">Aggregate · Entity · Value Object · Domain Event</div></div>
-          <div class="org-cell"><div class="org-name">Modelleme Atölyesi</div><div class="org-meta">Event Storming · Example Mapping · Domain Story</div></div>
-          <div class="org-cell"><div class="org-name">Ports &amp; Adapters</div><div class="org-meta">Hexagonal · Onion · Clean · Vertical Slice</div></div>
-        </div>
-      </div>
-
-      <div class="orgs-section">
-        <div class="orgs-head"><span class="orgs-tag">C</span> Dağıtık Sistem Desenleri · Microservices</div>
-        <div class="orgs-grid">
-          <div class="org-cell"><div class="org-name">Servis Topolojisi</div><div class="org-meta">DB-per-Service · API Gateway · BFF · Sidecar</div></div>
-          <div class="org-cell"><div class="org-name">Mesaj &amp; Tutarlılık</div><div class="org-meta">Saga · Outbox · Inbox · Idempotency Key</div></div>
-          <div class="org-cell"><div class="org-name">CQRS / Event Sourcing</div><div class="org-meta">Komut/Sorgu Ayrımı · Event Store · Projeksiyon</div></div>
-          <div class="org-cell"><div class="org-name">Resilience</div><div class="org-meta">Circuit Breaker · Bulkhead · Retry · Timeout · Backpressure</div></div>
-        </div>
-      </div>
-
-      <div class="orgs-section">
-        <div class="orgs-head"><span class="orgs-tag">D</span> Enterprise Integration Patterns · Hohpe</div>
-        <div class="orgs-grid">
-          <div class="org-cell"><div class="org-name">Mesajlaşma Temelleri</div><div class="org-meta">Channel · Endpoint · Message · Pipes &amp; Filters</div></div>
-          <div class="org-cell"><div class="org-name">Yönlendirme</div><div class="org-meta">Content-Based Router · Splitter · Aggregator · Filter</div></div>
-          <div class="org-cell"><div class="org-name">Dönüştürme</div><div class="org-meta">Message Translator · Envelope · Normalizer · Enricher</div></div>
-          <div class="org-cell"><div class="org-name">Uçnokta Davranışı</div><div class="org-meta">Polling Consumer · Idempotent Receiver · Dead Letter</div></div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ============ 003 / REFERANSLAR ============ -->
-  <section id="s-referanslar" class="section">
-    <div class="grid">
-      <div class="sec-head">
-        <span class="num">003</span>
-        <span class="label"><span>Referanslar</span><span class="right">46 kurum · 7 sektörel küme</span></span>
-      </div>
-
-      <h2 class="titanic" style="font-size:clamp(40px,8vw,108px);margin-bottom:30px;">
-        <span class="stroke">Çalışılan</span> <span class="accent">kurumlar</span>.
-      </h2>
-
-      <p class="orgs-intro">
-        19 yıllık kariyer boyunca eğitim/danışmanlık verilen veya bizzat yazılım projelerinde
-        birlikte çalışılan kurum ve kuruluşlar. Yedi sektörel kümede; kamu/savunmadan bankacılığa,
-        telekomunikasyondan ağır sanayiye, turizmden sigorta ve hizmet alanlarına kadar…
-      </p>
-
-      <div class="orgs-section">
-        <div class="orgs-head"><span class="orgs-tag">01</span> Kamu / Savunma · 9 kurum</div>
-        <div class="orgs-grid">
-          <div class="org-cell"><div class="org-name">TÜBİTAK-SAGE</div><div class="org-meta">Savunma AR-GE</div></div>
-          <div class="org-cell"><div class="org-name">TUSAŞ (TAI)</div><div class="org-meta">Havacılık &amp; Uzay</div></div>
-          <div class="org-cell"><div class="org-name">Kara Kuvvetleri Komutanlığı</div><div class="org-meta">TSK</div></div>
-          <div class="org-cell"><div class="org-name">Jandarma Genel Komutanlığı</div><div class="org-meta">İç Güvenlik</div></div>
-          <div class="org-cell"><div class="org-name">Emniyet Genel Müdürlüğü</div><div class="org-meta">İçişleri Bakanlığı</div></div>
-          <div class="org-cell"><div class="org-name">Milli Eğitim Bakanlığı</div><div class="org-meta">MEB</div></div>
-          <div class="org-cell"><div class="org-name">Sosyal Güvenlik Kurumu</div><div class="org-meta">SGK</div></div>
-          <div class="org-cell"><div class="org-name">Türksat</div><div class="org-meta">Uydu &amp; Kablo TV</div></div>
-          <div class="org-cell"><div class="org-name">İstanbul Teknik Üniversitesi</div><div class="org-meta">Yüksek Öğretim</div></div>
-        </div>
-      </div>
-
-      <div class="orgs-section">
-        <div class="orgs-head"><span class="orgs-tag">02</span> Bankacılık / Fintech · 10 kurum</div>
-        <div class="orgs-grid">
-          <div class="org-cell"><div class="org-name">Garanti Teknoloji</div><div class="org-meta">Bankacılık BT</div></div>
-          <div class="org-cell"><div class="org-name">Ziraat Teknoloji</div><div class="org-meta">Bankacılık BT</div></div>
-          <div class="org-cell"><div class="org-name">Türkiye Finans Katılım Bankası</div><div class="org-meta">Katılım Bankası</div></div>
-          <div class="org-cell"><div class="org-name">Kuveyt Türk</div><div class="org-meta">Katılım Bankası</div></div>
-          <div class="org-cell"><div class="org-name">QNB Finansbank</div><div class="org-meta">Özel Banka</div></div>
-          <div class="org-cell"><div class="org-name">AnadoluBank</div><div class="org-meta">Özel Banka</div></div>
-          <div class="org-cell"><div class="org-name">Wirecard</div><div class="org-meta">Ödeme Sistemleri</div></div>
-          <div class="org-cell"><div class="org-name">Paycore</div><div class="org-meta">Ödeme Teknolojileri</div></div>
-          <div class="org-cell"><div class="org-name">Metropolcard</div><div class="org-meta">Kart / Ödeme</div></div>
-          <div class="org-cell"><div class="org-name">Belbim A.Ş.</div><div class="org-meta">İBB Ödeme Sistemleri</div></div>
-        </div>
-      </div>
-
-      <div class="orgs-section">
-        <div class="orgs-head"><span class="orgs-tag">03</span> Telekom / BT · 8 kurum</div>
-        <div class="orgs-grid">
-          <div class="org-cell"><div class="org-name">Turkcell</div><div class="org-meta">Mobil Telekom</div></div>
-          <div class="org-cell"><div class="org-name">Turkcell Global Bilgi</div><div class="org-meta">Müşteri Deneyimi</div></div>
-          <div class="org-cell"><div class="org-name">İşNet</div><div class="org-meta">Kurumsal BT / İletişim</div></div>
-          <div class="org-cell"><div class="org-name">Innova Bilişim</div><div class="org-meta">BT Hizmetleri</div></div>
-          <div class="org-cell"><div class="org-name">NetBT Danışmanlık</div><div class="org-meta">BT Danışmanlık</div></div>
-          <div class="org-cell"><div class="org-name">VBT Bilgi Teknolojileri</div><div class="org-meta">Yazılım Danışmanlık</div></div>
-          <div class="org-cell"><div class="org-name">Nebim Neyir</div><div class="org-meta">Perakende ERP</div></div>
-          <div class="org-cell"><div class="org-name">Alfa Bilgisayar</div><div class="org-meta">Kurumsal Yazılım</div></div>
-        </div>
-      </div>
-
-      <div class="orgs-section">
-        <div class="orgs-head"><span class="orgs-tag">04</span> Sanayi / Otomotiv · 5 kurum</div>
-        <div class="orgs-grid">
-          <div class="org-cell"><div class="org-name">Mercedes-Benz</div><div class="org-meta">Otomotiv</div></div>
-          <div class="org-cell"><div class="org-name">Borusan</div><div class="org-meta">Sanayi Holding</div></div>
-          <div class="org-cell"><div class="org-name">Çolakoğlu Metalurji</div><div class="org-meta">Demir-Çelik</div></div>
-          <div class="org-cell"><div class="org-name">Siemens</div><div class="org-meta">Endüstri / Otomasyon</div></div>
-          <div class="org-cell"><div class="org-name">Korteks</div><div class="org-meta">Tekstil / Polyester İplik</div></div>
-        </div>
-      </div>
-
-      <div class="orgs-section">
-        <div class="orgs-head"><span class="orgs-tag">05</span> Turizm / Havacılık · 5 kurum</div>
-        <div class="orgs-grid">
-          <div class="org-cell"><div class="org-name">SunExpress</div><div class="org-meta">Havacılık</div></div>
-          <div class="org-cell"><div class="org-name">Amadeus</div><div class="org-meta">Seyahat Teknolojisi (GDS)</div></div>
-          <div class="org-cell"><div class="org-name">Setur</div><div class="org-meta">Turizm / Seyahat</div></div>
-          <div class="org-cell"><div class="org-name">Tatilbudur</div><div class="org-meta">Online Tatil</div></div>
-          <div class="org-cell"><div class="org-name">Talya Bilişim</div><div class="org-meta">Otel Yazılımları (Elektra)</div></div>
-        </div>
-      </div>
-
-      <div class="orgs-section">
-        <div class="orgs-head"><span class="orgs-tag">06</span> Sigorta · 3 kurum</div>
-        <div class="orgs-grid">
-          <div class="org-cell"><div class="org-name">Anadolu Sigorta</div><div class="org-meta">Sigorta</div></div>
-          <div class="org-cell"><div class="org-name">Neova Sigorta</div><div class="org-meta">Sigorta</div></div>
-          <div class="org-cell"><div class="org-name">Sompo Sigorta</div><div class="org-meta">Sigorta</div></div>
-        </div>
-      </div>
-
-      <div class="orgs-section">
-        <div class="orgs-head"><span class="orgs-tag">07</span> Tüketim / Hizmet · 6 kurum</div>
-        <div class="orgs-grid">
-          <div class="org-cell"><div class="org-name">Philip Morris SA</div><div class="org-meta">FMCG</div></div>
-          <div class="org-cell"><div class="org-name">PwC</div><div class="org-meta">Denetim / Danışmanlık</div></div>
-          <div class="org-cell"><div class="org-name">Ekol Lojistik</div><div class="org-meta">Lojistik</div></div>
-          <div class="org-cell"><div class="org-name">Saat &amp; Saat</div><div class="org-meta">Perakende</div></div>
-          <div class="org-cell"><div class="org-name">Lokman Ecza Deposu</div><div class="org-meta">Sağlık / Dağıtım</div></div>
-          <div class="org-cell"><div class="org-name">Bantaş</div><div class="org-meta">Ambalaj / Üretim</div></div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ============ 004 / KARİYER ============ -->
-  <section id="s-career" class="section">
-    <div class="grid">
-      <div class="sec-head">
-        <span class="num">004</span>
-        <span class="label"><span>Kariyer · 19 yıl</span><span class="right">Tübitak-SAGE → Lokman</span></span>
-      </div>
-
-      <h2 class="titanic" style="font-size:clamp(40px,8vw,108px);margin-bottom:30px;">
-        <span class="stroke">4 parçada</span><br/>19 yıllık deneyim.
-      </h2>
-
-      <!-- Mimari -->
-      <div class="cv-block">
-        <div class="lhs">
-          <h3>Mimarlık</h3>
-          <div>Yazılım Mimarı · Teknik Lider</div>
-          <span class="count">4 görev · 7+ yıl</span>
-        </div>
-        <div class="rhs">
-          <div class="cv-row">
-            <span class="when">2024<br/>2026</span>
-            <span class="what">
-              <div class="co">Lokman Ecza Deposu</div>
-              <div class="role">Teknik Lider · FarmaBorsa Projesi</div>
-              <div class="desc">Eczaneler arası ıtriyat borsası uygulamasının geliştirilmesi. Ekibe gerekli mimari deneyimi kazandırmak için saha içi küçük eğitimler ve projeye adaptasyon.</div>
-              <span class="stack">.NET Core · EF Core · Docker · Microservice · CQRS · CGPayment · Shipink.io</span>
-            </span>
-          </div>
-          <div class="cv-row">
-            <span class="when">2021<br/>2022</span>
-            <span class="what">
-              <div class="co">Tübitak-SAGE</div>
-              <div class="role">Yazılım Mimarı · Ankara</div>
-              <div class="desc">İç Yazılımlar biriminde mimari planlama, ekiple kod geliştirme, ekibin oryantasyonu.</div>
-              <span class="stack">.NET Core · Angular · MSSQL · Mongo · Redis · Min.IO · Docker · Microservice</span>
-            </span>
-          </div>
-          <div class="cv-row">
-            <span class="when">2016<br/>2019</span>
-            <span class="what">
-              <div class="co">YCP Bilgi Teknolojileri</div>
-              <div class="role">Ar/Ge Direktörü · İstanbul</div>
-              <div class="desc">IPay uluslararası mobil ödeme platformu (yurt dışı, 7 kişilik ekip). YCP Framework. Anadolu Sigorta Rücu/Hasar (3 takım, 15 kişi). GogoBio (AR sosyal medya).</div>
-              <span class="stack">C# · ASP.NET MVC/Web API · EF · Xamarin · Angular 6 · Vuforia AR</span>
-            </span>
-          </div>
-          <div class="cv-row"><span class="when">2014<br/>2015</span><span class="what"><div class="co">İTÜ Bilgi İşlem</div><div class="role">Yazılım Mimarı (outsource · Bilge Adam) · İstanbul · Yurt/Lojman/Yemekhane otomasyonları, takım liderliği</div></span></div>
-        </div>
-      </div>
-
-      <!-- Danışmanlık -->
-      <div class="cv-block danis">
-        <div class="lhs">
-          <h3>Danışmanlık</h3>
-          <div>Yazılım Danışmanı</div>
-          <span class="count">7 görev</span>
-        </div>
-        <div class="rhs">
-          <div class="cv-row">
-            <span class="when">2023<br/>2024</span>
-            <span class="what">
-              <div class="co">SAHABT → Architecht (Kuveyt-Türk)</div>
-              <div class="role">Kıdemli Yazılım Danışmanı · İstanbul</div>
-              <div class="desc">Kart Sistem Geliştirme ekibinde outsource danışman.</div>
-            </span>
-          </div>
-          <div class="cv-row">
-            <span class="when">2022</span>
-            <span class="what">
-              <div class="co">PAYCORE</div>
-              <div class="role">Kıdemli Yazılım Uzmanı · İstanbul</div>
-              <div class="desc">Replatform'a tabi tutulan Kredi Kartı · POS Seçimi projesinin geliştirilmesi.</div>
-              <span class="stack">C# · ASP.NET Web API · MediatR · ORACLE · EF Core · Docker · Microservice</span>
-            </span>
-          </div>
-          <div class="cv-row">
-            <span class="when">2020<br/>2021</span>
-            <span class="what">
-              <div class="co">Mercedes-Benz Türk</div>
-              <div class="role">Yazılım Geliştirme ve Uygulama Danışmanı · İstanbul</div>
-              <div class="desc">Bünyede geliştirilen Finans uygulamalarında danışmanlık.</div>
-              <span class="stack">.NET Core · Angular 7 · RabbitMQ · Docker · MSSQL · EF Core</span>
-            </span>
-          </div>
-          <div class="cv-row"><span class="when">2019<br/>2020</span><span class="what"><div class="co">Wirecard</div><div class="role">Proje Danışmanı · İstanbul · İç finans uygulamaları mimarisi, framework ve altyapı geliştirme</div></span></div>
-          <div class="cv-row">
-            <span class="when">2016</span>
-            <span class="what">
-              <div class="co">Biometrik Perkotek · Ajanspress · Saat &amp; Saat</div>
-              <div class="role">Startup Mimari &amp; Danışmanlık · İstanbul · 3 paralel görev</div>
-              <div class="desc">Biyometri (parmak izi/yüz/retina cihaz framework'ü) · medya takip sistemi (Angular 2 · Node · Mongo) · online perakende + CRM (plug-in mimari · IoC · EF Code First).</div>
-            </span>
-          </div>
-        </div>
-      </div>
-
-      <!-- Eğitmenlik -->
-      <div class="cv-block">
-        <div class="lhs">
-          <h3>Eğitmenlik</h3>
-          <div>Master Trainer</div>
-          <span class="count">4 kurum · 150+ grup</span>
-        </div>
-        <div class="rhs">
-          <div class="cv-row">
-            <span class="when">2015<br/>2019</span>
-            <span class="what">
-              <div class="co">BT Akademi</div>
-              <div class="role">Yazılım Eğitmeni · İstanbul · yarı zamanlı</div>
-              <div class="desc">≈150 grup mezun. MCSD Sertifikasyon, Enterprise Design Patterns, OOP, Yazılım Güvenliği, Xamarin Native, ASP.NET Core, EF Core, Angular 6.</div>
-            </span>
-          </div>
-          <div class="cv-row">
-            <span class="when">2013<br/>2014</span>
-            <span class="what">
-              <div class="co">Bilge Adam Bilişim Grubu</div>
-              <div class="role">Yazılım/Veritabanı Birim Müdürü · Master Trainer · Antalya / Bursa</div>
-              <div class="desc">6 grup × 300 saat MCSD eğitimi. TSK, Fresenius Medical, Zorlu Holding kurumsal eğitimleri. Yeni eğitmenlere Master Trainer.</div>
-            </span>
-          </div>
-          <div class="cv-row"><span class="when">2019<br/>2020</span><span class="what"><div class="co">Kariyer Mimarı</div><div class="role">Yazılım Eğitmeni · serbest · Başlangıçtan ileri seviyeye eğitimler</div></span></div>
-          <div class="cv-row"><span class="when">2008<br/>2009</span><span class="what"><div class="co">Uzman Bilişim Akademisi</div><div class="role">Yazılım Geliştirme Eğitmeni · Konya · 2 grup × 450 saat MCSD; Petkim ileri yazılım danışmanlığı</div></span></div>
-        </div>
-      </div>
-
-      <!-- Erken kariyer -->
-      <div class="cv-block">
-        <div class="lhs">
-          <h3>Erken Kariyer</h3>
-          <div>Geliştirici · Ekip Lideri</div>
-          <span class="count">7 görev · 11 yıl</span>
-        </div>
-        <div class="rhs">
-          <div class="cv-row"><span class="when">2015<br/>2016</span><span class="what"><div class="co">Biltim Bilgisayar Hizmetleri</div><div class="role">Kıdemli Yazılım Geliştirme Uzmanı · Çolakoğlu Holding (Texas) · Medtrade ERP</div></span></div>
-          <div class="cv-row"><span class="when">2012<br/>2013</span><span class="what"><div class="co">Talya Bilişim · Elektra Otel</div><div class="role">Kıdemli Yazılım Uzmanı · Antalya · Elektra Ticari Set Muhasebe</div></span></div>
-          <div class="cv-row"><span class="when">2010<br/>2012</span><span class="what"><div class="co">Nissa Yazılım</div><div class="role">Yazılım Ekip Lideri · Nevşehir · 6 kişilik ekip · Nissa Ticari Paket, Sarraf, Tarım İl Müdürlüğü</div></span></div>
-          <div class="cv-row"><span class="when">2009<br/>2010</span><span class="what"><div class="co">Talya Bilişim · Elektra Otel</div><div class="role">Yazılım Uzmanı · Antalya · Online Rezervasyon (PHP/AJAX/MSSQL)</div></span></div>
-          <div class="cv-row"><span class="when">2007<br/>2008</span><span class="what"><div class="co">Akınsoft</div><div class="role">Yazılım Ekip Lideri · Konya · Wolvox E-Ticaret/İK/Restaurant; Livechat; DigiMarketim</div></span></div>
-          <div class="cv-row"><span class="when">2005<br/>2006</span><span class="what"><div class="co">Göktaş Yazılım</div><div class="role">Web Yazılım Uzmanı · Konya · Otel/muhasebe web modülleri</div></span></div>
-          <div class="cv-row"><span class="when">2004<br/>2005</span><span class="what"><div class="co">Anadoluweb.Net</div><div class="role">Yazılım Uzmanı · Konya · KonTV, Konya Teknokent, Şekersüt — CMS &amp; web portalları</div></span></div>
-        </div>
-      </div>
-
-    </div>
-  </section>
-
-  <!-- ============ 005 / İLETİŞİM ============ -->
-  <section id="s-contact" class="section">
-    <div class="grid">
-      <div class="sec-head">
-        <span class="num" style="color:var(--accent)">005</span>
-        <span class="label"><span>İletişim</span></span>
-      </div>
-
-      <h2 class="titanic" style="font-size:clamp(40px,8vw,108px);margin-bottom:30px;color:var(--bg)">
-        <span class="stroke">Yaz.</span>
-      </h2>
-
-      <div class="contact-grid">
-        <div class="col">
-          <h3>Doğrudan Hat</h3>
-          <div class="row"><span class="k">E-posta</span><span class="v"><a href="mailto:iletisim@erdogan.kim">iletisim@erdogan.kim</a></span></div>
-          <div class="row"><span class="k">Telefon</span><span class="v"><a href="tel:+905075915566">+90 (507) 591 55 66</a><a href="https://wa.me/905075915566" aria-label="WhatsApp" target="_blank" rel="noopener" style="border-bottom:none;display:inline-flex;align-items:center;margin-left:10px;vertical-align:middle"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" style="display:block"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg></a></span></div>
-        </div>
-        <div class="col">
-          <h3>Profil</h3>
-          <div class="row"><span class="k">LinkedIn</span><span class="v"><a href="https://linkedin.com/in/erdoganozturk" rel="me">/in/erdoganozturk</a></span></div>
-          <div class="row"><span class="k">GitHub</span><span class="v"><a href="https://github.com/erdogankim" rel="me">/erdogankim</a></span></div>
-          <div class="row"><span class="k">Site</span><span class="v"><a href="/">erdogan.kim</a></span></div>
-        </div>
-      </div>
-
-    </div>
-  </section>
-
-  <footer class="tail">
-    <div>© 2026 <b>ERDOĞAN ÖZTÜRK</b></div>
-  </footer>
-
-</main>
-
-<div class="bottom-hud">
-  <div class="left">BÖLÜM <b id="hud-sec">000 / GİRİŞ</b></div>
-  <div class="right">AKIŞ <b id="hud-prog">0%</b></div>
-</div>
-
-<script type="importmap">
-{
-  "imports": {
-    "three": "https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js"
-  }
-}
-</script>
-
-<script type="module">
-import * as THREE from 'three';
-
-/* ===========================================================
-   BRUTALIST ATLAS · scroll-driven 3D
-   - Beyaz zemin, siyah wireframe, cobalt accent
-   - Camera waypoints scroll progress'a göre lerp ile geçer
-   - 6 bölüm var; her bölümün bir waypoint'i var
-   =========================================================== */
-
-const isMobile = window.matchMedia('(max-width: 720px)').matches;
-
-const canvas = document.getElementById('webgl');
-const renderer = new THREE.WebGLRenderer({
-  canvas, antialias: !isMobile, alpha: true
-});
-renderer.setSize(window.innerWidth, window.innerHeight);
-renderer.setPixelRatio(Math.min(devicePixelRatio, isMobile ? 1.5 : 2));
-renderer.setClearColor(0xffffff, 0);
+<body class="relative w-full h-full flex flex-col justify-center items-center select-none overflow-hidden bg-[#080a0f]">
+<!-- Tam Ekran 3D Three.js Sahnesi -->
+<div class="absolute inset-0 w-full h-full z-0 pointer-events-auto overflow-hidden" id="canvas-container">
+<!-- STITCH_THREEJS_START:ANIMATION_18 class="absolute inset-0 w-full h-full bg-transparent z-0 pointer-events-auto" -->
+<div class="absolute inset-0 w-full h-full bg-transparent z-0 pointer-events-auto" style="display:block;">
+<script src="https://ajax.googleapis.com/ajax/libs/threejs/r125/three.min.js"></script>
+<div id="threejs-container-ANIMATION_18" style="width:100%;height:100%"></div>
+<script>
+(function() {
+  const container = document.getElementById('threejs-container-ANIMATION_18');
+  const devicePixelRatio = window.devicePixelRatio || 1;
+  const width = container.clientWidth || window.innerWidth || 390;
+const height = container.clientHeight || window.innerHeight || 844;
 
 const scene = new THREE.Scene();
+const camera = new THREE.PerspectiveCamera(60, width / height, 0.1, 1000);
+camera.position.z = 24;
 
-const camera = new THREE.PerspectiveCamera(
-  isMobile ? 62 : 50,
-  window.innerWidth / window.innerHeight,
-  0.1, 200
-);
-camera.position.set(0, 1.6, 7);
-camera.lookAt(0, 1, 0);
+const renderer = new THREE.WebGLRenderer({ alpha: true, antialias: true, powerPreference: 'high-performance' });
+renderer.setSize(width, height);
+renderer.setPixelRatio(Math.min(window.devicePixelRatio || 1, 2));
+renderer.setClearColor(0x000000, 0); // fully transparent background
+container.appendChild(renderer.domElement);
 
-/* ============ MATERIALS ============ */
-const INK    = 0x000000;
-const ACCENT = 0x0033ff;
+// Lighting
+const ambientLight = new THREE.AmbientLight(0xffffff, 1.2);
+scene.add(ambientLight);
 
-const matInk = new THREE.LineBasicMaterial({
-  color: INK, transparent: true, opacity: 0.85
+const pointLightCyan = new THREE.PointLight(0x22d3ee, 3.5, 60);
+pointLightCyan.position.set(12, 10, 15);
+scene.add(pointLightCyan);
+
+const pointLightAmber = new THREE.PointLight(0xf59e0b, 3.0, 60);
+pointLightAmber.position.set(-12, -10, 15);
+scene.add(pointLightAmber);
+
+const coreGroup = new THREE.Group();
+scene.add(coreGroup);
+
+// 1. Central Core Sphere - 3D Wireframe Icosahedron
+const coreGeo = new THREE.IcosahedronGeometry(2.4, 2);
+const coreMat = new THREE.MeshStandardMaterial({
+  color: 0x38bdf8,
+  emissive: 0x0284c7,
+  wireframe: true,
+  roughness: 0.2,
+  metalness: 0.1,
+  transparent: true,
+  opacity: 0.75
 });
-const matAccent = new THREE.LineBasicMaterial({
-  color: ACCENT, transparent: true, opacity: 0.95
+const coreMesh = new THREE.Mesh(coreGeo, coreMat);
+coreGroup.add(coreMesh);
+
+// Soft inner core glow node
+const innerNodeGeo = new THREE.SphereGeometry(1.2, 16, 16);
+const innerNodeMat = new THREE.MeshBasicMaterial({
+  color: 0x22d3ee,
+  wireframe: true,
+  transparent: true,
+  opacity: 0.6
 });
-const matInkSoft = new THREE.LineBasicMaterial({
-  color: INK, transparent: true, opacity: 0.18
-});
+const innerNode = new THREE.Mesh(innerNodeGeo, innerNodeMat);
+coreGroup.add(innerNode);
 
-/* Helper: wireframe from geometry */
-function wire(geo, mat = matInk) {
-  return new THREE.LineSegments(new THREE.WireframeGeometry(geo), mat);
-}
-
-/* Helper: edge box (clean lines, not triangulated wireframe) */
-function edgeBox(w, h, d, mat = matInk) {
-  return new THREE.LineSegments(
-    new THREE.EdgesGeometry(new THREE.BoxGeometry(w, h, d)),
-    mat
-  );
-}
-
-/* ============ MONUMENTS · per section ============ */
-/* Each major form sits at a distinct world position; camera flies to each. */
-
-const monuments = [];
-
-// 000 / INTRO — büyük cobalt octahedron + ince siyah çerçeve
-const m0 = new THREE.Group();
-{
-  const oct = wire(new THREE.OctahedronGeometry(1.4, 0), matAccent);
-  m0.add(oct);
-  const frame = edgeBox(3.4, 3.4, 3.4, matInk);
-  m0.add(frame);
-  // alt dipsel grid (yer hissi)
-  const grid = new THREE.GridHelper(20, 20, INK, INK);
-  grid.material.opacity = 0.06;
-  grid.material.transparent = true;
-  grid.position.y = -1.7;
-  m0.add(grid);
-  m0.position.set(0, 1.6, 0);
-  scene.add(m0);
-  monuments.push({ id: 'intro', group: m0, baseRot: [0, 0, 0] });
-}
-
-// 001 / ROLLER (Müfredatlar'a transit) — üç wireframe küp + her küpte mini graph diyagramı
-const m1 = new THREE.Group();
-{
-  const cubes = [
-    { x: -3.4, y: 0,    w: 2.4, h: 3.0, d: 2.4, mat: matInk },
-    { x: 0,    y: 0.75, w: 2.4, h: 4.5, d: 2.4, mat: matAccent },
-    { x: 3.4,  y: -0.4, w: 2.4, h: 2.2, d: 2.4, mat: matInk }
-  ];
-
-  const nodeMat = new THREE.MeshBasicMaterial({ color: ACCENT });
-  const innerEdgeMat = new THREE.LineBasicMaterial({
-    color: INK, transparent: true, opacity: 0.55
-  });
-  const interEdgeMat = new THREE.LineBasicMaterial({
-    color: ACCENT, transparent: true, opacity: 0.45
-  });
-
-  // Pseudo-rastgele · seed = küp index'i (her sayfada stabil görünüm)
-  const rng = (n) => {
-    const s = Math.sin(n * 12.9898 + 78.233) * 43758.5453;
-    return s - Math.floor(s);
-  };
-
-  const cubeAnchors = [];
-
-  cubes.forEach((c, i) => {
-    const cubeGroup = new THREE.Group();
-    cubeGroup.position.set(c.x, c.y, 0);
-
-    const edge = edgeBox(c.w, c.h, c.d, c.mat);
-    cubeGroup.add(edge);
-
-    // İç graph: 5..7 düğüm (büyük küp = daha çok düğüm)
-    const nodeCount = 5 + Math.floor(rng(i * 3.7) * 3);
-    const nodes = [];
-    for (let n = 0; n < nodeCount; n++) {
-      const r = 0.07 + rng(i * 5 + n) * 0.04;
-      const sph = new THREE.Mesh(new THREE.SphereGeometry(r, 10, 8), nodeMat);
-      sph.position.set(
-        (rng(i * 11 + n * 2) - 0.5) * c.w * 0.7,
-        (rng(i * 13 + n * 3) - 0.5) * c.h * 0.7,
-        (rng(i * 17 + n * 5) - 0.5) * c.d * 0.7
-      );
-      cubeGroup.add(sph);
-      nodes.push(sph);
-    }
-
-    // İç kenarlar — her düğümü 1-2 komşusuna bağla
-    for (let a = 0; a < nodes.length; a++) {
-      const b = nodes[(a + 1) % nodes.length];
-      cubeGroup.add(new THREE.Line(
-        new THREE.BufferGeometry().setFromPoints([nodes[a].position, b.position]),
-        innerEdgeMat
-      ));
-      if (a % 2 === 0) {
-        const cc = nodes[(a + 2) % nodes.length];
-        cubeGroup.add(new THREE.Line(
-          new THREE.BufferGeometry().setFromPoints([nodes[a].position, cc.position]),
-          innerEdgeMat
-        ));
-      }
-    }
-
-    // Anchor — küpler arası hat oradan çıkacak (m1-uzayındaki konum)
-    const anchorIdx = Math.floor(rng(i * 19) * nodes.length);
-    const anchorM1 = nodes[anchorIdx].position.clone()
-      .add(new THREE.Vector3(c.x, c.y, 0));
-    cubeAnchors.push(anchorM1);
-
-    m1.add(cubeGroup);
-  });
-
-  // Küpler arası iletişim hatları (komşu + uzun atlama)
-  m1.add(new THREE.Line(
-    new THREE.BufferGeometry().setFromPoints([cubeAnchors[0], cubeAnchors[1]]),
-    interEdgeMat
-  ));
-  m1.add(new THREE.Line(
-    new THREE.BufferGeometry().setFromPoints([cubeAnchors[1], cubeAnchors[2]]),
-    interEdgeMat
-  ));
-  // Skip-link: 1 ↔ 3 (uzak servis-servis)
-  m1.add(new THREE.Line(
-    new THREE.BufferGeometry().setFromPoints([cubeAnchors[0], cubeAnchors[2]]),
-    interEdgeMat
-  ));
-
-  m1.position.set(20, 1.5, 0);
-  scene.add(m1);
-  monuments.push({ id: 'roles', group: m1, baseRot: [0, 0, 0] });
-}
-
-// 004 / KARİYER — uzun, dikey wireframe sütun (timeline of cubes)
-const m2 = new THREE.Group();
-{
-  const N = 19; // 19 yıl
-  for (let i = 0; i < N; i++) {
-    const sz = 0.55 + (i / N) * 1.0;
-    const m = edgeBox(sz, 0.45, sz, i === N - 1 ? matAccent : matInk);
-    m.position.y = i * 0.6 - (N * 0.6) / 2;
-    m.rotation.y = (i / N) * Math.PI * 0.6;
-    m2.add(m);
-  }
-  // dikey çizgi ekseni
-  const axisGeo = new THREE.BufferGeometry().setFromPoints([
-    new THREE.Vector3(0, -8, 0),
-    new THREE.Vector3(0, 8, 0)
-  ]);
-  m2.add(new THREE.Line(axisGeo, matAccent));
-
-  m2.position.set(60, 0, 0);
-  scene.add(m2);
-  monuments.push({ id: 'career', group: m2, baseRot: [0, 0, 0] });
-}
-
-// 003 / REFERANSLAR — kurum atlası: 8 sütun × 6 satır mini wireframe küp grid (44 hücre)
-const m3 = new THREE.Group();
-{
-  // her sektörün küme sayısı: 8,10,8,5,4,3,6 = 44
-  const sectorCounts = [8, 10, 8, 5, 4, 3, 6];
-  const cellSize = 0.34;
-  const gapX = 0.46;
-  const gapY = 0.62;
-  let cellIdx = 0;
-  sectorCounts.forEach((cnt, secI) => {
-    for (let c = 0; c < cnt; c++) {
-      const mat = (cellIdx % 11 === 0) ? matAccent : matInk;
-      const cube = edgeBox(cellSize, cellSize, cellSize, mat);
-      const col = c;
-      cube.position.set(
-        col * gapX - (10 * gapX) / 2,
-        (sectorCounts.length - 1 - secI) * gapY - (sectorCounts.length * gapY) / 2,
-        0
-      );
-      m3.add(cube);
-      cellIdx++;
-    }
-    // sektör ayraç çizgisi
-    const ly = (sectorCounts.length - 1 - secI) * gapY - (sectorCounts.length * gapY) / 2 - gapY / 2;
-    const lineGeo = new THREE.BufferGeometry().setFromPoints([
-      new THREE.Vector3(-3.0, ly, 0),
-      new THREE.Vector3( 3.0, ly, 0)
-    ]);
-    m3.add(new THREE.Line(lineGeo, matInkSoft));
-  });
-  m3.position.set(40, 0.8, 0);
-  scene.add(m3);
-  monuments.push({ id: 'referanslar', group: m3, baseRot: [0, 0, 0] });
-}
-
-// 005 / İLETİŞİM — basit küre, koyu zeminde patlayıcı
-const m5 = new THREE.Group();
-{
-  const ico = wire(new THREE.IcosahedronGeometry(1.6, 1), matAccent);
-  m5.add(ico);
-  const cage = edgeBox(4, 4, 4, new THREE.LineBasicMaterial({
-    color: 0xffffff, transparent: true, opacity: 0.6
-  }));
-  m5.add(cage);
-  m5.position.set(100, 1.4, 0);
-  scene.add(m5);
-  monuments.push({ id: 'contact', group: m5, baseRot: [0, 0, 0] });
-}
-
-/* ============ STAR-FIELD (ince yatay çizgiler · Swiss raster hissi) ============ */
-{
-  const lines = new THREE.Group();
-  const W = 200;
-  for (let i = -8; i <= 8; i++) {
-    const g = new THREE.BufferGeometry().setFromPoints([
-      new THREE.Vector3(-W/2, 0, i * 1.4),
-      new THREE.Vector3( W/2, 0, i * 1.4)
-    ]);
-    const m = new THREE.Line(g, new THREE.LineBasicMaterial({
-      color: INK, transparent: true,
-      opacity: 0.04 + (i % 4 === 0 ? 0.04 : 0)
-    }));
-    m.position.y = -2;
-    lines.add(m);
-  }
-  scene.add(lines);
-}
-
-/* ============ CAMERA WAYPOINTS ============ */
-/* Her waypoint: { pos: [x,y,z], lookAt: [x,y,z] }
-   Section index'leri sırayla scroll progress 0..1'e göre eşlenir. */
-const waypoints = [
-  { pos: [0,    1.8,  6.2], lookAt: [0,    1.6, 0] },   // intro
-  { pos: [20,   2.5,  6.5], lookAt: [20,   1.5, 0] },   // roles
-  { pos: [30,   1.8,  7.0], lookAt: [30,   1.0, 0] },   // mufredat (transit)
-  { pos: [40,   1.5,  7.2], lookAt: [40,   0.8, 0] },   // referanslar (now at x=40)
-  { pos: [62.5, 0.4,  7.0], lookAt: [60,   0,   0] },   // career      (now at x=60)
-  { pos: [100,  1.6,  5.8], lookAt: [100,  1.4, 0] },   // contact
+// 2. Cosmic Orbital Rings (Prominent, High-visibility Torus meshes)
+const rings = [];
+const ringConfigs = [
+  { radius: 4.8, tube: 0.08, color: 0x22d3ee, rx: 1.1, ry: 0.4, rz: 0.2, sx: 0.003, sy: 0.002, sz: 0.001 },
+  { radius: 6.8, tube: 0.07, color: 0x38bdf8, rx: 0.4, ry: 1.2, rz: 0.5, sx: -0.002, sy: 0.003, sz: 0.002 },
+  { radius: 8.8, tube: 0.08, color: 0xf59e0b, rx: 0.9, ry: -0.7, rz: 1.0, sx: 0.002, sy: -0.002, sz: 0.003 },
+  { radius: 10.8, tube: 0.06, color: 0x10b981, rx: -0.8, ry: 0.5, rz: -0.6, sx: -0.0015, sy: 0.002, sz: -0.002 }
 ];
 
-const sectionIds = ['s-intro','s-roles','s-mufredat','s-referanslar','s-career','s-contact'];
-const sectionLabels = ['000 / GİRİŞ','001 / ROLLER','002 / MÜFREDATLAR','003 / REFERANSLAR','004 / KARİYER','005 / İLETİŞİM'];
-
-/* ============ SCROLL HANDLING ============ */
-const progressEl = document.getElementById('progress');
-const hudSec = document.getElementById('hud-sec');
-const hudProg = document.getElementById('hud-prog');
-const navLinks = document.querySelectorAll('.top-frame nav a[data-nav]');
-
-let scrollT = 0;        // 0..1 across whole document
-let renderT = 0;        // smoothed
-let activeSec = 0;
-
-function getSectionRanges() {
-  const ranges = [];
-  for (const id of sectionIds) {
-    const el = document.getElementById(id);
-    if (!el) { ranges.push([0,0]); continue; }
-    const top = el.offsetTop;
-    const h = el.offsetHeight;
-    ranges.push([top, top + h]);
-  }
-  return ranges;
-}
-
-function updateScroll() {
-  const docH = document.documentElement.scrollHeight - window.innerHeight;
-  const sy = window.scrollY || window.pageYOffset || 0;
-  scrollT = Math.max(0, Math.min(1, docH > 0 ? sy / docH : 0));
-
-  // active section
-  const ranges = getSectionRanges();
-  const center = sy + window.innerHeight * 0.4;
-  for (let i = 0; i < ranges.length; i++) {
-    if (center >= ranges[i][0] && center < ranges[i][1]) {
-      activeSec = i; break;
-    }
-    if (i === ranges.length - 1) activeSec = i;
-  }
-
-  // ui
-  progressEl.style.width = (scrollT * 100).toFixed(1) + '%';
-  hudSec.textContent = sectionLabels[activeSec];
-  hudProg.textContent = (scrollT * 100).toFixed(0) + '%';
-
-  navLinks.forEach((a) => {
-    const id = a.getAttribute('href').slice(1);
-    a.classList.toggle('active', id === sectionIds[activeSec]);
+ringConfigs.forEach((cfg) => {
+  const ringGeo = new THREE.TorusGeometry(cfg.radius, cfg.tube, 20, 120);
+  const ringMat = new THREE.MeshStandardMaterial({
+    color: cfg.color,
+    emissive: cfg.color,
+    emissiveIntensity: 0.35,
+    roughness: 0.3,
+    metalness: 0.2,
+    transparent: true,
+    opacity: 0.85
   });
-}
-window.addEventListener('scroll', updateScroll, { passive: true });
-window.addEventListener('resize', updateScroll);
-updateScroll();
-
-/* Smooth-scroll on nav clicks */
-navLinks.forEach(a => {
-  a.addEventListener('click', e => {
-    const id = a.getAttribute('href').slice(1);
-    const el = document.getElementById(id);
-    if (el) {
-      e.preventDefault();
-      window.scrollTo({ top: el.offsetTop - 60, behavior: 'smooth' });
-    }
-  });
+  const ring = new THREE.Mesh(ringGeo, ringMat);
+  ring.rotation.set(cfg.rx, cfg.ry, cfg.rz);
+  coreGroup.add(ring);
+  rings.push({ mesh: ring, sx: cfg.sx, sy: cfg.sy, sz: cfg.sz });
 });
 
-/* ============ RESIZE ============ */
-window.addEventListener('resize', () => {
-  camera.aspect = window.innerWidth / window.innerHeight;
+// 3. Starlight & Particles
+const particlesCount = 650;
+const particlePositions = new Float32Array(particlesCount * 3);
+const particleColors = new Float32Array(particlesCount * 3);
+
+const colorCyan = new THREE.Color(0x38bdf8);
+const colorGold = new THREE.Color(0xfbbf24);
+const colorWhite = new THREE.Color(0xffffff);
+
+for (let i = 0; i < particlesCount; i++) {
+  const rad = 4 + Math.random() * 26;
+  const theta = Math.random() * Math.PI * 2;
+  const phi = Math.acos((Math.random() * 2) - 1);
+
+  particlePositions[i * 3] = rad * Math.sin(phi) * Math.cos(theta);
+  particlePositions[i * 3 + 1] = rad * Math.sin(phi) * Math.sin(theta);
+  particlePositions[i * 3 + 2] = rad * Math.cos(phi);
+
+  let c = colorWhite;
+  const rnd = Math.random();
+  if (rnd < 0.45) c = colorCyan;
+  else if (rnd < 0.75) c = colorGold;
+
+  particleColors[i * 3] = c.r;
+  particleColors[i * 3 + 1] = c.g;
+  particleColors[i * 3 + 2] = c.b;
+}
+
+const particleGeo = new THREE.BufferGeometry();
+particleGeo.setAttribute('position', new THREE.BufferAttribute(particlePositions, 3));
+particleGeo.setAttribute('color', new THREE.BufferAttribute(particleColors, 3));
+
+const particleMat = new THREE.PointsMaterial({
+  size: 0.16,
+  vertexColors: true,
+  transparent: true,
+  opacity: 0.8
+});
+
+const particleSystem = new THREE.Points(particleGeo, particleMat);
+scene.add(particleSystem);
+
+// Smooth gentle touch / mouse parallax & rotation interaction
+let mouseX = 0, mouseY = 0, targetX = 0, targetY = 0;
+let isDragging = false, prevX = 0, prevY = 0;
+
+function onPointerDown(e) {
+  isDragging = true;
+  const clientX = e.touches ? e.touches[0].clientX : e.clientX;
+  const clientY = e.touches ? e.touches[0].clientY : e.clientY;
+  prevX = clientX;
+  prevY = clientY;
+}
+
+function onPointerMove(e) {
+  const clientX = e.touches ? e.touches[0].clientX : e.clientX;
+  const clientY = e.touches ? e.touches[0].clientY : e.clientY;
+  
+  if (isDragging) {
+    const deltaX = clientX - prevX;
+    const deltaY = clientY - prevY;
+    coreGroup.rotation.y += deltaX * 0.008;
+    coreGroup.rotation.x += deltaY * 0.008;
+    prevX = clientX;
+    prevY = clientY;
+  }
+  
+  const halfX = window.innerWidth / 2;
+  const halfY = window.innerHeight / 2;
+  targetX = (clientX - halfX) * 0.0005;
+  targetY = (clientY - halfY) * 0.0005;
+}
+
+function onPointerUp() {
+  isDragging = false;
+}
+
+window.addEventListener('mousedown', onPointerDown, { passive: true });
+window.addEventListener('mousemove', onPointerMove, { passive: true });
+window.addEventListener('mouseup', onPointerUp, { passive: true });
+window.addEventListener('touchstart', onPointerDown, { passive: true });
+window.addEventListener('touchmove', onPointerMove, { passive: true });
+window.addEventListener('touchend', onPointerUp, { passive: true });
+
+function onWindowResize() {
+  const w = container.clientWidth || window.innerWidth;
+  const h = container.clientHeight || window.innerHeight;
+  camera.aspect = w / h;
   camera.updateProjectionMatrix();
-  renderer.setSize(window.innerWidth, window.innerHeight);
-});
-
-/* ============ ANIMATE ============ */
-const tmpV = new THREE.Vector3();
-const tmpL = new THREE.Vector3();
-const clock = new THREE.Clock();
-
-function lerpWaypoint(t) {
-  // t: 0..1 maps onto waypoints array
-  const seg = (waypoints.length - 1) * t;
-  const i = Math.min(waypoints.length - 2, Math.floor(seg));
-  const f = seg - i;
-  // smoothstep ease for between-section motion
-  const e = f * f * (3 - 2 * f);
-  const A = waypoints[i], B = waypoints[i + 1];
-  tmpV.set(
-    A.pos[0] + (B.pos[0] - A.pos[0]) * e,
-    A.pos[1] + (B.pos[1] - A.pos[1]) * e,
-    A.pos[2] + (B.pos[2] - A.pos[2]) * e
-  );
-  tmpL.set(
-    A.lookAt[0] + (B.lookAt[0] - A.lookAt[0]) * e,
-    A.lookAt[1] + (B.lookAt[1] - A.lookAt[1]) * e,
-    A.lookAt[2] + (B.lookAt[2] - A.lookAt[2]) * e
-  );
-  return { pos: tmpV, lookAt: tmpL };
+  renderer.setSize(w, h);
 }
+window.addEventListener('resize', onWindowResize);
 
+let clock = new THREE.Clock();
 function animate() {
-  const t = clock.getElapsedTime();
+  requestAnimationFrame(animate);
+  const elapsedTime = clock.getElapsedTime();
 
-  // smoothed scroll progress (camera kayganlığı için)
-  renderT += (scrollT - renderT) * 0.08;
+  mouseX += (targetX - mouseX) * 0.04;
+  mouseY += (targetY - mouseY) * 0.04;
 
-  const wp = lerpWaypoint(renderT);
-  camera.position.copy(wp.pos);
-  // hafif parallax: mouse yerine zamana bağlı sallantı (durağan kalmasın)
-  camera.position.x += Math.sin(t * 0.25) * 0.08;
-  camera.position.y += Math.sin(t * 0.4) * 0.06;
-  camera.lookAt(wp.lookAt);
+  coreGroup.rotation.y += 0.004;
+  coreGroup.rotation.x = Math.sin(elapsedTime * 0.3) * 0.08 + mouseY * 1.5;
+  coreGroup.rotation.z = Math.cos(elapsedTime * 0.2) * 0.05 + mouseX * 1.5;
 
-  // monuments rotate gently
-  monuments.forEach((m, i) => {
-    m.group.rotation.y = t * (0.08 + i * 0.02) + i;
-    m.group.rotation.x = Math.sin(t * 0.2 + i) * 0.05;
+  innerNode.rotation.y = -elapsedTime * 0.2;
+  innerNode.scale.setScalar(1 + Math.sin(elapsedTime * 1.5) * 0.09);
+
+  rings.forEach((r) => {
+    r.mesh.rotation.x += r.sx;
+    r.mesh.rotation.y += r.sy;
+    r.mesh.rotation.z += r.sz;
   });
 
-  // intro octahedron öne çıksın
-  m0.children[0].rotation.y = t * 0.5;
-  m0.children[0].rotation.z = t * 0.3;
-
-  // career timeline kendi içinde dön
-  m2.rotation.y = t * 0.05 + Math.PI * renderT * 0.3;
+  particleSystem.rotation.y = elapsedTime * 0.012;
+  particleSystem.rotation.x = Math.cos(elapsedTime * 0.02) * 0.03;
 
   renderer.render(scene, camera);
-  requestAnimationFrame(animate);
 }
 animate();
-
-/* ============ HIDE LOADING ============ */
-setTimeout(() => {
-  document.getElementById('loading').classList.add('gone');
-}, 360);
+})();
 </script>
-
-</body>
-</html>
+</div>
+<!-- STITCH_THREEJS_END:ANIMATION_18 -->
+</div>
+<!-- Merkez Kart: Niş Editoryal Tipografi Bloğu (Yarı saydam, 3D arkasından süzülür) -->
+<main class="relative z-10 w-full max-w-[340px] px-4 flex flex-col items-center justify-center my-auto pointer-events-none">
+<div class="relative w-full py-8 px-5 rounded-2xl border border-white/[0.12] bg-[#0c1017]/50 backdrop-blur-md shadow-[0_8px_40px_rgba(0,0,0,0.65)] flex flex-col items-center text-center overflow-hidden">
+<div class="absolute inset-0 ambient-glow pointer-events-none"></div>
+<div class="flex flex-col items-center">
+<h1 class="text-lg sm:text-2xl font-semibold tracking-[0.28em] text-cyan-300 glow-cyan uppercase font-mono-code">
+        YAZILIM MİMARI
+      </h1>
+</div>
+<div class="w-20 sm:w-24 h-[1px] subtle-line my-4 sm:my-5 opacity-80"></div>
+<div class="flex flex-col items-center">
+<h2 class="text-sm sm:text-lg font-normal tracking-[0.35em] text-slate-100 glow-silver uppercase font-mono-code">
+        DANIŞMAN
+      </h2>
+</div>
+<div class="w-16 sm:w-20 h-[1px] subtle-line my-4 sm:my-5 opacity-80"></div>
+<div class="flex flex-col items-center">
+<h3 class="text-sm sm:text-lg font-medium tracking-[0.35em] text-amber-400 glow-gold uppercase font-mono-code">
+        EĞİTMEN
+      </h3>
+</div>
+<div class="absolute top-2.5 left-2.5 w-1.5 h-1.5 border-t border-l border-cyan-400/40"></div>
+<div class="absolute top-2.5 right-2.5 w-1.5 h-1.5 border-t border-r border-cyan-400/40"></div>
+<div class="absolute bottom-2.5 left-2.5 w-1.5 h-1.5 border-b border-l border-amber-400/40"></div>
+<div class="absolute bottom-2.5 right-2.5 w-1.5 h-1.5 border-b border-r border-amber-400/40"></div>
+</div>
+</main>
+</body></html>
